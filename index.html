@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../KarinaPiha/">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta name="description"
+        content="Explore the vibrant artwork of Karina Piha, a Brazilian artist living in New Zealand. Her unique paintings blend European, Arab, and South American cultures, creating emotional and colorful masterpieces. Discover her latest exhibitions, available artworks, and more.">
+    <title>Karina Piha - Artist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        a {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        main#home {
+            padding-bottom: 100px;
+        }
+
+
+        /* Welcome */
+        .welcome {
+            text-align: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            width: 100%;
+            padding-top: 50px;
+            /* Adiciona um espaçamento acima da imagem */
+        }
+
+
+        .welcome img {
+            max-height: fit-content;
+            width: 400px;
+            /* Ajuste o tamanho da imagem conforme necessário */
+            max-width: 100%;
+        }
+
+        .welcome h2 {
+            margin: 15px;
+            font-size: 5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.2375rem;
+        }
+
+        .welcome p {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.2375rem;
+            margin: 0;
+        }
+
+        @media (max-width: 48em) {
+            .welcome h2 {
+                font-size: 3rem;
+            }
+
+            .welcome p {
+                font-size: 1.8rem;
+            }
+
+            ul.menu {
+                background: #e3c309;
+                ;
+            }
+        }
+
+        footer {
+            color: #333333;
+            text-align: center;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        @media (min-width: 48em) {
+            footer {
+                font-size: 1.125rem;
+            }
+        }
+
+        /**/
+        /* accommodation-container */
+        .accommodation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 120px 0;
+            width: 100%;
+        }
+
+
+
+        .accommodation-item {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: nowrap;
+        }
+
+        .accommodation-slider {
+            width: 50%;
+            /* Ajuste para ocupar metade do espaço */
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+
+        }
+
+        /* Atualize o .slider-container */
+        .slider-container {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* O slide ocupará 100% da altura da tela */
+            /* overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff; */
+            /* Fundo para evitar áreas "vazias" */
+        }
+
+        /* Atualize os slides individuais */
+        .slide {
+            width: 100%;
+            /* Preenche toda a largura do contêiner */
+            height: 100%;
+            /* Preenche toda a altura */
+            object-fit: cover;
+            /* Faz a imagem se ajustar sem distorção */
+            flex-shrink: 0;
+            /* Garante que os slides não diminuam de tamanho */
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-container {
+                height: 70vh;
+                /* Reduza a altura em telas pequenas */
+            }
+        }
+
+        button.next,
+        button.prev {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .accommodation-info {
+            width: 50%;
+            padding: 11px 73px;
+            background-color: #fff;
+            /* border: 1px solid #ddd; */
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 46px;
+            font-weight: 400;
+
+        }
+
+        p {
+            font-size: 15px;
+            margin: 5px 0;
+            font-weight: 400;
+        }
+
+        /* Responsividade para telas menores */
+        @media screen and (max-width: 768px) {
+            .accommodation-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .accommodation-slider,
+            .accommodation-info {
+                width: 100%;
+                /* Ocupa 100% em telas pequenas */
+            }
+        }
+
+
+
+        .rating-text {
+            font-size: 18px;
+            color: #333;
+            /* Cor do texto */
+            margin-left: 8px;
+            /* Espaçamento entre as estrelas e o texto */
+            font-weight: bold;
+        }
+
+        .fa-star,
+        .fa-star-half-alt {
+            color: #e4a853;
+            font-size: 0.7em;
+        }
+
+        /* Buttons in the info section */
+        .buttons-container {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn.view-more {
+            background-color: #0073e6;
+            /* Blue for "View More" */
+        }
+
+        .btn.reserve-airbnb {
+            background-color: #ff5a5f;
+            /* Airbnb's signature color */
+        }
+
+        .btn.reserve-direct {
+            background-color: #2ecc71;
+            /* Green for direct booking */
+        }
+
+        .btn:hover {
+            filter: brightness(1.2);
+            /* Hover effect */
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        .display {
+            display: inline-block;
+        }
+    </style>
+    <style>
+        /* header */
+        .header {
+            background: white;
+            /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1); */
+            width: 100%;
+            z-index: 99999;
+            position: fixed;
+            height: 90px;
+            line-height: 3;
+            top: 0;
+            transform: translateY(0);
+            /* Posição inicial */
+            transition: transform 0.5s ease, background 0.3s ease;
+            /* Transições */
+            border-bottom: 0.5px solid #e2e2e2;
+        }
+
+        .fixed {
+            background: white;
+            ;
+            transform: translateY(0);
+            /* Fica visível ao fixar 
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+             */
+        }
+
+        .header a {
+            color: #333;
+        }
+
+        .fixed a {
+            color: #333;
+        }
+
+        .header ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        /* menu */
+        .fixed li a {
+            display: block;
+            padding: 20px 20px;
+            border-bottom: 2px solid #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .header li a {
+            display: block;
+            padding: 20px 20px;
+            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+
+        @media (min-width: 48em) {
+            .header li a {
+                font-size: .9725rem;
+            }
+        }
+
+        .header li a:hover,
+        .header .menu-btn:hover {
+            background: #e2c1041f;
+            color: #e2c104;
+            transform: translateY(0);
+            transition: transform 0.5s ease, background 0.3s ease;
+
+        }
+
+        /* menu */
+        ul.menu {
+            background: white;
+        }
+
+        .header .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+
+
+
+
+        /* menu icon */
+        .header .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 44px 20px;
+            position: relative;
+            user-select: none;
+        }
+
+        .header .menu-icon .navicon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .fixed .menu-icon .navicon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .header .menu-icon .navicon:before,
+        .header .menu-icon .navicon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .fixed .menu-icon .navicon:before,
+        .fixed .menu-icon .navicon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .header .menu-icon .navicon:before {
+            top: 5px;
+        }
+
+        .header .menu-icon .navicon:after {
+            top: -5px;
+        }
+
+        .header .menu-btn {
+            display: none;
+        }
+
+        .header .menu-btn:checked~.menu {
+            max-height: 900px;
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+
+        /* 48em = 768px */
+        @media (min-width: 48em) {
+            .header li {
+                float: left;
+            }
+
+            .header li a {
+                padding: 20px 14px;
+            }
+
+
+            .header .menu {
+                clear: none;
+                float: right;
+                max-height: none;
+                margin-right: 20px;
+            }
+
+            .header .menu-icon {
+                display: none;
+            }
+
+            .header li a {
+
+                /*  border-bottom: 2px solid #333; */
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header" id="main-nav">
+        <img class="display-none" id="menu-logo" src="../images/pineapple-transparent.png" style="
+        width: 54px;
+        margin-top: 17px;
+        margin-left: 9px;" />
+
+        <input class=" menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./entire-place.html">Entire Place</a></li>
+            <li><a href="./private-sleepout.html">Private Sleepout</a></li>
+            <li><a href="./superhost.html">SuperHost</a></li>
+            <li><a href="./about.html">About This Place</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <!-- header -->
+    <div
+        style="background-color: #fff; height: 100vh; width: 100%;  display: flex; justify-content: center; align-items: center;   ">
+
+        <img src="../images/casa-da-karina-logo.png" style="
+            width: 32%;
+        " />
+
+    </div>
+    <main id="home">
+        <div class="accommodation-container">
+            <!-- Entire Place Slider -->
+            <div class="accommodation-item">
+
+                <div class="accommodation-info">
+                    <span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="rating-text">4.9</span>
+
+                    <h3 class="section-subtitle">Entire Place</h3>
+                    <p class="section-title">Space: Entire house in Havelock North, New Zealand</p>
+                    <p>8 Guests | 4 Bedrooms | 6 Beds | 2 Bathrooms</p>
+                    <br>
+                    <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                        vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit. Donec
+                        id velit ac arcu posuere blane.
+                        <br> <br>
+                        Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci varius
+                        natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant
+                        morbine.
+                    </p>
+                    <div class="buttons-container">
+                        <a href="./entire-place.html" class="btn view-more">View More</a>
+                        <a href="https://www.airbnb.com/rooms/entire-place" target="_blank"
+                            class="btn reserve-airbnb">Reserve on Airbnb</a>
+                        <a href="./contact.html" class="btn reserve-direct">Book Directly</a>
+                    </div>
+                </div>
+                <div class="accommodation-slider" id="entire-place-slider">
+                    <div class="slider-container">
+                        <img src="../images/entire-place1.jpeg" alt="Entire Place 1" class="slide">
+                        <img src="../images/private-sleepout1.jpeg" alt="Entire Place 2" class="slide">
+                        <img src="../images/entire-place1.jpeg" alt="Entire Place 3" class="slide">
+                        <img src="../images/private-sleepout1.jpeg" alt="Entire Place 4" class="slide">
+                        <img src="../images/entire-place1.jpeg" alt="Entire Place 5" class="slide">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1, 'entire-place-slider')">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1, 'entire-place-slider')">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Private Sleepout Slider -->
+            <div class="accommodation-item">
+                <div class="accommodation-slider" id="private-sleepout-slider">
+                    <div class="slider-container">
+                        <img src="../images/private-sleepout1.jpeg" alt="Private Sleepout 1" class="slide">
+                        <img src="../images/entire-place1.jpeg" alt="Private Sleepout 2" class="slide">
+                        <img src="../images/private-sleepout1.jpeg" alt="Private Sleepout 3" class="slide">
+                        <img src="../images/entire-place1.jpeg" alt="Private Sleepout 4" class="slide">
+                        <img src="../images/private-sleepout1.jpeg" alt="Private Sleepout 5" class="slide">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1, 'private-sleepout-slider')">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1, 'private-sleepout-slider')">&#10095;</button>
+                </div>
+                <div class="accommodation-info">
+                    <span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </span>
+                    <span class="rating-text">4.9</span>
+                    <h3 class="section-subtitle">Entire Place</h3>
+                    <p class="section-title">Space: Entire house in Havelock North, New Zealand</p>
+                    <p>8 Guests | 4 Bedrooms | 6 Beds | 2 Bathrooms</p>
+                    <br>
+                    <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                        vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit. Donec
+                        id velit ac arcu posuere blane.
+                        <br> <br>
+                        Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci varius
+                        natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant
+                        morbine.
+                    </p>
+                    <div class="buttons-container">
+                        <a href="./entire-place.html" class="btn view-more">View More</a>
+                        <a href="https://www.airbnb.com/rooms/entire-place" target="_blank"
+                            class="btn reserve-airbnb">Reserve on Airbnb</a>
+                        <a href="./contact.html" class="btn reserve-direct">Book Directly</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .testimonial-slider {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                background: #ffffff;
+                border-radius: 8px;
+            }
+
+            .testimonial-slide {
+                display: none;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .testimonial-slide.active {
+                display: block;
+            }
+
+            .testimonial-slide img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 15px;
+            }
+
+            .testimonial-slide p {
+                font-size: 16px;
+                color: #333;
+                margin: 10px 0;
+                padding: 15px 130px;
+            }
+
+            .testimonial-slide .testimonial-name {
+                font-weight: bold;
+                color: #555;
+            }
+
+            .testimonial-buttons {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+            }
+
+            .testimonial-buttons button {
+                background-color: white;
+                color: #333;
+                border: 1px solid black;
+                width: 42px;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+                margin: 41px;
+            }
+
+            .testimonial-buttons button:hover {
+                background-color: #333;
+                color: white;
+                border: 1px solid black;
+            }
+        </style>
+
+        <div class="testimonial-slider accommodation-container">
+            <div class="testimonial-slide active">
+                <img src="https://via.placeholder.com/80" alt="Reviewer 1">
+                <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="rating-text">4.9</span>
+
+                <h3 class="section-subtitle">Entire Place</h3>
+
+                <p>Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan
+                    vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit. Donec
+                    id velit ac arcu posuere blane.
+                    <br> <br>
+                    Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci varius
+                    natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant
+                    morbine.
+                </p>
+                <p>"This was an amazing experience! The host was incredibly welcoming."
+                    <br><span class="testimonial-name">- John Doe</span>
+                </p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://via.placeholder.com/80" alt="Reviewer 2">
+                <p>"Beautiful place, great location. Would definitely recommend to anyone."
+                    <br><span class="testimonial-name">- Jane Smith</span>
+                </p>
+            </div>
+            <div class="testimonial-slide">
+                <img src="https://via.placeholder.com/80" alt="Reviewer 3">
+                <p>"Such a cozy and relaxing environment. I felt right at home."
+                    <br><span class="testimonial-name">- Michael Lee</span>
+                </p>
+            </div>
+
+            <div class="testimonial-buttons">
+                <button id="testimonial-prev">&#10094;</button>
+                <button id="testimonial-next">&#10095;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year"></span> Casa Da Karina. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Obtém o ano atual com base no horário do navegador
+        const currentYear = new Date().getFullYear();
+        // Insere o ano no elemento do footer
+        document.getElementById("current-year").textContent = currentYear;
+    </script>
+    <script>
+        let slideIndex = {
+            'entire-place-slider': 0,
+            'private-sleepout-slider': 0
+        };
+
+        function showSlide(index, sliderId) {
+            const slides = document.querySelectorAll(`#${sliderId} .slide`);
+            if (index >= slides.length) slideIndex[sliderId] = 0;
+            if (index < 0) slideIndex[sliderId] = slides.length - 1;
+
+            const newTransformValue = -slideIndex[sliderId] * 100;
+            document.querySelector(`#${sliderId} .slider-container`).style.transform = `translateX(${newTransformValue}%)`;
+        }
+
+        function moveSlide(step, sliderId) {
+            slideIndex[sliderId] += step;
+            showSlide(slideIndex[sliderId], sliderId);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa ambos os sliders
+            showSlide(slideIndex['entire-place-slider'], 'entire-place-slider');
+            showSlide(slideIndex['private-sleepout-slider'], 'private-sleepout-slider');
+        });
+
+    </script>
+    <script>
+        // Adicione o JavaScript aqui
+        const nav = document.getElementById('main-nav');
+        const imgLogo = document.getElementById('menu-logo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > nav.offsetHeight) {
+                nav.classList.add('fixed');
+                imgLogo.classList.add('display');
+
+            } else {
+                nav.classList.remove('fixed');
+                imgLogo.classList.remove('display');
+
+            }
+        });
+    </script>
+    <script>
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const prevButton = document.getElementById('testimonial-prev');
+        const nextButton = document.getElementById('testimonial-next');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            testimonialSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : testimonialSlides.length - 1;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide < testimonialSlides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+
+</html>
