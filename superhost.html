@@ -442,3 +442,14 @@
   </div>
       </div>
 
+<footer>
+    <p>© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  // Obtém o ano atual com base no horário do navegador
+  const currentYear = new Date().getFullYear();
+  // Insere o ano no elemento do footer
+  document.getElementById("current-year").textContent = currentYear;
+</script>
+</html>
