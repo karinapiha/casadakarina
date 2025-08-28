@@ -1,3 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Karina Piha is a Brazilian artist living in New Zealand, with European and Arab roots. Her vibrant artwork blends cultures, influenced by her life in Germany and around the world. A multi-lingual artist, she also practices art therapy, teaches Yoga Nidra and Ashtanga, and is a popular Airbnb Superhost. Karina’s work has been sold to high-profile clients and she is dedicated to charity work.">
+    <title>About Me</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Reset básico */
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        a {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Fundo */
+        body {
+            background: #f4cda5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        /* header */
+
+        /* https://codepen.io/mutedblues/pen/MmPNPG */
+
+        .header {
+            /*background-color: #f4cda5;*/
+            background: #f4cda5;
+            /*  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1); */
+            width: 100%;
+            z-index: 3;
+        }
+
+        .header ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+
+        }
+
+        /* menu */
+        .header li a {
+            font-family: 'Josefin Sans', sans-serif;
+
+            display: block;
+            padding: 20px 20px;
+            border-bottom: 2px solid #f4cda5;
+            text-decoration: none;
+            font-size: 1rem;
+            /* Aqui é onde o tamanho da fonte do menu é definido */
+        }
+
+        @media (min-width: 48em) {
+            .header li a {
+                font-size: .9725rem;
+                font-family: 'Josefin Sans', sans-serif;
+
+                /* Aumente o tamanho da fonte para telas maiores */
+            }
+        }
+
+        .header li a:hover,
+        .header .menu-btn:hover {
+            border-bottom: 2px solid;
+        }
+
+
+
+        /* menu */
+
+        ul.menu {
+            background: #f4cda5;
+        }
+
+        .header .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+
+        }
+
+        /* menu icon */
+
+        .header .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 28px 20px;
+            position: relative;
+            user-select: none;
+        }
+
+        .header .menu-icon .navicon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+        }
+
+        .header .menu-icon .navicon:before,
+        .header .menu-icon .navicon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        .header .menu-icon .navicon:before {
+            top: 5px;
+        }
+
+        .header .menu-icon .navicon:after {
+            top: -5px;
+        }
+
+        /* menu btn */
+
+        .header .menu-btn {
+            display: none;
+        }
+
+        .header .menu-btn:checked~.menu {
+            max-height: 240px;
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .header .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+
+        /* 48em = 768px */
+
+        @media (min-width: 48em) {
+            .header li {
+                float: left;
+            }
+
+            .header li a {
+                padding: 20px 14px;
+            }
+
+            .header .menu {
+                clear: none;
+                float: right;
+                max-height: none;
+                margin-right: 20px;
+            }
+
+            .header .menu-icon {
+                display: none;
+            }
+        }
+
+
+        /* Container principal */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background: #f4cda5;
+            border-radius: 12px;
+            /*  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+            flex-wrap: wrap;
+        }
+
+        /* Estilo para a imagem */
+        .about-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para o texto */
+        .about-text {
+            flex: 1 1 400px;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .about-text h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        .about-text p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .about-text h1 {
+                font-size: 2em;
+                text-align: center;
+            }
+
+            .about-text p {
+                font-size: 1em;
+                text-align: justify;
+            }
+
+            .about-image img {
+                max-width: 300px;
+            }
+        }
+
+        footer {
+
+            background-color: #f4cda5;
+            color: #333333;
+            text-align: center;
+            padding: 24px 0;
+            font-size: 1rem;
+            /* bottom: 0; */
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+
+        @media (min-width: 48em) {
+            footer {
+                font-size: 1.125rem;
+                /* Aumente o tamanho da fonte do footer para telas grandes */
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 13px"></div>
+    <header class="header">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="./exhibitions.html">Art Exhibitions</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="about-container">
+        <div class="about-image">
+            <img src="kp.jpg" alt="About Me Image">
+        </div>
+        <div class="about-text">
+            <h1>Who Is Karina Piha?</h1>
+            <p>Karina Piha is a Brazilian artist with European and Arab roots, living in New Zealand. Her unique style
+                reflects a blend of vibrant cultures, shaped by years living in Germany and other countries.</p>
+            <p>Fluent in multiple languages, including Portuguese, English, German, and Spanish, Karina brings a global
+                perspective to her art. Her work is celebrated for its bold colors, emotional depth, and authenticity.
+            </p>
+            <p>In addition to her artistic career, Karina offers art therapy and teaches Yoga Nidra and Ashtanga. Her
+                home, a popular Airbnb destination, mirrors the warmth and creativity found in her artwork.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="current-year"></span> Karina Piha. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // Obtém o ano atual com base no horário do navegador
+    const currentYear = new Date().getFullYear();
+
+    // Insere o ano no elemento do footer
+    document.getElementById("current-year").textContent = currentYear;
+</script>
+
+</html>
 <div class="profile">
   <h2>Karina User Profile</h2>
   <p>Karina <span>Superhost</span></p>
