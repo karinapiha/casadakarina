@@ -358,6 +358,47 @@
     main#home .contact .more-info a:hover {
       color: #555;
     }
+
+/** Profile **/
+
+.profile {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.info {
+  flex: 1 1 30%;
+  margin: 20px;
+}
+
+.reviews {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 10px;
+  }
+}
+
   </style>
 </head>
 
