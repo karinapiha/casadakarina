@@ -123,7 +123,7 @@
     }
 
     .header .menu-btn:checked~.menu {
-      max-height: 240px;
+      max-height: auto;
     }
 
     .header .menu-btn:checked~.menu-icon .navicon {
@@ -444,6 +444,9 @@ align-items: center;
 }
 
 @media (max-width: 480px) {
+.mobile-none {
+    display: none;
+}
   .profile {
     padding: 10px;
   }
@@ -462,7 +465,7 @@ align-items: center;
 </head>
 
 <body>
-  <!--<div class style="height: 13px"></div>-->
+  <div class="mobile-none" style="height: 13px"></div>
   <header class="header" style="position: fixed;">
     <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
            width: 54px;
