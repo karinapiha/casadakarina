@@ -489,6 +489,7 @@ align-items: center;
       color: #000;
     }
 
+/**
 .reviews {
     display: flex;
     flex-wrap: wrap;
@@ -505,6 +506,24 @@ align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: calc(33.33% - 20px);
 }
+**/
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+
 
 .review p {
     font-size: 16px;
