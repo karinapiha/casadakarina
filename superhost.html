@@ -413,6 +413,8 @@ p{
     margin-bottom: 20px;
 }
 
+.mobile-block{
+display: none}
 @media (max-width: 768px) {
     .info {
         flex: 1 1 100%;
@@ -521,6 +523,8 @@ align-items: center;
     }
 .mobile-none {
 display: none}
+.mobile-block{
+display: block}
 }
 
 @media (max-width: 480px) {
@@ -535,6 +539,7 @@ display: none}
 
 <body>
   <div class="mobile-none" style="height: 13px"></div>
+<div class="mobile-block" style="height: -13px"></div>
   <header class="header" style="position: fixed;">
     <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
            width: 54px;
