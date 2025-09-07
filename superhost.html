@@ -643,7 +643,8 @@ width: 23%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    padding: 20px;
+    padding: 20px 80px;
+border-radius:10px;
   }
 
   .left-section {
@@ -654,11 +655,34 @@ width: 23%;
     justify-content: center;
   }
 
+  .left-section .photo-container {
+    position: relative;
+  }
+
   .left-section img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
+  }
+
+  .left-section .verified-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-section .verified-icon::before {
+    content: "\2713";
+    font-size: 14px;
+    color: #fff;
   }
 
   .left-section .name {
@@ -702,7 +726,10 @@ width: 23%;
 
 <div class="card">
   <div class="left-section">
-    <img src="https:">                                                 
+    <div class="photo-container">
+      <img src="https:"/>                                                     
+      <div class="verified-icon"></div>
+    </div>
     <div class="name">Karina Piha</div>
     <div class="superhost">Superhost</div>
   </div>
@@ -715,6 +742,7 @@ width: 23%;
     <div class="label no-border">Years Hosting</div>
   </div>
 </div>
+
 
     <img src="https://iili.io/Kqk5F8G.png" class="image">
     <p>My Work: ...<br/>
