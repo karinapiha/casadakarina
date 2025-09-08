@@ -706,15 +706,32 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .right-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-      padding: 9px 10px;
-      border-radius: 4px;
-  border: 1px solid #333;
-text-align:center;}
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #333;
+            text-align: center;
+          }
+
+          .right-section>div {
+            padding: 0 10px;
+            width: 70px;
+            height: 50px;
+            line-height: 0.9;
+            
+            margin: 0;
+          }
+
+
+.right-section > div:nth-child(2) {
+  border-right: 0.01px solid #666;
+            border-left: 0.01px solid #666;
+}
+
 
 .value, .label {
 }
