@@ -688,7 +688,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .left-section .verified-icon::before {
-    content: "\2713";
+ /*   content: "\2713"; */
     font-size: 14px;
     color: #fff;
 
@@ -708,7 +708,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   .right-section {
     width: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
@@ -720,9 +720,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .right-section .label {
-    font-size: 15px;
+    font-size: 13px;
     color: #666;
     border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+
 text-align: center;
 width:100%;
     padding-bottom: 5px;
@@ -737,7 +739,7 @@ width:100%;
 
 <div class="card">
 
-<div style="display: flex">
+<div style="display: flex; flex-direction: column;">
   <div class="left-section">
     <div class="photo-container">
       <img src="https://karinapiha.com/kp.jpg"/>                                                     
