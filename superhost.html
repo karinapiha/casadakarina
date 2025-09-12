@@ -540,6 +540,15 @@
         margin
       }
     }
+
+    i.fa-regular.fa-user {
+    border: 1px solid #333;
+    width: 20px;
+    height: 20px;
+    line-height: 2;
+    border-radius: 50%;
+    font-size: 10px;
+}
   </style>
 </head>
 
@@ -677,7 +686,7 @@
             position: absolute;
             bottom: 10px;
             right: 10px;
-            background-color: #ccc;
+            background-color: #333;
             color: white;
             border-radius: 50%;
             width: 20px;
@@ -763,7 +772,7 @@ border-right: 1px solid #ddd;*/
             <div class="left-section">
               <div class="photo-container">
                 <img src="https://karinapiha.com/kp.jpg" />
-                <div class="verified-icon"><i class="fa-regular fa-shield"></i>
+                <div class="verified-icon"><i class="fa-regular fa-check"></i>
                 </div>
               </div>
               <div class="name">Karina Piha</div>
@@ -821,9 +830,12 @@ border-right: 1px solid #ddd;*/
             font-size: px;
           }
 
-          .stars .filled {
-            color: #f90;
-          }
+   .stars .filled {
+/*     color: #f90;
+    color: #D9A404;
+    color: #D9B607; */
+    color: #D98E04;
+}
         </style>
 
         <div class="stars">
@@ -835,7 +847,7 @@ border-right: 1px solid #ddd;*/
         </div>
 
         <p>Excellent host! The house is very comfortable and clean.</p>
-        <p>- John</p>
+       <p><i class="fa-regular fa-user"></i> - Laura</p>
       </div>
       <!-- Review 2 -->
       <div class="review">
@@ -848,7 +860,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star-half-alt filled"></i>
         </div>
         <p>It was an incredible experience! The superhost was very attentive.</p>
-        <p>- Mary</p>
+      <p><i class="fa-regular fa-user"></i> - Laura</p>
       </div>
       <!-- Review 3 -->
       <div class="review">
@@ -861,7 +873,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star-half-alt filled"></i>
         </div>
         <p>The house is very well located and the superhost is very helpful.</p>
-        <p>- Peter</p>
+       <p><i class="fa-regular fa-user"></i> - Laura</p>
       </div>
       <!-- Review 4 -->
       <div class="review">
@@ -874,7 +886,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star-half-alt filled"></i>
         </div>
         <p>I loved the decoration of the house! It's very cozy.</p>
-        <p>- Anna</p>
+        <p><i class="fa-regular fa-user"></i> - Laura</p>
       </div>
       <!-- Review 5 -->
       <div class="review">
@@ -887,7 +899,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star-half-alt filled"></i>
         </div>
         <p>The superhost was very communicative and attentive.</p>
-        <p>- Charles</p>
+        <p><i class="fa-regular fa-user"></i> - Laura</p>
       </div>
       <!-- Review 6 -->
       <div class="review">
@@ -1070,17 +1082,18 @@ i.fa-solid.fa-location-dot {}
     </div>
     <br /><br /><br /><br />
     <h1>Ask Karina About</h1>
-    <p>
-    <i class="fas fa-utensils"></i> Cooking up a storm! 
-    <i class="fas fa-hamburger"></i> Delicious Food scenes 
-    <i class="fas fa-tree"></i> Outdoors in nature 
-    <i class="fas fa-book"></i> and getting lost in Reading.
-</p>
+    <div>
+    <p><i class="fas fa-utensils"></i> Cooking </p>
+    <p><i class="fas fa-hamburger"></i> Food Scenes </p>
+    <p><i class="fas fa-tree"></i> Outdoors </p>
+    <p><i class="fas fa-book"></i> Reading </p>
+</div>
 
     <br /><br /><br /><br />
     
     <h1>Karina’s listings</h1>
-    <style>.card-property {
+    <style>
+      .card-property {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1161,6 +1174,7 @@ i.fa-solid.fa-location-dot {}
 </script>
 
 </html>
+
 
 
 
