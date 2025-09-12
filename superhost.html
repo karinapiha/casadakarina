@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
   <link rel="icon" type="image/png" href="./images/favicon.png">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     body {
@@ -17,14 +18,14 @@
       background: #fff;
     }
 
-
-
     h1,
     h2,
     a {
       color: #333;
     }
-    h1, h2 {
+
+    h1,
+    h2 {
       font-size: 2.5rem;
       color: #333;
       font-weight: 300;
@@ -65,7 +66,9 @@
     }
 
     @media (min-width: 48em) {
-      .header li a, footer p {
+
+      .header li a,
+      footer p {
         font-size: .9725rem;
         /* Aumente o tamanho da fonte para telas maiores */
       }
@@ -258,9 +261,8 @@
       color: #555;
     }
 
-
     footer {
-    background: #fff;
+      background: #fff;
       color: #333333;
       text-align: center;
       /* padding: 10px; */
@@ -369,110 +371,108 @@
       color: #555;
     }
 
-/** Profile **/
+    /** Profile **/
+    .profile {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-.profile {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    
-}
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.info-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.info {
-    flex: 1 1 auto;
-    margin: 20px;
-}
-
-.reviews {
-    margin-bottom: 20px;
-}
-
-.info img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
-}
-
-.info h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.info p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.mobile-block{
-display: none}
-@media (max-width: 768px) {
     .info {
+      flex: 1 1 auto;
+      margin: 20px;
+    }
+
+    .reviews {
+      margin-bottom: 20px;
+    }
+
+    .info img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+    }
+
+    .info h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-block {
+      display: none
+    }
+
+    @media (max-width: 768px) {
+      .info {
         flex: 1 1 100%;
         margin: 10px 0;
+      }
     }
-}
 
- max-width: 80%;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  /**box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);**/
-}
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    /**box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);**/
+    }
 
-.info-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-align-items: center;
-}
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .info {
+      flex: 1 1 auto;
+      margin: 20px;
+    }
 
+    .reviews {
+      margin-bottom: 20px;
+    }
 
-.info {
-  flex: 1 1 auto;
-  margin: 20px;
-}
+    @media (max-width: 768px) {
+      .info {
+        flex: 1 1 100%;
+        margin: 10px 0;
+      }
+    }
 
-.reviews {
-  margin-bottom: 20px;
-}
+    @media (max-width: 480px) {
+      .mobile-none {
+        display: none;
+      }
 
-@media (max-width: 768px) {
-  .info {
-    flex: 1 1 100%;
-    margin: 10px 0;
-  }
-}
+      .profile {
+        padding: 10px;
+      }
+    }
 
-@media (max-width: 480px) {
-.mobile-none {
-    display: none;
-}
-  .profile {
-    padding: 10px;
-  }
-}
+    .info img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
 
-
-.info img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 50%;
-}
-
-     .btn-contact {
+    .btn-contact {
       font-size: 1rem;
       color: #333;
       background: #fff;
@@ -491,69 +491,60 @@ align-items: center;
       color: #000;
     }
 
-
-.reviews {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.review {
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-   /* width: calc(33.33% - 40px);*/
- width: 23.33%;
-height: 200px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
-
-
-
-
-.review p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 5px;
-text-align: center;
-}
-
-.review p:last-child {
-    font-weight: bold;
-    color: #333;
-margin-bottom:0;
-}
-
-@media (max-width: 768px) {
-    .review {
-       /* width: calc(33.33% - 20px);*/
-width: 23%;
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-}
-
-@media (max-width: 480px) {
     .review {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+      /* width: calc(33.33% - 40px);*/
+      width: 23.33%;
+      height: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .review p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .review p:last-child {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .review {
+        /* width: calc(33.33% - 20px);*/
+        width: 23%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .review {
         width: 100%;
         margin
-
-}}
-
+      }
+    }
   </style>
 </head>
 
 <body>
- 
+
   <header class="header" style="position: fixed; margin-top: 0px; padding-top: 5px">
     <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
            width: 54px;
@@ -571,155 +562,150 @@ width: 23%;
     </ul>
   </header>
 
+  <div class="" style="height: 60px"></div>
 
-     <div class="" style="height: 60px"></div>
+  <div class="profile">
+    <h1>Meet Your Host</h1>
 
-<div class="profile">
-<h1>Meet Your Host</h1>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+      }
 
-<style>
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
+      .left-column {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-.left-column {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+      .right-column {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
+      .right-column p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+        font-weight: 300;
+        line-height: 1.2;
+      }
 
-}
+      .image {
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;*/
+        /*margin-bottom: 20px;*/
+      }
 
-.right-column {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+      .list {
+        list-style: none;
+        padding-left: 5px;
+        margin: 0;
+        font-weight: 300;
+      }
 
-}
+      .list-item {
+        margin-bottom: 10px;
+      }
 
-.right-column p{
-      font-size: 1.2rem;
-      color: #333;
-      margin-bottom: 20px;
-      letter-spacing: 3px;
-      font-weight: 300;
-      line-height: 1.2;
-}
+      .button {
+        cursor: pointer;
+      }
 
-.image {
-  width: 100%;
-  height: auto;
- /* object-fit: cover;*/
-  /*margin-bottom: 20px;*/
-}
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
 
-.list {
-  list-style: none ;
-  padding-left: 5px;
-  margin: 0;
-  font-weight: 300;
-}
+        .left-column,
+        .right-column {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
 
-.list-item {
-  margin-bottom: 10px;
-}
+      @media (max-width: 480px) {
+        .image {
+          height: auto;
+        }
 
-.button {
-  cursor: pointer;
-}
+        .button {}
+      }
+    </style>
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .left-column, .right-column {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
+    <section class="container">
+      <div class="left-column">
+        <style>
+          .card {
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* display: flex;*/
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+          }
 
-@media (max-width: 480px) {
-  .image {
-    height: auto;
-  }
-  .button {
-    
-  }
-}
+          .left-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
 
-</style>
+          .left-section .photo-container {
+            position: relative;
+          }
 
-<section class="container">
-  <div class="left-column">
-<style>
-  .card {
-    width: 250px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   /* display: flex;*/
-    padding: 30px 20px;
-    border-radius:10px;
-border: 1px solid #333;
-  }
+          .left-section img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+          }
 
-  .left-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+          .left-section .verified-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #ccc;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
 
-  .left-section .photo-container {
-    position: relative;
-  }
+          .left-section .verified-icon::before {
+            /*   content: "\2713"; */
+            font-size: 14px;
+            color: #f90;
+          }
 
-  .left-section img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
+          .left-section .name {
+            font-size: ;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
 
-  .left-section .verified-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #ccc;
-color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+          .left-section .superhost {
+            font-size: ;
+            color: #666;
+          }
 
-  .left-section .verified-icon::before {
- /*   content: "\2713"; */
-    font-size: 14px;
-    color: #f90;
-
-  }
-
-  .left-section .name {
-    font-size: ;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .left-section .superhost {
-    font-size: ;
-    color: #666;
-  }
-
-  .right-section {
+          .right-section {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -736,205 +722,327 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 70px;
             height: 50px;
             line-height: 0.9;
-            
             margin: 0;
           }
 
-
-.right-section > div:nth-child(2) {
-  border-right: 0.01px solid #666;
+          .right-section>div:nth-child(2) {
+            border-right: 0.01px solid #666;
             border-left: 0.01px solid #666;
-}
+          }
 
+          .value {
+            margin-top: 4px;
+          }
 
-.value {
-margin-top: 4px;
-}
+          .right-section .value {
+            font-size: ;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
 
-  .right-section .value {
-    font-size: ;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .right-section .label {
-    font-size: 13px;
-    color: #666;
-  /*  border-bottom: 1px solid #ddd;
+          .right-section .label {
+            font-size: 13px;
+            color: #666;
+            /*  border-bottom: 1px solid #ddd;
 border-right: 1px solid #ddd;*/
+            text-align: center;
+            width: 100%;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+          }
 
-text-align: center;
-width:100%;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-  }
+          .right-section .no-border {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+        </style>
 
-  .right-section .no-border {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-</style>
+        <div class="card">
 
-<div class="card">
+          <div style="display: flex; flex-direction: column;">
+            <div class="left-section">
+              <div class="photo-container">
+                <img src="https://karinapiha.com/kp.jpg" />
+                <div class="verified-icon"><i class="fas fa-check"></i>
+                </div>
+              </div>
+              <div class="name">Karina Piha</div>
+              <div class="superhost"> Airbnb Superhost</div>
 
-<div style="display: flex; flex-direction: column;">
-  <div class="left-section">
-    <div class="photo-container">
-      <img src="https://karinapiha.com/kp.jpg"/>                                                     
-      <div class="verified-icon"><i class="fas fa-check"></i>
-</div>
-    </div>
-    <div class="name">Karina Piha</div>
-    <div class="superhost"> Airbnb Superhost</div>
+            </div>
+            <br /><br />
+            <div class="right-section">
+              <div>
+                <div class="value">127</div>
+                <div class="label">Airbnb Reviews</div>
+              </div>
+              <div>
+                <div class="value">4.91</div>
+                <div class="label">Airbnb Rating</div>
+              </div>
+              <div>
+                <div class="value">9</div>
+                <div class="label no-border">Years Hosting</div>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          <div classe="" style="width:100%">
+            <p style="font-weight: bold;">My Work: <span style="color: #666; font-weight: 400;"> Artist and Yoga Teacher </span>
+              <br /><br />
+              Speaks: <span style="color: #666; font-weight: 400;"> English, German, Portuguese, and Spanish</span>
+              <br /><br />
+              Item 3:<span style="color: #666; font-weight: 400;"> Something</span>
+            </p>
+            <br /><br />
+            <button class="button btn-contact" style="width:100%">Message Host <i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
 
-  </div>
-<br/><br/>
-  <div class="right-section">
-   <div> <div class="value">127</div>
-    <div class="label">Airbnb Reviews</div>
-</div>
-<div>
-    <div class="value">4.91</div>
-    <div class="label">Airbnb Rating</div>
-</div>
-<div>
-    <div class="value">9</div>
-    <div class="label no-border">Years Hosting</div>
-</div>
-  </div>
-</div>
- <br/><br/>
-<div classe="" style="width:100%">
-<p style="font-weight: bold;">My Work: <span style="color: #666; font-weight: 400;"> Artist and Yoga Teacher </span>
-<br/><br/>
-     Speaks: <span style="color: #666; font-weight: 400;"> English, German, Portuguese, and Spanish</span>
-<br/><br/>
-     Item 3:<span style="color: #666; font-weight: 400;"> Something</span> </p>
-<br/><br/>
-    <button class="button btn-contact" style="width:100%">Message Host <i class="fas fa-paper-plane"></i></button>
-</div>
-</div>
-
-  </div>
-  <div class="right-column">
-    <p>I am born and raised in Brazil, lived 16 years in Germany, and now in NZ since 2016. <br/><br/>
-      Initially, we set the lodge to welcome our visiting family and friends from abroad. <br/><br/>
-      The place is decorated as part of our house, designed for the people we love the most.<br/><br/>
-      We have 5 kids (3 live at home), a lovely dog, and a very friendly cat.</p>
-<br/>
-    <button class="button btn-contact">See More <i class="fas fa-external-link-alt"></i></button>
-  </div>
-</section>
-  </div>
       </div>
-<div class="profile">
-<h1>Superhost Airbnb Reviews</h1>
-<div class="reviews">
-    <!-- Review 1 -->
-    <div class="review">
-<style>
-  .stars {
-    color: #ccc;
-font-size:px;
-  }
+      <div class="right-column">
+        <p>I am born and raised in Brazil, lived 16 years in Germany, and now in NZ since 2016. <br /><br />
+          Initially, we set the lodge to welcome our visiting family and friends from abroad. <br /><br />
+          The place is decorated as part of our house, designed for the people we love the most.<br /><br />
+          We have 5 kids (3 live at home), a lovely dog, and a very friendly cat.</p>
+        <br />
+        <button class="button btn-contact">See More <i class="fas fa-external-link-alt"></i></button>
+      </div>
+    </section>
+  </div>
+  </div>
+  <div class="profile">
+    <h1>Superhost Airbnb Reviews</h1>
+    <div class="reviews">
+      <!-- Review 1 -->
+      <div class="review">
+        <style>
+          .stars {
+            color: #ccc;
+            font-size: px;
+          }
 
-  .stars .filled {
-    color: #f90;
-  }
+          .stars .filled {
+            color: #f90;
+          }
+        </style>
 
-</style>
-
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
 
         <p>Excellent host! The house is very comfortable and clean.</p>
         <p>- John</p>
-    </div>
-    <!-- Review 2 -->
-    <div class="review">
+      </div>
+      <!-- Review 2 -->
+      <div class="review">
 
-
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
         <p>It was an incredible experience! The superhost was very attentive.</p>
         <p>- Mary</p>
-    </div>
-    <!-- Review 3 -->
-    <div class="review">
+      </div>
+      <!-- Review 3 -->
+      <div class="review">
 
-
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
         <p>The house is very well located and the superhost is very helpful.</p>
         <p>- Peter</p>
-    </div>
-    <!-- Review 4 -->
-    <div class="review">
+      </div>
+      <!-- Review 4 -->
+      <div class="review">
 
-
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
         <p>I loved the decoration of the house! It's very cozy.</p>
         <p>- Anna</p>
-    </div>
-    <!-- Review 5 -->
-    <div class="review">
+      </div>
+      <!-- Review 5 -->
+      <div class="review">
 
-
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
         <p>The superhost was very communicative and attentive.</p>
         <p>- Charles</p>
-    </div>
-    <!-- Review 6 -->
-    <div class="review">
-                                                       
-<div class="stars">
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star filled"></i>
-  <i class="fas fa-star-half-alt filled"></i>
-</div>
-<!--<img style="width:50px; height:50px; border-radius:100%;" src="https://karinapiha.com/kp.jpg"/>  -->  
+      </div>
+      <!-- Review 6 -->
+      <div class="review">
+
+        <div class="stars">
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star filled"></i>
+          <i class="fas fa-star-half-alt filled"></i>
+        </div>
+        <!--<img style="width:50px; height:50px; border-radius:100%;" src="https://karinapiha.com/kp.jpg"/>  -->
         <p>The house is very clean and comfortable. I highly recommend!</p>
         <p><i class="fa-regular fa-user"></i> - Laura</p>
+      </div>
+
     </div>
-   
-</div>
-<br/><br/>
-<div style="width:100%; text-align:center;">
-<a href="more-reviews.html" target="_blank" class="btn-contact">See More <i class="fas fa-external-link-alt"></i></a>
-</div>
-<br/><br/><br/><br/>
-<footer style="bottom:0; padding: 5px 0;">
-    <p style="bottom:0;margin:0">© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
-  </footer>
+    <br /><br />
+    <div style="width:100%; text-align:center;">
+      <a href="more-reviews.html" target="_blank" class="btn-contact">See More <i class="fas fa-external-link-alt"></i></a>
+    </div>
+    <br /><br /><br /><br />
+    <!--  -->
+    <style>
+      #card_slider {
+        clear: both;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        height: 235px;
+        margin-top: 20px;
+        position: relative;
+        padding-left: 5px;
+        padding-top: 0px;
+      }
+
+      #card_slider::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      #card_slider::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+        border-radius: 0px;
+      }
+
+      #card_slider::-webkit-scrollbar-thumb {
+        background-color: #5d646c;
+        border-radius: 0px;
+      }
+
+      #card_track {
+        position: absolute;
+        width: 2000px;
+      }
+
+      .subject_card {
+        border-radius: 8px;
+        height: 215px;
+        width: 178px;
+        background-color: #fff;
+        color: #5d646c;
+        float: left;
+        margin-right: 20px;
+        display: inline;
+        box-shadow: 0px 2px 4px 0px rgb(82, 82, 88);
+      }
+
+      .subject_card>img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 178px;
+        height: 135px;
+        display: block;
+      }
+
+      .subject_card>p {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 5px;
+        overflow: hidden;
+        max-height: 60px;
+      }
+    </style>
+    <h1></h1>
+
+    <div id="card_slider">
+      <div id="card_track">
+        <a href="  ">
+          <div class="subject_card">
+            <img src="  " />
+
+            <p>Title #1</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #2</p>
+          </div>
+        </a>
+
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #3</p>
+          </div>
+        </a>
+        <a href="  ">
+          <div class="subject_card">
+            <img src=" " />
+            <p>Title #4</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <br /><br /><br /><br />
+    <footer style="bottom:0; padding: 5px 0;">
+      <p style="bottom:0;margin:0">© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
+    </footer>
 </body>
 <script>
   // Obtém o ano atual com base no horário do navegador
@@ -942,8 +1050,5 @@ font-size:px;
   // Insere o ano no elemento do footer
   document.getElementById("current-year").textContent = currentYear;
 </script>
+
 </html>
-
-
-
-
