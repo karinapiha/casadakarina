@@ -623,32 +623,20 @@
     overflow: hidden;
   }
 
-  /* Atualize o .slider-container */
-  .slider-container {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* O slide ocupará 100% da altura da tela */
-    /* overflow: hidden;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff; */
-    /* Fundo para evitar áreas "vazias" */
-  }
+.slider-container {
+  display: flex;
+  position: relative;
+  width: 500%; /* 5 imagens = 5 * 100% */
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
+}
 
-  /* Atualize os slides individuais */
-  .slide {
-    width: 100%;
-    /* Preenche toda a largura do contêiner */
-    height: 100%;
-    /* Preenche toda a altura */
-    object-fit: cover;
-    /* Faz a imagem se ajustar sem distorção */
-    flex-shrink: 0;
-    /* Garante que os slides não diminuam de tamanho */
-  }
-
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
   @media screen and (max-width: 768px) {
     .slider-container {
       height: 70vh;
