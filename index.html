@@ -1030,13 +1030,22 @@
     'private-sleepout-slider': 0
   };
 
-  function showSlide(index, sliderId) {
-    const slides = document.querySelectorAll(`#${sliderId} .slide`);
-    if (index >= slides.length) slideIndex[sliderId] = 0;
-    if (index < 0) slideIndex[sliderId] = slides.length - 1;
-    const newTransformValue = -slideIndex[sliderId] * 100;
-    document.querySelector(`#${sliderId} .slider-container`).style.transform = `translateX(${newTransformValue}%)`;
+function showSlide(index, sliderId) {
+  const slides = document.querySelectorAll(`#${sliderId} .slide`);
+  
+  // Corrige o índice antes de usá-lo
+  if (index >= slides.length) {
+    slideIndex[sliderId] = slides.length - 1; // Mantém no último slide
+  } else if (index < 0) {
+    slideIndex[sliderId] = 0; // Mantém no primeiro slide
+  } else {
+    slideIndex[sliderId] = index;
   }
+
+  const newTransformValue = -slideIndex[sliderId] * 100;
+  document.querySelector(`#${sliderId} .slider-container`).style.transform = `translateX(${newTransformValue}%)`;
+}
+
 
   function moveSlide(step, sliderId) {
     slideIndex[sliderId] += step;
