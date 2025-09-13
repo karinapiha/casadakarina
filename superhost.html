@@ -563,9 +563,7 @@
     }
 
     i.fa-regular.fa-user {
-    border: 1px solid #333;
-    width: 20px;
-    height: 20px;
+    /* border: 1px solid #333; */
     line-height: 2;
     border-radius: 50%;
     font-size: 10px;
@@ -598,19 +596,26 @@
     }
 
     .review p {
-  height: 121px;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 5px;
     text-align: center;
     font-weight: 300;
+      height: 120px;
     }
 
     .review p:last-child {
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 0;
+     font-weight: 400;
+    color: #333;
+    margin-bottom: 0;
+    font-size: 12px;
+      height: 52px;
     }
+
+    .review p:last-child span {
+    color: #666;
+    font-weight: 400;
+}
 
     @media (max-width: 768px) {
       .review {
@@ -927,8 +932,10 @@ border-right: 1px solid #ddd;*/
       <div class="review">
         <style>
           .stars {
-            color: #ccc;
-            font-size: 13px;
+          color: #ccc;
+    font-size: 13px;
+    height: 20px;
+    padding-top: 10px;
           }
 
    .stars .filled {
@@ -1353,6 +1360,7 @@ Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
 </script>
 
 </html>
+
 
 
 
