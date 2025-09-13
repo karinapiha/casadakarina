@@ -672,12 +672,15 @@ li {
       object-fit: cover;
       flex-shrink: 0;
     }
-
+ .mobile-off {display:block}
+      .mobile-on {display:none}
     @media screen and (max-width: 768px) {
       .slider-container {
         height: 70vh;
         /* Reduza a altura em telas pequenas */
       }
+      .mobile-off {display:none}
+      .mobile-on {display:block}
     }
 
     button.next,
@@ -957,7 +960,7 @@ ease;
 
  <br/> <br/>
      <div class="accommodation-item">
-        <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="" >
+        <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-off" >
      <div class="accommodation-info">
         <div class="rating-box">
           <span class="rating-text-large">★ 4.91 / 5</span>
@@ -993,7 +996,7 @@ You will have your own private room and bathroom away from the main house but in
 
       </div>
      
-     
+       <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-on" >
     </div>
 
     
