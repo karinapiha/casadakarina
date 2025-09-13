@@ -570,6 +570,58 @@
     border-radius: 50%;
     font-size: 10px;
 }
+
+    
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .review {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+      /* width: calc(33.33% - 40px);*/
+      width: 23.33%;
+      height: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .review p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .review p:last-child {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .review {
+        /* width: calc(33.33% - 20px);*/
+        width: 27%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .review {
+        width: 100%;
+        margin
+      }
+    }
+
   </style>
 </head>
 
@@ -960,7 +1012,6 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <!--<img style="width:50px; height:50px; border-radius:100%;" src="https://karinapiha.com/kp.jpg"/>  -->
         <p>Karina was a very friendly host who organized some treats, much appreciated. </p>
         <p><i class="fa-regular fa-user"></i> - <bold>Michelle</bold> - 
 <span>Cambridge, New Zealand</span> </p>
@@ -1298,6 +1349,7 @@ Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
 </script>
 
 </html>
+
 
 
 
