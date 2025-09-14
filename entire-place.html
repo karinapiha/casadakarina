@@ -243,14 +243,18 @@
 @layers general, demo;
 @layer demo {
 	.grid {
-		display: grid;
-		gap: 0.5rem;
-		grid-template-columns: 2fr 1fr 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		max-width: 900px;
-		height: 600px;
+	display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 100%;
+    height: 300px;
 	}
-
+	
+.grid img:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
 	.item {
 		overflow: hidden;
 	}
