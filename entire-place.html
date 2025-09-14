@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
     body {
       font-family: 'Josefin Sans', sans-serif;
       margin: 0;
@@ -364,7 +371,8 @@ text-align: center;
 
 <body>
   <div style="height: 13px"></div>
-  <header class="header" style="position: fixed;">
+  <header class="header" style="position: fixed;margin-top: -13px;
+    padding: 7px 0;">
     <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
            width: 54px;
     margin-top: 0px;
