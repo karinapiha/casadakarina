@@ -223,46 +223,58 @@
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-  width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
   display: block;
   object-fit: cover;
   transition: transform 0.3s ease;
   cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Wrapper para cada imagem */
+.gallery-item {
+  flex: 1 1 300px;
+  max-width: 300px;
 }
 
 .gallery img:hover {
   transform: scale(1.03);
 }
 
+
   </style>
- <div class="container">
-   <h2>Casa da Karina</h2>
-            <div class="gallery">
-                <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Gallery image 1" />
-                
-                    <img src="./images/%20entire-place/1dec1547-3168-47b4-99cf-c39921cca984.jpeg" alt="Gallery image 2" />
-            
-                    <img src="./images/%20entire-place/2a10c2a3-e578-455b-8ec0-9fbd1fd26635.jpeg" alt="Gallery image 3" />
-              
-                    <img src="./images/%20entire-place/56ff6190-a338-41c5-a18b-b62759dc05a6.jpg" alt="Gallery image 4" />
-               
-                    <img src="./images/%20entire-place/7926679f-8835-4cc8-a5f0-b38c38d3d556.jpeg" alt="Gallery image 5" />
-     
-            </div>
-    <h3 class="section-subtitle">Entire Home • Havelock North, New Zealand</h3>
-       <p>8 Guests | 4 Bedrooms | 6 Beds | 1 Bath</p>
- </div>
+<div class="container">
+  <h2>Casa da Karina</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Gallery image 1" />
+    </div>
+    <div class="gallery-item">
+      <img src="./images/%20entire-place/1dec1547-3168-47b4-99cf-c39921cca984.jpeg" alt="Gallery image 2" />
+    </div>
+    <div class="gallery-item">
+      <img src="./images/%20entire-place/2a10c2a3-e578-455b-8ec0-9fbd1fd26635.jpeg" alt="Gallery image 3" />
+    </div>
+    <div class="gallery-item">
+      <img src="./images/%20entire-place/56ff6190-a338-41c5-a18b-b62759dc05a6.jpg" alt="Gallery image 4" />
+    </div>
+    <div class="gallery-item">
+      <img src="./images/%20entire-place/7926679f-8835-4cc8-a5f0-b38c38d3d556.jpeg" alt="Gallery image 5" />
+    </div>
+  </div>
+  <h3 class="section-subtitle">Entire Home • Havelock North, New Zealand</h3>
+  <p>8 Guests | 4 Bedrooms | 6 Beds | 1 Bath</p>
+</div>
+
 
   <footer>
     <p>© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
