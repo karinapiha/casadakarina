@@ -1,1 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casa da Karina ★4.97 Superhost. Your home away from home in Havelock North, New Zealand. 4 beds, 1 bath. Book now!">
+  <title>Entire Place - Casa da Karina - NZ </title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+      background: #fff;
+    }
 
+    h1,
+    h2,
+    a {
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* header */
+    /* https://codepen.io/mutedblues/pen/MmPNPG */
+    .header {
+      /*
+            background: #fff;
+            position: fixed;
+            */
+      background: #fff;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .header ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    /* menu */
+    .header li a {
+      display: block;
+      padding: 20px 20px;
+      border-bottom: 2px solid #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      /* Aqui é onde o tamanho da fonte do menu é definido */
+    }
+
+    @media (min-width: 48em) {
+      .header li a {
+        font-size: .9725rem;
+        /* Aumente o tamanho da fonte para telas maiores */
+      }
+    }
+
+    .header li a:hover,
+    .header .menu-btn:hover {
+      border-bottom: 2px solid;
+    }
+
+    /* menu */
+    ul.menu {
+      background: #fff;
+    }
+
+    .header .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-out;
+    }
+
+    /* menu icon */
+    .header .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 28px 20px;
+      position: relative;
+      user-select: none;
+    }
+
+    .header .menu-icon .navicon {
+      background: #333;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+    }
+
+    .header .menu-icon .navicon:before,
+    .header .menu-icon .navicon:after {
+      background: #333;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+
+    .header .menu-icon .navicon:before {
+      top: 5px;
+    }
+
+    .header .menu-icon .navicon:after {
+      top: -5px;
+    }
+
+    /* menu btn */
+    .header .menu-btn {
+      display: none;
+    }
+
+    .header .menu-btn:checked~.menu {
+      max-height: 100vh;
+    }
+
+    .header .menu-btn:checked~.menu-icon .navicon {
+      background: transparent;
+    }
+
+    .header .menu-btn:checked~.menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+
+    .header .menu-btn:checked~.menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+
+    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }
+
+    /* 48em = 768px */
+    @media (min-width: 48em) {
+      .header li {
+        float: left;
+      }
+
+      .header li a {
+        padding: 20px 14px;
+      }
+
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-right: 20px;
+      }
+
+      .header .menu-icon {
+        display: none;
+      }
+    }
+
+    /* Welcome */
+    .welcome {
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      width: 100%;
+    }
+
+    .welcome h2 {
+      margin: 15px;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 0.2375rem;
+    }
+
+    .welcome p {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.2375rem;
+      margin: 0;
+    }
+
+    @media (max-width: 48em) {
+      .welcome h2 {
+        font-size: 3rem;
+      }
+
+      .welcome p {
+        font-size: 1.8rem;
+      }
+
+      ul.menu {
+        background: white;
+      }
+    }
+
+    /*Gallery*/
+    .gallery {
+      display: flex;
+      width: 100%;
+      gap: 43px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .artwork {
+      text-align: center;
+      width: 360px;
+      height: 430px;
+    }
+
+    .artwork img {
+      width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .artwork img:hover {
+      transform: scale(1.05);
+    }
+
+    .artwork h3,
+    .artwork p {
+      margin: 5px 0;
+    }
+
+    .artwork h3 {
+      text-transform: uppercase;
+      margin-top: 11px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .artwork p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    footer {
+    background: #fff;
+      color: #333333;
+      text-align: center;
+      /* padding: 10px; */
+      font-size: 1rem;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (min-width: 48em) {
+      footer {
+        font-size: 1.125rem;
+        /* Aumente o tamanho da fonte do footer para telas grandes */
+      }
+    }
+
+    .welcome a {
+      border: 1px solid #333;
+      padding: 19px 19px;
+    }
+
+    main#home {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 90vh;
+    }
+
+    /* Contact Section */
+    main#home .contact {
+      width: 55%;
+      text-align: center;
+      padding: 40px 20px;
+      /* margin-bottom: 40px; */
+      border-radius: 8px;
+      /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    }
+
+    @media (max-width: 48em) {
+      main#home .contact {
+        width: 75%;
+      }
+    }
+
+    main#home .contact h2 {
+      font-size: 2.5rem;
+      color: #333;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    main#home .contact p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 20px;
+      letter-spacing: 0px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    main#home .contact .btn-contact {
+      font-size: 1rem;
+      color: #333;
+      background: #fff;
+      padding: 19px 20px;
+      border-radius: 4px;
+      border: 1px solid #333;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    main#home .contact .btn-contact:hover {
+      border: 1px solid #000000;
+      color: #000;
+    }
+
+    main#home .contact .more-info {
+      margin-top: 40px;
+text-align: center;
+    }
+
+    main#home .contact .more-info h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    main#home .contact .more-info p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    main#home .contact .more-info a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    main#home .contact .more-info a:hover {
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="height: 13px"></div>
+  <header class="header" style="position: fixed;">
+    <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
+           width: 54px;
+    margin-top: 0px;
+    margin-left: 9px;" />
+
+    <input class=" menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./entire-place.html">Entire Place</a></li>
+      <li><a href="./private-sleepout.html">Private Sleepout</a></li>
+      <li><a href="./superhost.html">SuperHost</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <style>
+    /*https://codepen.io/vkanet/pen/rbmRoB*/
+.container {
+  width: 100%;
+  margin: 2rem auto; 
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 1.5rem; 
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.gallery__item--5 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+  </style>
+ <div class="container">
+   <h2>Casa da Karina</h2>
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="./images/%20entire-place/1dec1547-3168-47b4-99cf-c39921cca984.jpeg" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="./images/%20entire-place/2a10c2a3-e578-455b-8ec0-9fbd1fd26635.jpeg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="./images/%20entire-place/56ff6190-a338-41c5-a18b-b62759dc05a6.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="./images/%20entire-place/7926679f-8835-4cc8-a5f0-b38c38d3d556.jpeg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+     
+            </div>
+    <h3 class="section-subtitle">Entire Home • Havelock North, New Zealand</h3>
+       <p>8 Guests | 4 Bedrooms | 6 Beds | 1 Bath</p>
+ </div>
+
+  <footer>
+    <p>© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  // Obtém o ano atual com base no horário do navegador
+  const currentYear = new Date().getFullYear();
+  // Insere o ano no elemento do footer
+  document.getElementById("current-year").textContent = currentYear;
+</script>
+
+</html>
