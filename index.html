@@ -796,33 +796,34 @@ li {
     object-fit: cover;
 }
     .btn {
-          display: flex;
+             border: 1px solid #333;
+    display: flex
+;
     padding: 8px 12px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    color: white;
+    color: #333;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s 
 ease;
-    /* align-content: center; */
     justify-content: center;
     align-items: center;
     }
 
     .btn.view-more {
-      background-color: #0073e6;
+      background-color: ;
       /* Blue for "View More" */
     }
 
     .btn.reserve-airbnb {
-      background-color: #ff5a5f;
+      background-color: ;
       /* Airbnb's signature color */
     }
 
     .btn.reserve-direct {
-      background-color: #2ecc71;
+      background-color: ;
       /* Green for direct booking */
     }
 
@@ -960,10 +961,19 @@ ease;
         </div>
 
         <div class="buttons-container">
-          <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight">✅ Book Directly – Best Price</a>
-          <a href="./entire-place.html" class="btn view-more">View More Details</a>
-          <a href="https://www.airbnb.com/rooms/41800361?source_impression_id=p3_1757768708_P3yOzVK_U5yEg0VN" target="_blank" class="btn reserve-airbnb subtle">or Reserve on Airbnb</a>
-        </div>
+      
+<a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight">
+  <i class="fab fa-whatsapp"></i> Book Directly – Best Price
+</a>
+
+<a href="./entire-place.html" class="btn view-more">
+  <i class="fas fa-info-circle"></i> View More Details
+</a>
+
+<a href="https://www.airbnb.com/rooms/41800361?source_impression_id=p3_1757768708_P3yOzVK_U5yEg0VN" target="_blank" class="btn reserve-airbnb subtle">
+  <i class="fas fa-home"></i> or Reserve on Airbnb
+</a>
+ </div>
 
       </div>
 
