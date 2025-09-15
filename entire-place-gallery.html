@@ -1,1570 +1,1034 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Casa da Karina ★4.97 Superhost. Your home away from home in Havelock North, New Zealand. 4 beds, 1 bath. Book now!">
-  <title>Host Profile - Casa da Karina - NZ </title>
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-  i.fas.fa-check-circle.icon-check {
-    color: #333;
-    font-size: 21px;
-    background: #fff;
-    position: absolute;
-    bottom: 10px;
-    right: 11px;
-    top: 53px;
-    /* color: white; */
-    border-radius: 50%;
-    /* width: 20px; */
-    /* height: 20px; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 300px) {
- .card {
-            width: 226px;
-            background: red;
-          }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Casa da Karina ★4.97 Superhost. Your home away from home in Havelock North, New Zealand. 4 beds, 1 bath. Book now!">
+	<title>Host Profile - Casa da Karina - NZ </title>
+	<link rel="icon" type="image/png" href="./images/favicon.png">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<style>
+		i.fas.fa-check-circle.icon-check {
+			color: #333;
+			font-size: 21px;
+			background: #fff;
+			position: absolute;
+			bottom: 10px;
+			right: 11px;
+			top: 53px;
+			/* color: white; */
+			border-radius: 50%;
+			/* width: 20px; */
+			/* height: 20px; */
+			/* display: flex; */
+			/* justify-content: center; */
+			/* align-items: center; */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
 
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
-}
-  
-</style>
-  <style>
-    body {
-      font-family: 'Josefin Sans', sans-serif;
-      margin: 0;
-      background: #fff;
-    }
+		@media (max-width: 300px) {
+			.card {
+				width: 226px;
+				background: red;
+			}
 
-    h1,
-    h2,
-    a {
-      color: #333;
-    }
+			.right-section>div {
+				width: 70px;
+				margin: 0;
+			}
+		}
+	</style>
+	<style>
+		body {
+			font-family: 'Josefin Sans', sans-serif;
+			margin: 0;
+			background: #fff;
+		}
 
-    h1,
-    h2 {
-      font-size: 2.5rem;
-      color: #333;
-      font-weight: 300;
-      margin-bottom: 20px;
-    }
+		h1,
+		h2,
+		a {
+			color: #333;
+		}
 
-    a {
-      text-decoration: none;
-    }
+		h1,
+		h2 {
+			font-size: 2.5rem;
+			color: #333;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
 
-    /* header */
-    /* https://codepen.io/mutedblues/pen/MmPNPG */
-    .header {
-      /*
+		a {
+			text-decoration: none;
+		}
+
+		/* header */
+		/* https://codepen.io/mutedblues/pen/MmPNPG */
+		.header {
+			/*
             background: #fff;
             position: fixed;
             */
-      background: #fff;
-      width: 100%;
-      z-index: 3;
-    }
-
-    .header ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      overflow: hidden;
-    }
-
-    /* menu */
-    .header li a {
-      display: block;
-      padding: 20px 20px;
-      border-bottom: 2px solid #fff;
-      text-decoration: none;
-      font-size: 1rem;
-      /* Aqui é onde o tamanho da fonte do menu é definido */
-    }
-
-    @media (min-width: 48em) {
-
-      .header li a,
-      footer p {
-        font-size: .9725rem;
-        /* Aumente o tamanho da fonte para telas maiores */
-      }
-    }
-
-    .header li a:hover,
-    .header .menu-btn:hover {
-      border-bottom: 2px solid;
-    }
-
-    /* menu */
-    ul.menu {
-      background: #fff;
-    }
-
-    .header .menu {
-      clear: both;
-      max-height: 0;
-      transition: max-height .2s ease-out;
-    }
-
-    /* menu icon */
-    .header .menu-icon {
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      padding: 28px 20px;
-      position: relative;
-      user-select: none;
-    }
-
-    .header .menu-icon .navicon {
-      background: #333;
-      display: block;
-      height: 2px;
-      position: relative;
-      transition: background .2s ease-out;
-      width: 18px;
-    }
-
-    .header .menu-icon .navicon:before,
-    .header .menu-icon .navicon:after {
-      background: #333;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all .2s ease-out;
-      width: 100%;
-    }
-
-    .header .menu-icon .navicon:before {
-      top: 5px;
-    }
-
-    .header .menu-icon .navicon:after {
-      top: -5px;
-    }
-
-    /* menu btn */
-    .header .menu-btn {
-      display: none;
-    }
-
-    .header .menu-btn:checked~.menu {
-      max-height: 100vh;
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon {
-      background: transparent;
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon:before {
-      transform: rotate(-45deg);
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon:after {
-      transform: rotate(45deg);
-    }
-
-    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-      top: 0;
-    }
-
-    /* 48em = 768px */
-    @media (min-width: 48em) {
-      .header li {
-        float: left;
-      }
-
-      .header li a {
-        padding: 20px 14px;
-      }
-
-      .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-        margin-right: 20px;
-      }
-
-      .header .menu-icon {
-        display: none;
-      }
-    }
-
-    /* Welcome */
-    .welcome {
-      text-align: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #333;
-      width: 100%;
-    }
-
-    .welcome h2 {
-      margin: 15px;
-      font-size: 3rem;
-      font-weight: 300;
-      letter-spacing: 0.2375rem;
-    }
-
-    .welcome p {
-      font-size: 2rem;
-      font-weight: 300;
-      letter-spacing: 0.2375rem;
-      margin: 0;
-    }
-
-    @media (max-width: 48em) {
-      .welcome h2 {
-        font-size: 3rem;
-      }
-
-      .welcome p {
-        font-size: 1.8rem;
-      }
-
-      ul.menu {
-        background: #fff;
-      }
-    }
-
-    /*Gallery*/
-    .gallery {
-      display: flex;
-      width: 100%;
-      gap: 43px;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-    }
-
-    .artwork {
-      text-align: center;
-      width: 360px;
-      height: 430px;
-    }
-
-    .artwork img {
-      width: 100%;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .artwork img:hover {
-      transform: scale(1.05);
-    }
-
-    .artwork h3,
-    .artwork p {
-      margin: 5px 0;
-    }
-
-    .artwork h3 {
-      text-transform: uppercase;
-      margin-top: 11px;
-      font-size: 15px;
-      color: #333;
-    }
-
-    .artwork p {
-      font-size: 18px;
-      color: #555;
-    }
-
-    footer {
-      background: #fff;
-      color: #333333;
-      text-align: center;
-      /* padding: 10px; */
-      font-size: 1rem;
-      bottom: 0;
-      text-align: center;
-      width: 100%;
-    }
-
-    @media (min-width: 48em) {
-      footer {
-        font-size: 1.125rem;
-        /* Aumente o tamanho da fonte do footer para telas grandes */
-      }
-    }
-
-    .welcome a {
-      border: 1px solid #333;
-      padding: 19px 19px;
-    }
-
-    main#home {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-    }
-
-    /* Contact Section */
-    main#home .contact {
-      width: 55%;
-      text-align: center;
-      padding: 40px 20px;
-      /* margin-bottom: 40px; */
-      border-radius: 8px;
-      /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
-    }
-
-    @media (max-width: 48em) {
-      main#home .contact {
-        width: 75%;
-      }
-    }
-
-    main#home .contact h2 {
-      font-size: 2.5rem;
-      color: #333;
-      font-weight: 300;
-      margin-bottom: 20px;
-    }
-
-    main#home .contact p {
-      font-size: 1.2rem;
-      color: #333;
-      margin-bottom: 20px;
-      letter-spacing: 3px;
-      font-weight: 300;
-      line-height: 1.2;
-    }
-
-    main#home .contact .btn-contact {
-      font-size: 1rem;
-      color: #333;
-      background: #fff;
-      padding: 19px 20px;
-      border-radius: 4px;
-      border: 1px solid #333;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-
-    main#home .contact .btn-contact:hover {
-      border: 1px solid #000000;
-      color: #000;
-    }
-
-    main#home .contact .more-info {
-      margin-top: 40px;
-    }
-
-    main#home .contact .more-info h3 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    main#home .contact .more-info p {
-      font-size: 1.2rem;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    main#home .contact .more-info a {
-      color: #333;
-      text-decoration: underline;
-    }
-
-    main#home .contact .more-info a:hover {
-      color: #555;
-    }
-
-    /** Profile **/
-    .profile {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .info-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .info {
-      flex: 1 1 auto;
-      margin: 20px;
-    }
-
-    .s {
-      margin-bottom: 20px;
-    }
-
-    .info img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 20px auto;
-    }
-
-    .info h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .info p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
-    .mobile-block {
-      display: none
-    }
-
-    @media (max-width: 768px) {
-      .info {
-        flex: 1 1 100%;
-        margin: 10px 0;
-      }
-    }
-
-    max-width: 80%;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    /**box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);**/
-    }
-
-    .info-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .info {
-      flex: 1 1 auto;
-      margin: 20px;
-    }
-
-    .s {
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .info {
-        flex: 1 1 100%;
-        margin: 10px 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .mobile-none {
-        display: none;
-      }
-
-      .profile {
-        padding: 10px;
-      }
-      .card { width: 100% !important;
-      }
-      .right-section>div {
-   
-    width: 70px !important;
-        margin: 0 !important;
-    
-}
-    }
-
-    .info img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 50%;
-    }
-
-    .btn-contact {
-      font-size: 1rem;
-      color: #333;
-      background: #fff;
-      padding: 19px 20px;
-      border-radius: 4px;
-      border: 1px solid #333;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-contact:hover {
-      border: 1px solid #000000;
-      color: #000;
-    }
-
-    .s {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    . {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      padding: 20px;
-      margin: 10px;
-      border: 1px solid #333;
-      border-radius: 10px;
-      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-      /* width: calc(33.33% - 40px);*/
-      width: 23.33%;
-      height: 200px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    . p {
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 5px;
-      text-align: center;
-    }
-
-    . p:last-child {
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-      . {
-        /* width: calc(33.33% - 20px);*/
-        width: 27%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      . {
-        width: 100%;
-        margin
-      }
-    }
-
-    i.fa-regular.fa-user {
-    /* border: 1px solid #333; */
-    line-height: 2;
-    border-radius: 50%;
-    font-size: 10px;
-}
-
-    
-    .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .review {
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* width: calc(33.33% - 40px); */
-    width: 23.33%;
-    height: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-content: center;
-    flex-wrap: nowrap;
-    }
-
-    .review p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-weight: 300;
-      height: 152px;
-    }
-
-    .review p:last-child {
-     font-weight: 400;
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-      height: 52px;
-    }
-
-    .review p:last-child span {
-    color: #666;
-    font-weight: 400;
-}
-
-    @media (max-width: 768px) {
-      .review {
-        /* width: calc(33.33% - 20px);*/
-        width: 27%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .review {
-        width: 100%;
-        margin
-      }
-    }
-
-  </style>
+			background: #fff;
+			width: 100%;
+			z-index: 3;
+		}
+
+		.header ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			overflow: hidden;
+		}
+
+		/* menu */
+		.header li a {
+			display: block;
+			padding: 20px 20px;
+			border-bottom: 2px solid #fff;
+			text-decoration: none;
+			font-size: 1rem;
+			/* Aqui é onde o tamanho da fonte do menu é definido */
+		}
+
+		@media (min-width: 48em) {
+
+			.header li a,
+			footer p {
+				font-size: .9725rem;
+				/* Aumente o tamanho da fonte para telas maiores */
+			}
+		}
+
+		.header li a:hover,
+		.header .menu-btn:hover {
+			border-bottom: 2px solid;
+		}
+
+		/* menu */
+		ul.menu {
+			background: #fff;
+		}
+
+		.header .menu {
+			clear: both;
+			max-height: 0;
+			transition: max-height .2s ease-out;
+		}
+
+		/* menu icon */
+		.header .menu-icon {
+			cursor: pointer;
+			display: inline-block;
+			float: right;
+			padding: 28px 20px;
+			position: relative;
+			user-select: none;
+		}
+
+		.header .menu-icon .navicon {
+			background: #333;
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background .2s ease-out;
+			width: 18px;
+		}
+
+		.header .menu-icon .navicon:before,
+		.header .menu-icon .navicon:after {
+			background: #333;
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			transition: all .2s ease-out;
+			width: 100%;
+		}
+
+		.header .menu-icon .navicon:before {
+			top: 5px;
+		}
+
+		.header .menu-icon .navicon:after {
+			top: -5px;
+		}
+
+		/* menu btn */
+		.header .menu-btn {
+			display: none;
+		}
+
+		.header .menu-btn:checked~.menu {
+			max-height: 100vh;
+		}
+
+		.header .menu-btn:checked~.menu-icon .navicon {
+			background: transparent;
+		}
+
+		.header .menu-btn:checked~.menu-icon .navicon:before {
+			transform: rotate(-45deg);
+		}
+
+		.header .menu-btn:checked~.menu-icon .navicon:after {
+			transform: rotate(45deg);
+		}
+
+		.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+		.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+			top: 0;
+		}
+
+		/* 48em = 768px */
+		@media (min-width: 48em) {
+			.header li {
+				float: left;
+			}
+
+			.header li a {
+				padding: 20px 14px;
+			}
+
+			.header .menu {
+				clear: none;
+				float: right;
+				max-height: none;
+				margin-right: 20px;
+			}
+
+			.header .menu-icon {
+				display: none;
+			}
+		}
+
+		/* Welcome */
+		.welcome {
+			text-align: center;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #333;
+			width: 100%;
+		}
+
+		.welcome h2 {
+			margin: 15px;
+			font-size: 3rem;
+			font-weight: 300;
+			letter-spacing: 0.2375rem;
+		}
+
+		.welcome p {
+			font-size: 2rem;
+			font-weight: 300;
+			letter-spacing: 0.2375rem;
+			margin: 0;
+		}
+
+		@media (max-width: 48em) {
+			.welcome h2 {
+				font-size: 3rem;
+			}
+
+			.welcome p {
+				font-size: 1.8rem;
+			}
+
+			ul.menu {
+				background: #fff;
+			}
+		}
+
+		/*Gallery*/
+		.gallery {
+			display: flex;
+			width: 100%;
+			gap: 43px;
+			flex-wrap: wrap;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+		}
+
+		.artwork {
+			text-align: center;
+			width: 360px;
+			height: 430px;
+		}
+
+		.artwork img {
+			width: 100%;
+			transition: transform 0.3s ease;
+			cursor: pointer;
+		}
+
+		.artwork img:hover {
+			transform: scale(1.05);
+		}
+
+		.artwork h3,
+		.artwork p {
+			margin: 5px 0;
+		}
+
+		.artwork h3 {
+			text-transform: uppercase;
+			margin-top: 11px;
+			font-size: 15px;
+			color: #333;
+		}
+
+		.artwork p {
+			font-size: 18px;
+			color: #555;
+		}
+
+		footer {
+			background: #fff;
+			color: #333333;
+			text-align: center;
+			/* padding: 10px; */
+			font-size: 1rem;
+			bottom: 0;
+			text-align: center;
+			width: 100%;
+		}
+
+		@media (min-width: 48em) {
+			footer {
+				font-size: 1.125rem;
+				/* Aumente o tamanho da fonte do footer para telas grandes */
+			}
+		}
+
+		.welcome a {
+			border: 1px solid #333;
+			padding: 19px 19px;
+		}
+
+		main#home {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+		}
+
+		/* Contact Section */
+		main#home .contact {
+			width: 55%;
+			text-align: center;
+			padding: 40px 20px;
+			/* margin-bottom: 40px; */
+			border-radius: 8px;
+			/* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+		}
+
+		@media (max-width: 48em) {
+			main#home .contact {
+				width: 75%;
+			}
+		}
+
+		main#home .contact h2 {
+			font-size: 2.5rem;
+			color: #333;
+			font-weight: 300;
+			margin-bottom: 20px;
+		}
+
+		main#home .contact p {
+			font-size: 1.2rem;
+			color: #333;
+			margin-bottom: 20px;
+			letter-spacing: 3px;
+			font-weight: 300;
+			line-height: 1.2;
+		}
+
+		main#home .contact .btn-contact {
+			font-size: 1rem;
+			color: #333;
+			background: #fff;
+			padding: 19px 20px;
+			border-radius: 4px;
+			border: 1px solid #333;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			transition: background-color 0.3s ease;
+			display: inline-block;
+		}
+
+		main#home .contact .btn-contact:hover {
+			border: 1px solid #000000;
+			color: #000;
+		}
+
+		main#home .contact .more-info {
+			margin-top: 40px;
+		}
+
+		main#home .contact .more-info h3 {
+			font-size: 1.8rem;
+			color: #333;
+			margin-bottom: 15px;
+		}
+
+		main#home .contact .more-info p {
+			font-size: 1.2rem;
+			margin: 10px 0;
+			color: #333;
+		}
+
+		main#home .contact .more-info a {
+			color: #333;
+			text-decoration: underline;
+		}
+
+		main#home .contact .more-info a:hover {
+			color: #555;
+		}
+
+		/** Profile **/
+		.profile {
+			max-width: 800px;
+			margin: 40px auto;
+			padding: 20px;
+		}
+
+		.info-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.info {
+			flex: 1 1 auto;
+			margin: 20px;
+		}
+
+		.s {
+			margin-bottom: 20px;
+		}
+
+		.info img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin: 20px auto;
+		}
+
+		.info h3 {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.info p {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+		.mobile-block {
+			display: none
+		}
+
+		@media (max-width: 768px) {
+			.info {
+				flex: 1 1 100%;
+				margin: 10px 0;
+			}
+		}
+
+		max-width: 80%;
+		margin: 40px auto;
+		padding: 20px;
+		background-color: #fff;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		/**box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);**/
+		}
+
+		.info-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.info {
+			flex: 1 1 auto;
+			margin: 20px;
+		}
+
+		.s {
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: 768px) {
+			.info {
+				flex: 1 1 100%;
+				margin: 10px 0;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.mobile-none {
+				display: none;
+			}
+
+			.profile {
+				padding: 10px;
+			}
+
+			.card {
+				width: 100% !important;
+			}
+
+			.right-section>div {
+				width: 70px !important;
+				margin: 0 !important;
+			}
+		}
+
+		.info img {
+			max-width: 200px;
+			height: auto;
+			border-radius: 50%;
+		}
+
+		.btn-contact {
+			font-size: 1rem;
+			color: #333;
+			background: #fff;
+			padding: 19px 20px;
+			border-radius: 4px;
+			border: 1px solid #333;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			transition: background-color 0.3s ease;
+			display: inline-block;
+		}
+
+		.btn-contact:hover {
+			border: 1px solid #000000;
+			color: #000;
+		}
+
+		.s {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		. {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			padding: 20px;
+			margin: 10px;
+			border: 1px solid #333;
+			border-radius: 10px;
+			/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+			/* width: calc(33.33% - 40px);*/
+			width: 23.33%;
+			height: 200px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		. p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+
+		. p:last-child {
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: 768px) {
+			. {
+				/* width: calc(33.33% - 20px);*/
+				width: 27%;
+			}
+		}
+
+		@media (max-width: 480px) {
+			. {
+				width: 100%;
+				margin
+			}
+		}
+
+		i.fa-regular.fa-user {
+			/* border: 1px solid #333; */
+			line-height: 2;
+			border-radius: 50%;
+			font-size: 10px;
+		}
+
+		.reviews {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.review {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			padding: 20px;
+			margin: 10px;
+			border: 1px solid #333;
+			border-radius: 10px;
+			/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+			/* width: calc(33.33% - 40px); */
+			width: 23.33%;
+			height: auto;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			align-content: center;
+			flex-wrap: nowrap;
+		}
+
+		.review p {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 5px;
+			text-align: center;
+			font-weight: 300;
+			height: 152px;
+		}
+
+		.review p:last-child {
+			font-weight: 400;
+			color: #333;
+			margin-bottom: 0;
+			font-size: 12px;
+			height: 52px;
+		}
+
+		.review p:last-child span {
+			color: #666;
+			font-weight: 400;
+		}
+
+		@media (max-width: 768px) {
+			.review {
+				/* width: calc(33.33% - 20px);*/
+				width: 27%;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.review {
+				width: 100%;
+				margin
+			}
+		}
+	</style>
 </head>
 
 <body>
 
-  <header class="header" style="position: fixed; margin-top: 0px; padding-top: 5px">
-    <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
+	<header class="header" style="position: fixed; margin-top: 0px; padding-top: 5px">
+		<img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
            width: 54px;
     margin-top: 0px;
-    margin-left: 9px;" />
-
-    <input class=" menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./entire-place.html">Entire Place</a></li>
-      <li><a href="./private-sleepout.html">Private Sleepout</a></li>
-      <li><a href="./superhost.html">SuperHost</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-    </ul>
-  </header>
-
-  <div class="" style="height: 60px"></div>
-
-  <div class="profile">
-    <h1>Meet Your Host</h1>
-
-    <style>
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-      .left-column {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .right-column {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .right-column p {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 20px;
-        letter-spacing: 3px;
-        font-weight: 300;
-        line-height: 1.2;
-      }
-
-      .image {
-        width: 100%;
-        height: auto;
-        /* object-fit: cover;*/
-        /*margin-bottom: 20px;*/
-      }
-
-      .list {
-        list-style: none;
-        padding-left: 5px;
-        margin: 0;
-        font-weight: 300;
-      }
-
-      .list-item {
-        margin-bottom: 10px;
-      }
-
-      .button {
-        cursor: pointer;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .left-column,
-        .right-column {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .image {
-          height: auto;
-        }
-
-        .button {}
-         .card {
-            width: 226px;
-            
-          }
-
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
-      }
-    </style>
-
-    <section class="container">
-      <div class="left-column">
-        <style>
-@media (max-width: 440px) {
-  .card {
-            width: 226px;
-            
-          }
-
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
-}
-          
-          .card {
-            width: 365px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /* display: flex;*/
-            padding: 30px 20px;
-            border-radius: 10px;
-            border: 1px solid #333;
-          }
-
-          .left-section {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-
-          .left-section .photo-container {
-            position: relative;
-          }
-
-          .left-section img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-          }
-
-          .left-section .verified-icon {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: #333;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          }
-
-          .left-section .verified-icon::before {
-            /*   content: "\2713"; */
-            font-size: 14px;
-            color: #f90;
-          }
-
-          .left-section .name {
-            font-size: ;
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-
-          .left-section .superhost {
-            font-size: ;
-            color: #666;
-          }
-
-          .right-section {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-            border-radius: 4px;
-            border: 1px solid #333;
-            text-align: center;
-          }
-
-          .right-section>div {
-            padding: 0 10px;
-            width: 95px;
-            height: 50px;
-            line-height: 0.9;
-            margin: 8px 0 0 0;
-          }
-
-          .right-section>div:nth-child(2) {
-            border-right: 0.01px solid #666;
-            border-left: 0.01px solid #666;
-          }
-
-          .value {
-            margin-top: 4px;
-          }
-
-          .right-section .value {
-            font-size: ;
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-
-          .right-section .label {
-            font-size: 13px;
-            color: #666;
-            /*  border-bottom: 1px solid #ddd;
-border-right: 1px solid #ddd;*/
-            text-align: center;
-            width: 100%;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-          }
-
-          .right-section .no-border {
-            border-bottom: none;
-            padding-bottom: 0;
-          }
-        </style>
-
-        <div class="card">
-
-          <div style="display: flex; flex-direction: column;">
-            <div class="left-section">
-              <div class="photo-container">
-                <img src="https://karinapiha.com/kp.jpg" />
-                <i class="fas fa-check-circle icon-check"></i> 
-<!--                 <div class="verified-icon"><i class="fas fa-check-circle icon-check"></i> 
-                </div> -->
-              </div>
-              <div class="name">Karina Piha</div>
-              <div class="superhost"> Airbnb Superhost</div>
-            </div>
-            <br /><br />
-            <div class="right-section">
-              <div>
-                <div class="value">127</div>
-                <div class="label">Airbnb Reviews</div>
-              </div>
-              <div>
-                <div class="value"> <div class="value"><span class="rating-text-large">★ 4.91 / 5</span></div></div>
-                <div class="label">Airbnb Rating</div>
-              </div>
-              <div>
-                <div class="value">9</div>
-                <div class="label no-border">Years Hosting</div>
-              </div>
-            </div>
-          </div>
-          <br /><br />
-          <div classe="" style="width:100%">
-            <p style="font-weight: bold;">My Work: <span style="color: #666; font-weight: 400;"> Artist and Yoga Teacher </span>
-              <br /><br />
-              Speaks: <span style="color: #666; font-weight: 400;"> English, German, Portuguese, and Spanish</span>
-              <br /><br />
-              Lives: <span style="color: #666; font-weight: 400;"> Havelock North, New Zealand</span>
-            </p>
-            <br /><br />
-            <button class="button btn-contact" style="width:100%" 
-   onclick="window.open('https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability.', '_blank');">Message Host <i class="fas fa-paper-plane"></i></button>
-          </div>
-        </div>
-
-      </div>
-      <div class="right-column">
-        <p>I am born and raised in Brazil, lived 16 years in Germany, and now in NZ since 2016. <br /><br />
-          Initially, we set the lodge to welcome our visiting family and friends from abroad. <br /><br />
-          The place is decorated as part of our house, designed for the people we love the most.<br /><br />
-          We have 5 kids (3 live at home), a lovely dog, and a very friendly cat.</p>
-        <br />
-        <button
-          class="button btn-contact"  
-          onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See More <i class="fas fa-external-link-alt"></i></button>
-      </div>
-    </section>
-  </div>
-  </div>
-  <div class="profile">
-    <h1>Karina’s Reviews</h1>
-    <div class="reviews">
-      <!-- Review 1 -->
-      <div class="review">
-        <style>
-          .stars {
-          color: #ccc;
-    font-size: 13px;
-    height: 20px;
-    padding-top: 10px;
-          }
-
-   .stars .filled {
-/*     color: #f90;
-    color: #D9A404;
-    color: #D9B607; */
-    color: #D98E04;
-}
-        </style>
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-
-        <p>Regarding the host, Karina is the best. She was inviting and so helpful with any request. We cannot thank her enough.</p>
-       <p><i class="fa-regular fa-user"></i> - <bold>Cody</bold> <br/> <span>Auckland, New Zealand</span></p>
-      </div>
-      <!-- Review 2 -->
-      <div class="review">
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-        <p>Karina was an amazing host – very friendly and accommodating. Her instructions were clear and helpful.</p>
-      <p><i class="fa-regular fa-user"></i> - <bold>Sarah</bold> <br/> 
-<span>Auckland, New Zealandy</span></p>
-      </div>
-      <!-- Review 3 -->
-      <div class="review">
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-        <p>Karina is a friendly, warm person & very welcoming. </p>
-       <p><i class="fa-regular fa-user"></i> - <bold>Margie</bold> <br/> 
-<span>Auckland, New Zealand</span></p>
-      </div>
-      <!-- Review 4 -->
-      <div class="review">
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-        <p>Karina is such a warm and welcoming host—highly recommend staying here.</p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Ayshen</bold> <br/> <span>Huntleys Point, Australia</span>
-</p>
-      </div>
-      <!-- Review 5 -->
-      <div class="review">
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-        <p> Karina and her family were welcoming and friendly, l would definitely recommend this place.</p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Leanne</bold> <br/>
-<span>Waikato, New Zealand</span></p>
-      </div>
-      <!-- Review 6 -->
-      <div class="review">
-
-        <div class="stars">
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-          <i class="fas fa-star filled"></i>
-        </div>
-        <p>Karina was a very friendly host who organized some treats, much appreciated. </p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Michelle</bold> <br/> 
-<span>Cambridge, New Zealand</span> </p>
-      </div>
-
-    </div>
-    <br /><br />
-    <div style="width:100%; text-align:center;">
-        <button
-          class="button btn-contact"  
-          onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See all reviews on Airbnb <i class="fas fa-external-link-alt"></i></button>
-      
-    </div>
-    <br /><br /><br /><br />
-    <!--  -->
-    <style>
-      #card_slider {
-        clear: both;
-        overflow-y: hidden;
-        overflow-x: scroll;
-        height: 170px;
-        margin-top: 20px;
-        position: relative;
-        padding-left: 5px;
-        padding-top: 0px;
-      }
-
-      #card_slider::-webkit-scrollbar {
-        height: 5px;
-      }
-
-      #card_slider::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-        border-radius: 0px;
-      }
-
-      #card_slider::-webkit-scrollbar-thumb {
-        background-color: #5d646c;
-        border-radius: 0px;
-      }
-
-      #card_track {
-        position: absolute;
-        width: 6000px;
-      }
-
-      .subject_card {
-
-    border-radius: 8px;
-    height: 142px;
-    width: 171px;
-    background-color: #fff;
-    color: #333;
-    float: left;
-    text-align: center;
-    margin-right: 20px;
-    display: flex;
-    border: 1px solid #333;
-    /* box-shadow: 0px 2px 4px 0px rgb(82, 82, 88); */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-      }
-
-      .subject_card span {
-    margin-top: -12px;
-    font-size: 13px;
-    color: #666;
-}
-
-i.fa-solid.fa-location-dot {
-     font-size: 25px;
-    padding: 8px 0px;
-    color: #666;
-    margin-top: -31px;
-}
-}
-
-i.fa-solid.fa-location-dot {}
-
-      .subject_card>img {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        width: 178px;
-        height: 135px;
-        display: block;
-      }
-
-      .subject_card>p {
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-top: 5px;
-        overflow: hidden;
-        max-height: 60px;
-        font-size:13px;
-      }
-    </style>
-    <h1>Where Karina Has Been</h1>
-
-    <div id="card_slider">
-      <div id="card_track">
-        
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Aracati, Brazil</p>
-            <span>July 2025</span>
-          </div>
-        
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paraty, Brazil</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Aracati, Brazil</p>
-            <span>July 2025</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Nelson, New Zealand</p>
-            <span>January 2025</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Napier City, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Waimārama, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-    
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Taupō, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Zagarolo, Italy</p>
-            <span>September 2023</span>
-          </div>
-        
-
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Sitges, Spain</p>
-            <span>September 2023</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Barcelona, Spain</p>
-            <span>September 2023</span>
-          </div>
-        
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Auckland, New Zealand</p>
-            <span>9 trips</span>
-          </div>
-         
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Whangarei Heads, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-         
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Far North District, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-      
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Kahuranaki, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-       
-       
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Glenduan, New Zealand</p>
-    <span>July 2022</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Tasman District, New Zealand</p>
-    <span>July 2022</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Elsthorpe, New Zealand</p>
-    <span>March 2022</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Eskdale, New Zealand</p>
-    <span>January 2021</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Kuratau, New Zealand</p>
-    <span>January 2021</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Clarence, New Zealand</p>
-    <span>September 2020</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Colchagua, Chile</p>
-    <span>April 2018</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Thames Coromandel District, New Zealand</p>
-    <span>January 2018</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>London, United Kingdom</p>
-    <span>2 trips</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Hurunui District, New Zealand</p>
-    <span>September 2020</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Marlborough, New Zealand</p>
-    <span>2 trips</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Central Hawke's Bay District, New Zealand</p>
-    <span>2 trips</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Aramoana, New Zealand</p>
-    <span>October 2019</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Amsterdam, Netherlands</p>
-    <span>June 2019</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Pataua, New Zealand</p>
-    <span>January 2019</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Ōhope, New Zealand</p>
-    <span>December 2018</span>
-  </div>
-
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Providencia, Chile</p>
-    <span>April 2018</span>
-  </div>
-</a>
-
-      </div>
-    </div>
-    <br /><br /><br /><br />
-    <h1>Ask Karina About</h1>
-    <style>
-      .ask-list {
-            display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-      }
-      .ask-list p {
-    padding: 10px;
-    border: 1px solid #333;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 20px;
-    /* border: 1px solid #ddd; */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #666;
-}
-      .ask-list p i {
-   margin-right: 4px;
-    color: #333;
-}
-    </style>
-    <div class="ask-list">
-    <p><i class="fas fa-utensils"></i> Cooking </p>
-    <p><i class="fas fa-hamburger"></i> Food Scenes </p>
-    <p><i class="fas fa-tree"></i> Outdoors </p>
-    <p><i class="fas fa-book"></i> Reading </p>
-</div>
-
-    <br /><br /><br /><br />
-    
-    <h1>Karina’s listings</h1>
-    <style>
-      .card-property {
-
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 250px;
-        border: 1px solid #333;
-}
-
-
-
-.card-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card-rating {
-    font-size: 18px;
-    color: #666;
-}
-
-.card-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.card-button:hover {
-    background-color: #3e8e41;
-}
-    .listing {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    }  
-</style>
-   <div class="listing"> 
-     <a href="./entire-place.html" class="card-property">
-    <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Home Casa da Karina" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Home Casa da Karina</h2>
-        <p class="card-rating">4.97/5 · 33 reviews</p>
-      
-    </div>
-</a>
-
-<a href="./private-sleepout.html" class="card-property">
-    <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Karina's House Private Sleepout" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Karina's House Private Sleepout</h2>
-        <p class="card-rating">4.91/5 · 80 reviews</p>
-      
-    </div>
-</a>
-    </div>
-    <br /><br /><br /><br />
-    <h1>Karina's Guidebook</h1>
-    <style>
-      .guide {
-        width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-      }
-      .guide a {
-     margin: 20px;
-    padding-top: 36px;
-    width: 147px;
-    text-align: center;
-      }
-      .guide-a-1 {
-            width: 100%;
-    margin: 9px 0 30px 0px;
-    font-size: 37px;
-    color: #333;
-}
-      }
-    </style>
-    <div class="guide">
-      <a href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/4407280" target="_blank" class="btn-contact">
-        <i class="fa-solid fa-signs-post guide-a-1"></i>
-Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
-         <a href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/2083505" target="_blank" class="btn-contact">
-           <i class="fa-solid fa-map-location-dot guide-a-1"></i>
-Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
-    </div>
-    <br /><br /><br /><br />
-    <footer style="bottom:0; padding: 0px 0;">
-      <p style="bottom:0;margin:0">© <span id="current-year"></span> Casa da Karina. All rights reserved.</p>
-    </footer>
+    margin-left: 9px;">
+
+		<input class=" menu-btn" type="checkbox" id="menu-btn">
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu">
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./entire-place.html">Entire Place</a></li>
+			<li><a href="./private-sleepout.html">Private Sleepout</a></li>
+			<li><a href="./superhost.html">SuperHost</a></li>
+			<li><a href="./contact.html">Contact</a></li>
+		</ul>
+	</header>
+
+	<div class="" style="height: 60px"></div>
+
+	<div class="profile">
+
+		<!--  -->
+		<style>
+			#card_slider {
+				clear: both;
+				overflow-y: hidden;
+				overflow-x: scroll;
+				height: 170px;
+				margin-top: 20px;
+				position: relative;
+				padding-left: 5px;
+				padding-top: 0px;
+			}
+
+			#card_slider::-webkit-scrollbar {
+				height: 5px;
+			}
+
+			#card_slider::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+				border-radius: 0px;
+			}
+
+			#card_slider::-webkit-scrollbar-thumb {
+				background-color: #5d646c;
+				border-radius: 0px;
+			}
+
+			#card_track {
+				position: absolute;
+				width: 6000px;
+			}
+
+			.subject_card {
+				border-radius: 8px;
+				height: 142px;
+				width: 171px;
+				background-color: #fff;
+				color: #333;
+				float: left;
+				text-align: center;
+				margin-right: 20px;
+				display: flex;
+				border: 1px solid #333;
+				/* box-shadow: 0px 2px 4px 0px rgb(82, 82, 88); */
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.subject_card span {
+				margin-top: -12px;
+				font-size: 13px;
+				color: #666;
+			}
+
+			i.fa-solid.fa-location-dot {
+				font-size: 25px;
+				padding: 8px 0px;
+				color: #666;
+				margin-top: -31px;
+			}
+			}
+
+			i.fa-solid.fa-location-dot {}
+
+			.subject_card>img {
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				width: 178px;
+				height: 135px;
+				display: block;
+			}
+
+			.subject_card>p {
+				padding-left: 5px;
+				padding-right: 5px;
+				margin-top: 5px;
+				overflow: hidden;
+				max-height: 60px;
+				font-size: 13px;
+			}
+		</style>
+
+		<h1>Living room 1</h1>
+		<span>2 sofa beds - Crib</span>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Living room 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Full kitchen</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Dining area 1</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Dining area 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 1</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 3</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 4</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Full bathroom</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Patio</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Exterior</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Hot tub</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Additional photos</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<br><br><br><br>
+	<footer style="bottom:0; padding: 0px 0;">
+		<p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
+	</footer>
+
+	<script>
+		// Obtém o ano atual com base no horário do navegador
+		const currentYear = new Date().getFullYear();
+		// Insere o ano no elemento do footer
+		document.getElementById("current-year").textContent = currentYear;
+	</script>
+
+	</div>
 </body>
-<script>
-  // Obtém o ano atual com base no horário do navegador
-  const currentYear = new Date().getFullYear();
-  // Insere o ano no elemento do footer
-  document.getElementById("current-year").textContent = currentYear;
-</script>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
