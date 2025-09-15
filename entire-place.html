@@ -373,10 +373,1299 @@ ease;
     <div class="label">Reviews</div>
   </div>
 </div>
+	<style>
+		.host-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0;
+  max-width: 400px;
+}
+
+.host-avatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.host-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.host-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #2ecc71; /* verde */
+}
+
+.host-info .host-name {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.host-info .host-details {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+	</style>
+	<div class="host-card">
+  <div class="host-avatar">
+    <img src="https://a0.muscache.com/im/pictures/user/cb3c094c-d288-405e-a9b4-f387aae5d716.jpg?im_w=240" alt="Karina - Host profile picture">
+    <span class="host-icon"><i class="fas fa-check-circle"></i></span>
+  </div>
+  <div class="host-info">
+    <p class="host-name">Hosted by Karina</p>
+    <p class="host-details">Superhost · 9 years hosting</p>
+  </div>
+</div>
+	<style>
+		.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  color: #e31c5f; /* Airbnb red */
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.feature-text h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.feature-text p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+	</style>
+	<div class="feature">
+  <i class="fas fa-users feature-icon"></i>
+  <div class="feature-text">
+    <h3>Perfect ratings from families</h3>
+    <p>100% of families who stayed here in the past year rated it 5 stars overall.</p>
+  </div>
+</div>
+
+<div class="feature">
+  <i class="fas fa-baby feature-icon"></i>
+  <div class="feature-text">
+    <h3>Amenities for baby bedtime</h3>
+    <p>This host can provide a crib and travel crib.</p>
+  </div>
+</div>
+
+<div class="feature">
+  <i class="fas fa-key feature-icon"></i>
+  <div class="feature-text">
+    <h3>Self check-in</h3>
+    <p>Check yourself in with the smartlock.</p>
+  </div>
+</div>
+
+	<style>
+		.description-preview a {
+  color: #e31c5f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #333;
+}
+
+	</style>
+	<p class="description-preview">
+  Casa da Karina was built in 1932 as part of Muritai Homestead...
+  <a href="#" id="showMoreBtn">Show more</a>
+</p>
+
+<!-- Modal -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h3>About Casa da Karina</h3>
+    <p>
+      Casa da Karina was built in 1932 as part of Muritai Homestead. Now it is my home, full of character and charm, perfect to welcome friends and family.<br><br>
+
+      My dog Lola is only acting as a model but won’t be here during your stay. Our Cat however, stays.<br><br>
+
+      In the so called "green circle" of Havelock North. It is a 7-10 minute stroll into the Village where all shops and restaurants are at walking distance: even Te Mata Peak.<br><br>
+
+      Wineries and beaches are a short drive away. You’ll enjoy Casa da Karina.<br><br>
+
+      <strong>The space</strong><br>
+      Casa da Karina has 4 comfortable bedrooms: 3 in the main house and an ensuite sleepout which is a separate listing you can add if needed: <a href="https://abnb.me/h7nOMCi39tb" target="_blank">link</a>.<br><br>
+
+      <strong>Guest access</strong><br>
+      Two cars fit inside the gate. Additional parking is just outside the door.<br><br>
+
+      <strong>Other things to note</strong><br>
+      I have a ginger cat called "Cat". She's moody and might not show up, but please keep her bowl full.<br><br>
+
+      I also have a self-contained studio that can be booked too. Ask during booking if it will be occupied.
+    </p>
+  </div>
+</div>
+<style>
+      #card_slider {
+        clear: both;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        height: 170px;
+        margin-top: 20px;
+        position: relative;
+        padding-left: 5px;
+        padding-top: 0px;
+      }
+
+      #card_slider::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      #card_slider::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+        border-radius: 0px;
+      }
+
+      #card_slider::-webkit-scrollbar-thumb {
+        background-color: #5d646c;
+        border-radius: 0px;
+      }
+
+      #card_track {
+        position: absolute;
+        width: 6000px;
+      }
+
+      .subject_card {
+
+    border-radius: 8px;
+    height: 142px;
+    width: 171px;
+    background-color: #fff;
+    color: #333;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    display: flex;
+    border: 1px solid #333;
+    /* box-shadow: 0px 2px 4px 0px rgb(82, 82, 88); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      }
+
+      .subject_card span {
+    margin-top: -12px;
+    font-size: 13px;
+    color: #666;
+}
+
+i.fa-solid.fa-location-dot {
+     font-size: 25px;
+    padding: 8px 0px;
+    color: #666;
+    margin-top: -31px;
+}
+}
+
+i.fa-solid.fa-location-dot {}
+
+      .subject_card>img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 178px;
+        height: 135px;
+        display: block;
+      }
+
+      .subject_card>p {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 5px;
+        overflow: hidden;
+        max-height: 60px;
+        font-size:13px;
+      }
+    </style>
+	<h1>Where Karina Has Been</h1>
+	<div id="card_slider">
+      <div id="card_track">
+        
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Aracati, Brazil</p>
+            <span>July 2025</span>
+          </div>
+        
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Paraty, Brazil</p>
+            <span>2 trips</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Aracati, Brazil</p>
+            <span>July 2025</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Nelson, New Zealand</p>
+            <span>January 2025</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Napier City, New Zealand</p>
+            <span>2 trips</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Waimārama, New Zealand</p>
+            <span>2 trips</span>
+          </div>
+    
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Taupō, New Zealand</p>
+            <span>2 trips</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Zagarolo, Italy</p>
+            <span>September 2023</span>
+          </div>
+        
+
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Sitges, Spain</p>
+            <span>September 2023</span>
+          </div>
+       
+         
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Barcelona, Spain</p>
+            <span>September 2023</span>
+          </div>
+        
+          
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Auckland, New Zealand</p>
+            <span>9 trips</span>
+          </div>
+         
+          
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Whangarei Heads, New Zealand</p>
+            <span>December 2022</span>
+          </div>
+         
+          
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Far North District, New Zealand</p>
+            <span>December 2022</span>
+          </div>
+      
+          
+          <div class="subject_card">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Kahuranaki, New Zealand</p>
+            <span>December 2022</span>
+          </div>
+       
+       
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Glenduan, New Zealand</p>
+    <span>July 2022</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Tasman District, New Zealand</p>
+    <span>July 2022</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Elsthorpe, New Zealand</p>
+    <span>March 2022</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Eskdale, New Zealand</p>
+    <span>January 2021</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Kuratau, New Zealand</p>
+    <span>January 2021</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Clarence, New Zealand</p>
+    <span>September 2020</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Colchagua, Chile</p>
+    <span>April 2018</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Thames Coromandel District, New Zealand</p>
+    <span>January 2018</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>London, United Kingdom</p>
+    <span>2 trips</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Hurunui District, New Zealand</p>
+    <span>September 2020</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Marlborough, New Zealand</p>
+    <span>2 trips</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Central Hawke's Bay District, New Zealand</p>
+    <span>2 trips</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Aramoana, New Zealand</p>
+    <span>October 2019</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Amsterdam, Netherlands</p>
+    <span>June 2019</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Pataua, New Zealand</p>
+    <span>January 2019</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Ōhope, New Zealand</p>
+    <span>December 2018</span>
+  </div>
+
+  <div class="subject_card">
+    <i class="fa-solid fa-location-dot"></i>
+    <p>Providencia, Chile</p>
+    <span>April 2018</span>
+  </div>
+
+
+      </div>
+    </div>
+<style>
+  .amenities-section {
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  .amenities-section h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .amenities-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .amenities-list li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .amenities-modal-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Modal overlay */
+  .amenities-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  /* Modal content */
+  .amenities-modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Close button */
+  .amenities-modal-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    user-select: none;
+  }
+
+  .amenities-modal-close:hover {
+    color: #000;
+  }
+
+  .amenities-modal-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .amenities-modal-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .amenities-modal-unavailable {
+    text-decoration: line-through;
+    color: #999;
+  }
+</style>
+	<div class="amenities-section">
+  <h3>What this place offers</h3>
+  <ul class="amenities-list">
+    <li><i class="fas fa-utensils"></i> Kitchen</li>
+    <li><i class="fas fa-wifi"></i> Wifi</li>
+    <li><i class="fas fa-laptop"></i> Dedicated workspace</li>
+    <li><i class="fas fa-parking"></i> Free parking on premises</li>
+    <li><i class="fas fa-paw"></i> Pets allowed</li>
+  </ul>
+
+  <button class="amenities-modal-btn" onclick="openAmenitiesModal()">
+    <i class="fas fa-list"></i> Show all 72 amenities
+  </button>
+</div>
+
+<!-- Modal -->
+	
+<div id="amenitiesModal" class="amenities-modal-overlay">
+  <div class="amenities-modal-content">
+    <span class="amenities-modal-close" onclick="closeAmenitiesModal()">&times;</span>
+    <h3>All 72 Amenities</h3>
+    <ul class="amenities-modal-list">
+      <li><i class="fas fa-bath"></i> Bathroom</li>
+      <li><i class="fas fa-wind"></i> Hair dryer</li>
+      <li><i class="fas fa-broom"></i> Cleaning products</li>
+      <li><i class="fas fa-shower"></i> Shampoo</li>
+      <li><i class="fas fa-shower"></i> Conditioner</li>
+      <li><i class="fas fa-soap"></i> Body soap</li>
+      <li><i class="fas fa-fire"></i> Hot water</li>
+      <li><i class="fas fa-shower"></i> Shower gel</li>
+      <li><i class="fas fa-tshirt"></i> Washer</li>
+      <li><i class="fas fa-tshirt"></i> Dryer</li>
+      <li><i class="fas fa-toilet-paper"></i> Towels, bed sheets, soap, and toilet paper</li>
+      <li><i class="fas fa-hanger"></i> Hangers</li>
+      <li><i class="fas fa-bed"></i> Bed linens</li>
+      <li><i class="fas fa-bed"></i> Egyptian cotton linens</li>
+      <li><i class="fas fa-moon"></i> Room-darkening shades</li>
+      <li><i class="fas fa-iron"></i> Iron</li>
+      <li><i class="fas fa-tshirt"></i> Drying rack for clothing</li>
+      <li><i class="fas fa-archive"></i> Clothing storage</li>
+      <li><i class="fas fa-music"></i> Piano</li>
+      <li><i class="fas fa-volume-up"></i> Sound system</li>
+      <li><i class="fas fa-dumbbell"></i> Exercise equipment</li>
+      <li><i class="fas fa-gamepad"></i> Arcade games</li>
+      <li><i class="fas fa-book"></i> Books and reading material</li>
+      <li><i class="fas fa-baby"></i> Crib</li>
+      <li><i class="fas fa-baby-carriage"></i> Pack ’n play/Travel crib</li>
+      <li><i class="fas fa-puzzle-piece"></i> Children’s books and toys</li>
+      <li><i class="fas fa-snowflake"></i> Air conditioning</li>
+      <li><i class="fas fa-fire-alt"></i> Indoor fireplace</li>
+      <li><i class="fas fa-thermometer-half"></i> Heating</li>
+      <li><i class="fas fa-smoking-ban"></i> Smoke alarm</li>
+      <li><i class="fas fa-exclamation-triangle"></i> Carbon monoxide alarm</li>
+      <li><i class="fas fa-fire-extinguisher"></i> Fire extinguisher</li>
+      <li><i class="fas fa-first-aid"></i> First aid kit</li>
+      <li><i class="fas fa-wifi"></i> Wifi</li>
+      <li><i class="fas fa-laptop"></i> Dedicated workspace</li>
+      <li><i class="fas fa-utensils"></i> Kitchen</li>
+      <li><i class="fas fa-blender"></i> Space where guests can cook their own meals</li>
+      <li><i class="fas fa-warehouse"></i> Refrigerator</li>
+      <li><i class="fas fa-microchip"></i> Microwave</li>
+      <li><i class="fas fa-pepper-hot"></i> Cooking basics</li>
+      <li><i class="fas fa-utensils"></i> Pots and pans, oil, salt and pepper</li>
+      <li><i class="fas fa-utensils"></i> Dishes and silverware</li>
+      <li><i class="fas fa-bowl-rice"></i> Bowls, chopsticks, plates, cups, etc.</li>
+      <li><i class="fas fa-ice-cream"></i> Mini fridge</li>
+      <li><i class="fas fa-snowflake"></i> Freezer</li>
+      <li><i class="fas fa-dishwasher"></i> Dishwasher</li>
+      <li><i class="fas fa-fire"></i> Stove</li>
+      <li><i class="fas fa-oven"></i> Oven</li>
+      <li><i class="fas fa-mug-hot"></i> Hot water kettle</li>
+      <li><i class="fas fa-coffee"></i> Coffee maker</li>
+      <li><i class="fas fa-wine-glass-alt"></i> Wine glasses</li>
+      <li><i class="fas fa-bread-slice"></i> Toaster</li>
+      <li><i class="fas fa-baking-sheet"></i> Baking sheet</li>
+      <li><i class="fas fa-trash"></i> Trash compactor</li>
+      <li><i class="fas fa-burn"></i> Barbecue utensils</li>
+      <li><i class="fas fa-grill"></i> Grill, charcoal, bamboo skewers/iron skewers, etc.</li>
+      <li><i class="fas fa-dining-table"></i> Dining table</li>
+      <li><i class="fas fa-coffee"></i> Coffee</li>
+      <li><i class="fas fa-door-closed"></i> Private entrance</li>
+      <li><i class="fas fa-door-open"></i> Separate street or building entrance</li>
+      <li><i class="fas fa-tshirt"></i> Laundromat nearby</li>
+      <li><i class="fas fa-umbrella-beach"></i> Patio or balcony</li>
+      <li><i class="fas fa-tree"></i> Backyard</li>
+      <li><i class="fas fa-seedling"></i> An open space on the property usually covered in grass</li>
+      <li><i class="fas fa-couch"></i> Outdoor furniture</li>
+      <li><i class="fas fa-hammock"></i> Hammock</li>
+      <li><i class="fas fa-utensils-alt"></i> Outdoor dining area</li>
+      <li><i class="fas fa-bbq"></i> BBQ grill</li>
+      <li><i class="fas fa-umbrella-beach"></i> Beach towels, umbrella, beach blanket, snorkeling gear</li>
+      <li><i class="fas fa-bicycle"></i> Bikes</li>
+      <li><i class="fas fa-chair"></i> Sun loungers</li>
+      <li><i class="fas fa-parking"></i> Free parking on premises</li>
+      <li><i class="fas fa-parking"></i> Free street parking</li>
+      <li><i class="fas fa-charging-station"></i> EV charger</li>
+      <li><i class="fas fa-car-battery"></i> Guests can charge their electric vehicles on the property</li>
+      <li><i class="fas fa-dumbbell"></i> Gym</li>
+      <li><i class="fas fa-paw"></i> Pets allowed</li>
+      <li><i class="fas fa-wheelchair"></i> Assistance animals are always allowed</li>
+      <li><i class="fas fa-suitcase-rolling"></i> Luggage dropoff allowed</li>
+      <li><i class="fas fa-clock"></i> For guests' convenience when they have early arrival or late departure</li>
+      <li><i class="fas fa-calendar-alt"></i> Long term stays allowed</li>
+      <li><i class="fas fa-calendar-check"></i> Allow stay for 28 days or more</li>
+      <li><i class="fas fa-door-open"></i> Self check-in</li>
+      <li><i class="fas fa-lock"></i> Smart lock</li>
+      <li><span class="amenities-modal-unavailable"><i class="fas fa-video-slash"></i> Exterior security cameras on property (Unavailable)</span></li>
+      <li><span class="amenities-modal-unavailable"><i class="fas fa-tv"></i> TV (Unavailable)</span></li>
+    </ul>
+  </div>
+</div>
+
+	
+<!-- Guest Favorite -->
+	<style>
+  .guest-favorite-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #333;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px 30px;
+    background: #fafafa;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  }
+
+  .overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .rating-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffb400; /* gold */
+  }
+
+  .stars {
+    color: #ffb400;
+    font-size: 1.8rem;
+  }
+
+  .guest-favorite-text h2 {
+    margin: 0 0 5px;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  .guest-favorite-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .summary-section {
+    margin-top: 25px;
+  }
+
+  .summary-section h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .summary-list li {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .summary-list strong {
+    color: #222;
+  }
+
+  .details-ratings {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 15px;
+  }
+
+  .rating-item {
+    background: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rating-item .label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .rating-item .score {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffb400;
+    margin-bottom: 6px;
+  }
+
+  .rating-item .stars {
+    font-size: 1.1rem;
+    color: #ffb400;
+  }
+</style>
+<div class="guest-favorite-container">
+  <div class="overall-rating">
+    <div class="rating-number">4.97</div>
+    <div class="stars" data-rating="4.97"></div>
+  </div>
+  <div class="guest-favorite-text">
+    <h2>Guest favorite</h2>
+    <p>This home is a guest favorite based on ratings, reviews, and reliability</p>
+  </div>
+
+  <div class="summary-section">
+    <h3>7 of 7 items showing</h3>
+    <ul class="summary-list">
+      <li><strong>Overall rating</strong> <span>5 stars, 97% of reviews</span></li>
+      <li><strong>5</strong> 4 stars, 3% of reviews</li>
+      <li><strong>4</strong> 3 stars, 0% of reviews</li>
+      <li><strong>3</strong> 2 stars, 0% of reviews</li>
+      <li><strong>2</strong> 1 star, 0% of reviews</li>
+    </ul>
+  </div>
+
+  <div class="details-ratings">
+    <div class="rating-item">
+      <div class="label">Cleanliness</div>
+      <div class="score">4.9</div>
+      <div class="stars" data-rating="4.9"></div>
+    </div>
+    <div class="rating-item">
+      <div class="label">Accuracy</div>
+      <div class="score">4.9</div>
+      <div class="stars" data-rating="4.9"></div>
+    </div>
+    <div class="rating-item">
+      <div class="label">Check-in</div>
+      <div class="score">4.9</div>
+      <div class="stars" data-rating="4.9"></div>
+    </div>
+    <div class="rating-item">
+      <div class="label">Communication</div>
+      <div class="score">4.9</div>
+      <div class="stars" data-rating="4.9"></div>
+    </div>
+    <div class="rating-item">
+      <div class="label">Location</div>
+      <div class="score">5.0</div>
+      <div class="stars" data-rating="5.0"></div>
+    </div>
+    <div class="rating-item">
+      <div class="label">Value</div>
+      <div class="score">4.8</div>
+      <div class="stars" data-rating="4.8"></div>
+    </div>
+  </div>
+</div>
+
+
+	<style>
+  .location-section {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+  }
+  .location-center {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .map-container {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .show-more-btn:hover {
+    background: #0056b3;
+  }
+  /* FontAwesome icon style fix */
+  .show-more-btn i {
+    font-size: 1.1rem;
+  }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .location-section {
+      padding: 0.5rem;
+    }
+    .map-container iframe {
+      height: 200px;
+    }
+  }
+</style>
+
+<div class="location-section">
+  <h2>Where you’ll be</h2>
+  <p class="location-center">Centered on <strong>Havelock North</strong></p>
+  <p>Havelock North, Hawke's Bay, New Zealand</p>
+  <p>Ocean Beach and Te Mata Peak are my preferred spots</p>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100808.99584173394!2d176.82948135563665!3d-39.68116572211316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d71b68a9442f3e1%3A0x500ef6143a2d150!2sHavelock%20North%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1694775612345!5m2!1sen!2sus"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <a 
+    href="https://www.google.com/maps/place/Havelock+North,+New+Zealand" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="show-more-btn"
+  >
+    Show more <i class="fas fa-map-marker-alt"></i>
+  </a>
+</div>
+
+
+	<style>
+  .host-section {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 1rem;
+  }
+
+  .host-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .host-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .host-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007BFF;
+  }
+
+  .host-info {
+    flex: 1;
+  }
+
+  .host-name {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.4rem;
+  }
+
+  .host-badge {
+    margin: 0 0 0.6rem 0;
+    color: #007BFF;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .host-badge i {
+    color: gold;
+  }
+
+  .host-info p {
+    margin: 0.15rem 0;
+    font-size: 1rem;
+  }
+
+  .host-details-text p {
+    margin: 0.7rem 0;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+
+  .host-extra-info {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .host-extra-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+
+  .host-extra-info i {
+    color: #28a745; /* green check and clock */
+  }
+
+  .message-host-btn {
+    margin-top: 1.5rem;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .message-host-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .payment-warning {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  /* Responsivo */
+  @media (max-width: 480px) {
+    .host-profile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .host-photo {
+      width: 70px;
+      height: 70px;
+    }
+  }
+</style>
+<div class="host-section">
+  <h2>Meet your host</h2>
+  
+  <div class="host-profile">
+    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Karina Profile" class="host-photo" />
+    <div class="host-info">
+      <h3 class="host-name">Karina</h3>
+      <p class="host-badge"><i class="fas fa-star"></i> Superhost</p>
+      <p><strong>127</strong> reviews</p>
+      <p><strong>4.91</strong> out of 5 average rating</p>
+      <p><strong>9</strong> years of hosting</p>
+    </div>
+  </div>
+  
+  <div class="host-details-text">
+    <p><strong>Where I went to school:</strong> São Paulo, Brazil</p>
+    <p><strong>My work:</strong> Nourished for Nil</p>
+    <p>I am born and raised in Brazil, lived 16 years in Germany and now in NZ since 2016. Initially we set the lodge to welcome our visiting family and friends from abroad. The place is decorated as part of our house, designed for the people we love the most. We have 5 kids (3 live at home), a lovely dog and a very friendly cat.</p>
+    <p><strong>Karina is a Superhost</strong></p>
+    <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</p>
+    <div class="host-extra-info">
+      <p><i class="fas fa-check-circle"></i> Response rate: <strong>100%</strong></p>
+      <p><i class="fas fa-clock"></i> Responds within an hour</p>
+    </div>
+  </div>
+  
+  <button class="message-host-btn">Message host</button>
+  
+  <p class="payment-warning">
+    To help protect your payment, always use Airbnb to send money and communicate with hosts.
+  </p>
+</div>
+
+
+
+
+<div class="things-to-know">
+  <h2><i class="fas fa-info-circle"></i> Things to know</h2>
+
+  <div class="info-section">
+    <h3><i class="fas fa-house"></i> House rules</h3>
+    <ul class="short-list">
+      <li><i class="fas fa-check-circle"></i> Check-in after 3:00 PM</li>
+      <li><i class="fas fa-check-circle"></i> Checkout before 11:00 AM</li>
+      <li><i class="fas fa-check-circle"></i> 8 guests maximum</li>
+    </ul>
+    <button class="toggle-btn" data-target="rules">
+      <i class="fas fa-plus"></i> Show more
+    </button>
+    <ul class="full-list hidden" id="rules">
+      <li><i class="fas fa-info-circle"></i> You'll be staying in someone's home, so please treat it with care and respect.</li>
+      <li><i class="fas fa-door-open"></i> Self check-in with smart lock</li>
+      <li><i class="fas fa-paw"></i> Pets allowed</li>
+      <li><i class="fas fa-clock"></i> Quiet hours 11:00 PM - 7:00 AM</li>
+      <li><i class="fas fa-camera"></i> Commercial photography allowed</li>
+      <li><i class="fas fa-smoking-ban"></i> No smoking</li>
+      <li><i class="fas fa-cat"></i> Please care for the cat</li>
+    </ul>
+  </div>
+
+  <div class="info-section">
+    <h3><i class="fas fa-shield-alt"></i> Safety & property</h3>
+    <ul class="short-list">
+      <li><i class="fas fa-radiation-alt"></i> Carbon monoxide alarm</li>
+      <li><i class="fas fa-smoking-ban"></i> Smoke alarm</li>
+      <li><i class="fas fa-paw"></i> Pet(s) live on property</li>
+    </ul>
+    <button class="toggle-btn" data-target="safety">
+      <i class="fas fa-plus"></i> Show more
+    </button>
+    <ul class="full-list hidden" id="safety">
+      <li><i class="fas fa-exclamation-triangle"></i> Avoid surprises by looking over these important details about your Host's property.</li>
+      <li><i class="fas fa-radiation-alt"></i> Carbon monoxide alarm installed</li>
+      <li><i class="fas fa-smoking-ban"></i> Smoke alarm installed</li>
+      <li><i class="fas fa-car-slash"></i> No parking on property</li>
+    </ul>
+  </div>
+
+  <div class="info-section cancellation">
+    <h3><i class="fas fa-ban"></i> Cancellation policy</h3>
+    <p><i class="fas fa-calendar-alt"></i> Add your trip dates to get the cancellation details for this stay.</p>
+    <button class="ask-host-btn">
+      <i class="fas fa-envelope"></i> Ask the host
+    </button>
+  </div>
+</div>
+
+<style>
+  .things-to-know {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #222;
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none; /* removendo bullets padrão */
+    margin: 0 0 0.7rem 0;
+    padding-left: 0;
+  }
+  ul li {
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+  }
+  
+  .toggle-btn, .ask-host-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  .toggle-btn:hover, .ask-host-btn:hover {
+    background: #0056b3;
+  }
+
+  .full-list.hidden {
+    display: none;
+  }
+
+  /* Responsivo */
+  @media (min-width: 768px) {
+    .things-to-know {
+      display: flex;
+      gap: 1rem;
+    }
+    .info-section {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+</style>
+
+
+
+
+
+
+
   <footer>
     <p>© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
   </footer>
+	<script>
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const list = document.getElementById(targetId);
+      if(list.classList.contains('hidden')) {
+        list.classList.remove('hidden');
+        button.innerHTML = '<i class="fas fa-minus"></i> Show less';
+      } else {
+        list.classList.add('hidden');
+        button.innerHTML = '<i class="fas fa-plus"></i> Show more';
+      }
+    });
+  });
 
+  document.querySelector('.ask-host-btn').addEventListener('click', () => {
+    alert('Send a message to the host to ask about cancellation policy.');
+  });
+</script>
+	<script>
+  // Botão Show more toggle (opcional JS simples)
+  const btn = document.querySelector('.show-more-btn');
+  const extra = document.getElementById('extra-info');
+
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+    btn.setAttribute('aria-expanded', !expanded);
+    btn.textContent = expanded ? 'Show more' : 'Show less';
+    extra.style.display = expanded ? 'none' : 'block';
+  });
+</script>
+	<script>
+  // Função para renderizar estrelas cheias, meia, vazia conforme rating decimal
+  document.querySelectorAll('.stars').forEach(starContainer => {
+    const rating = parseFloat(starContainer.getAttribute('data-rating')) || 0;
+    starContainer.innerHTML = renderStars(rating);
+  });
+
+  function renderStars(rating) {
+    let fullStars = Math.floor(rating);
+    let halfStar = (rating - fullStars) >= 0.5;
+    let emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+    let starsHtml = '';
+
+    for(let i=0; i < fullStars; i++) {
+      starsHtml += '<i class="fas fa-star"></i>';
+    }
+    if(halfStar) {
+      starsHtml += '<i class="fas fa-star-half-alt"></i>';
+    }
+    for(let i=0; i < emptyStars; i++) {
+      starsHtml += '<i class="far fa-star"></i>';
+    }
+
+    return starsHtml;
+  }
+</script>
+<script>
+  function openAmenitiesModal() {
+    document.getElementById('amenitiesModal').style.display = 'block';
+  }
+
+  function closeAmenitiesModal() {
+    document.getElementById('amenitiesModal').style.display = 'none';
+  }
+
+  window.addEventListener('click', function(event) {
+    const modal = document.getElementById('amenitiesModal');
+    if (event.target === modal) {
+      closeAmenitiesModal();
+    }
+  });
+</script>
+<script>
+  const modal = document.getElementById("modalOverlay");
+  const btn = document.getElementById("showMoreBtn");
+  const closeBtn = document.getElementById("closeModal");
+
+  btn.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  }
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 <script>
 	const grid = document.querySelector(".grid");
