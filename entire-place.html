@@ -740,10 +740,16 @@ In the so called "green circle" of Havelock North. It is a 7-10 minute stroll in
 
 				.amenities-list li {
 					margin-bottom: 0.25rem;
-					font-size: 1rem;
-					display: flex;
-					align-items: center;
-					gap: 8px;
+    font-size: 1rem;
+    display: flex
+;
+    align-items: center;
+    gap: 14px;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 6px;
 				}
 
 				.amenities-modal-btn {
@@ -818,7 +824,7 @@ In the so called "green circle" of Havelock North. It is a 7-10 minute stroll in
 				}
 			</style>
 			<div class="amenities-section">
-				<h3>What this place offers</h3>
+				<h2>What this place offers</h2>
 				<ul class="amenities-list">
 					<li><i class="fas fa-utensils"></i> Kitchen</li>
 					<li><i class="fas fa-wifi"></i> Wifi</li>
@@ -827,7 +833,7 @@ In the so called "green circle" of Havelock North. It is a 7-10 minute stroll in
 					<li><i class="fas fa-paw"></i> Pets allowed</li>
 				</ul>
 
-				<button class="amenities-modal-btn" onclick="openAmenitiesModal()">
+				<button class="btn-contact amenities-modal-btn" onclick="openAmenitiesModal()">
 					<i class="fas fa-list"></i> Show all 72 amenities
 				</button>
 			</div>
