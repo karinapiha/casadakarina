@@ -1443,10 +1443,10 @@
         }
 
         .host-details-text p {
-      margin: 0.7rem 0;
-    line-height: 1.4;
-    font-size: 17px;
-    font-weight: 300;
+          margin: 0.7rem 0;
+          line-height: 1.4;
+          font-size: 17px;
+          font-weight: 300;
         }
 
         .host-extra-info {
@@ -1502,24 +1502,101 @@
           }
         }
 
-		  .full-list {
-    margin-top: 17px;
-}
+        .full-list {
+          margin-top: 17px;
+        }
       </style>
       <div class="host-section">
         <h2>Meet your host</h2>
-
-        <div class="host-profile">
-          <img src="https://a0.muscache.com/im/pictures/user/cb3c094c-d288-405e-a9b4-f387aae5d716.jpg?im_w=240" alt="Karina Profile" class="host-photo" />
+        <div class="host-card">
+          <div class="host-avatar">
+            <img src="https://a0.muscache.com/im/pictures/user/cb3c094c-d288-405e-a9b4-f387aae5d716.jpg?im_w=240" alt="Karina Profile">
+            <div class="host-icon">
+              <i class="fas fa-star" title="Superhost"></i>
+            </div>
+          </div>
           <div class="host-info">
             <h3 class="host-name">Karina Piha</h3>
-            <p class="host-badge"><i class="fas fa-star"></i> Superhost</p>
-            <p><strong>127</strong> reviews</p>
-            <p><strong>4.91</strong> out of 5 average rating</p>
-            <p><strong>9</strong> years of hosting</p>
+            <p class="host-badge"> Superhost</p>
+            <ul class="host-stats">
+              <li><strong>127</strong> reviews</li>
+              <li><strong>4.91</strong> average rating</li>
+              <li><strong>9</strong> years hosting</li>
+            </ul>
           </div>
         </div>
+        <style>
+          .host-card {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #fafafa;
+            max-width: 420px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+          }
 
+          .host-avatar {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+          }
+
+          .host-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+          }
+
+          .host-icon {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 2px;
+            font-size: 0.75rem;
+            color: #FF5A5F;
+            /* AirBnb red */
+            border: 1px solid #ccc;
+          }
+
+          .host-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .host-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+          }
+
+          .host-badge {
+            font-size: 0.85rem;
+            color: #FF5A5F;
+            font-weight: 500;
+            margin: 0;
+          }
+
+          .host-stats {
+            list-style: none;
+            padding: 0;
+            margin: 4px 0 0;
+            font-size: 0.85rem;
+            color: #555;
+          }
+
+          .host-stats li {
+            margin-bottom: 2px;
+          }
+        </style>
         <div class="host-details-text">
           <p><strong>My work:</strong> Artist & Yoga Teacher</p>
           <p>I am born and raised in Brazil, lived 16 years in Germany and now in NZ since 2016. Initially we set the lodge to welcome our visiting family and friends from abroad. The place is decorated as part of our house, designed for the people we love the most. We have 5 kids (3 live at home), a lovely dog and a very friendly cat.</p>
