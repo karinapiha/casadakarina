@@ -1,1 +1,861 @@
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Casa da Karina ★4.97 Superhost. Your home away from home in Havelock North, New Zealand. 4 beds, 1 bath. Book now!">
+	<title>Host Profile - Casa da Karina - NZ </title>
+	<link rel="icon" type="image/png" href="./images/favicon.png">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+	<style>
+	i.fas.fa-check-circle.icon-check {
+	color: #333;
+	font-size: 21px;
+	background: #fff;
+	position: absolute;
+	bottom: 10px;
+	right: 11px;
+	top: 53px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 300px) {
+	.card {
+		width: 226px;
+		background: red;
+	}
+	.right-section > div {
+		width: 70px;
+		margin: 0;
+	}
+}
+body {
+	font-family: "Josefin Sans", sans-serif;
+	margin: 0;
+	background: #fff;
+}
+a,
+h1,
+h2 {
+	color: #333;
+}
+h1,
+h2 {
+	font-size: 2.5rem;
+	color: #333;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+a {
+	text-decoration: none;
+}
+.header {
+	background: #fff;
+	width: 100%;
+	z-index: 3;
+}
+.header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.header li a {
+	display: block;
+	padding: 20px 20px;
+	border-bottom: 2px solid #fff;
+	text-decoration: none;
+	font-size: 1rem;
+}
+@media (min-width: 48em) {
+	.header li a,
+	footer p {
+		font-size: 0.9725rem;
+	}
+}
+.header .menu-btn:hover,
+.header li a:hover {
+	border-bottom: 2px solid;
+}
+ul.menu {
+	background: #fff;
+}
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+}
+.header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+}
+.header .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background 0.2s ease-out;
+	width: 18px;
+}
+.header .menu-icon .navicon:after,
+.header .menu-icon .navicon:before {
+	background: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+.header .menu-icon .navicon:before {
+	top: 5px;
+}
+.header .menu-icon .navicon:after {
+	top: -5px;
+}
+.header .menu-btn {
+	display: none;
+}
+.header .menu-btn:checked ~ .menu {
+	max-height: 100vh;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+	background: 0 0;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+	top: 0;
+}
+@media (min-width: 48em) {
+	.header li {
+		float: left;
+	}
+	.header li a {
+		padding: 20px 14px;
+	}
+	.header .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+		margin-right: 20px;
+	}
+	.header .menu-icon {
+		display: none;
+	}
+}
+.welcome {
+	text-align: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #333;
+	width: 100%;
+}
+.welcome h2 {
+	margin: 15px;
+	font-size: 3rem;
+	font-weight: 300;
+	letter-spacing: 0.2375rem;
+}
+.welcome p {
+	font-size: 2rem;
+	font-weight: 300;
+	letter-spacing: 0.2375rem;
+	margin: 0;
+}
+@media (max-width: 48em) {
+	.welcome h2 {
+		font-size: 3rem;
+	}
+	.welcome p {
+		font-size: 1.8rem;
+	}
+	ul.menu {
+		background: #fff;
+	}
+}
+.gallery {
+	display: flex;
+	width: 100%;
+	gap: 43px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+.artwork {
+	text-align: center;
+	width: 360px;
+	height: 430px;
+}
+.artwork img {
+	width: 100%;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+.artwork img:hover {
+	transform: scale(1.05);
+}
+.artwork h3,
+.artwork p {
+	margin: 5px 0;
+}
+.artwork h3 {
+	text-transform: uppercase;
+	margin-top: 11px;
+	font-size: 15px;
+	color: #333;
+}
+.artwork p {
+	font-size: 18px;
+	color: #555;
+}
+footer {
+	background: #fff;
+	color: #333;
+	text-align: center;
+	font-size: 1rem;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+@media (min-width: 48em) {
+	footer {
+		font-size: 1.125rem;
+	}
+}
+.welcome a {
+	border: 1px solid #333;
+	padding: 19px 19px;
+}
+main#home {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+main#home .contact {
+	width: 55%;
+	text-align: center;
+	padding: 40px 20px;
+	border-radius: 8px;
+}
+@media (max-width: 48em) {
+	main#home .contact {
+		width: 75%;
+	}
+}
+main#home .contact h2 {
+	font-size: 2.5rem;
+	color: #333;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+main#home .contact p {
+	font-size: 1.2rem;
+	color: #333;
+	margin-bottom: 20px;
+	letter-spacing: 3px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+main#home .contact .btn-contact {
+	font-size: 1rem;
+	color: #333;
+	background: #fff;
+	padding: 19px 20px;
+	border-radius: 4px;
+	border: 1px solid #333;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	transition: background-color 0.3s ease;
+	display: inline-block;
+}
+main#home .contact .btn-contact:hover {
+	border: 1px solid #000;
+	color: #000;
+}
+main#home .contact .more-info {
+	margin-top: 40px;
+}
+main#home .contact .more-info h3 {
+	font-size: 1.8rem;
+	color: #333;
+	margin-bottom: 15px;
+}
+main#home .contact .more-info p {
+	font-size: 1.2rem;
+	margin: 10px 0;
+	color: #333;
+}
+main#home .contact .more-info a {
+	color: #333;
+	text-decoration: underline;
+}
+main#home .contact .more-info a:hover {
+	color: #555;
+}
+.profile {
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 20px;
+}
+.info-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.info {
+	flex: 1 1 auto;
+	margin: 20px;
+}
+.s {
+	margin-bottom: 20px;
+}
+.info img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 20px auto;
+}
+.info h3 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.info p {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.mobile-block {
+	display: none;
+}
+@media (max-width: 768px) {
+	.info {
+		flex: 1 1 100%;
+		margin: 10px 0;
+	}
+}
+.info {
+	flex: 1 1 auto;
+	margin: 20px;
+}
+.s {
+	margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+	.info {
+		flex: 1 1 100%;
+		margin: 10px 0;
+	}
+}
+@media (max-width: 480px) {
+	.mobile-none {
+		display: none;
+	}
+	.profile {
+		padding: 10px;
+	}
+	.card {
+		width: 100% !important;
+	}
+	.right-section > div {
+		width: 70px !important;
+		margin: 0 !important;
+	}
+}
+.info img {
+	max-width: 200px;
+	height: auto;
+	border-radius: 50%;
+}
+.btn-contact {
+	font-size: 1rem;
+	color: #333;
+	background: #fff;
+	padding: 19px 20px;
+	border-radius: 4px;
+	border: 1px solid #333;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	transition: background-color 0.3s ease;
+	display: inline-block;
+}
+.btn-contact:hover {
+	border: 1px solid #000;
+	color: #000;
+}
+.s {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+. {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid #333;
+	border-radius: 10px;
+	width: 23.33%;
+	height: 200px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+. p {
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+. p:last-child {
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 0;
+}
+@media (max-width: 768px) {
+	. {
+		width: 27%;
+	}
+}
+@media (max-width: 480px) {
+	. {
+		width: 100%;
+	}
+}
+i.fa-regular.fa-user {
+	line-height: 2;
+	border-radius: 50%;
+	font-size: 10px;
+}
+.reviews {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.review {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid #333;
+	border-radius: 10px;
+	width: 23.33%;
+	height: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	align-content: center;
+	flex-wrap: nowrap;
+}
+.review p {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-weight: 300;
+	height: 152px;
+}
+.review p:last-child {
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 0;
+	font-size: 12px;
+	height: 52px;
+}
+.review p:last-child span {
+	color: #666;
+	font-weight: 400;
+}
+@media (max-width: 768px) {
+	.review {
+		width: 27%;
+	}
+}
+@media (max-width: 480px) {
+	.review {
+		width: 100%;
+	}
+}
+#card_slider {
+	clear: both;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	height: 170px;
+	margin-top: 20px;
+	position: relative;
+	padding-left: 5px;
+	padding-top: 0;
+}
+#card_slider::-webkit-scrollbar {
+	height: 5px;
+}
+#card_slider::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+	border-radius: 0;
+}
+#card_slider::-webkit-scrollbar-thumb {
+	background-color: #5d646c;
+	border-radius: 0;
+}
+#card_track {
+	position: absolute;
+	width: 6000px;
+}
+.subject_card {
+	border-radius: 8px;
+	height: 142px;
+	width: 171px;
+	background-color: #fff;
+	color: #333;
+	float: left;
+	text-align: center;
+	margin-right: 20px;
+	display: flex;
+	border: 1px solid #333;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.subject_card span {
+	margin-top: -12px;
+	font-size: 13px;
+	color: #666;
+}
+i.fa-solid.fa-location-dot {
+	font-size: 25px;
+	padding: 8px 0;
+	color: #666;
+	margin-top: -31px;
+}
+
+	</style>
+<body>
+
+	<header class="header" style="position: fixed; margin-top: 0px; padding-top: 5px">
+		<img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
+           width: 54px;
+    margin-top: 0px;
+    margin-left: 9px;">
+
+		<input class=" menu-btn" type="checkbox" id="menu-btn">
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu">
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./entire-place.html">Entire Place</a></li>
+			<li><a href="./private-sleepout.html">Private Sleepout</a></li>
+			<li><a href="./superhost.html">SuperHost</a></li>
+			<li><a href="./contact.html">Contact</a></li>
+		</ul>
+	</header>
+
+	<div class="" style="height: 60px"></div>
+
+	<div class="profile">
+
+		<!--  -->
+		
+		<h1>Living room 1</h1>
+		<span>2 sofa beds - Crib</span>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 1 Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Living room 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Living room 2 Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Full kitchen</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+				<div class="subject_card">
+					<img src="" alt="Full kitchen Image" />
+				</div>
+
+			</div>
+		</div>
+
+		<h1>Dining area 1</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 1 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Dining area 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Dining area 2 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 1</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 1 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 2</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 2 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 3</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 3 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Bedroom 4</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Bedroom 4 Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Full bathroom</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Full bathroom Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Patio</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Patio Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Exterior</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Exterior Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Hot tub</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Hot tub Image" />
+				</div>
+			</div>
+		</div>
+
+		<h1>Additional photos</h1>
+		<div id="card_slider">
+			<div id="card_track">
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+				<div class="subject_card">
+					<img src="" alt="Additional photos Image" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<br><br><br><br>
+	<footer style="bottom:0; padding: 0px 0;">
+		<p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
+	</footer>
+
+	<script>
+		// Obtém o ano atual com base no horário do navegador
+		const currentYear = new Date().getFullYear();
+		// Insere o ano no elemento do footer
+		document.getElementById("current-year").textContent = currentYear;
+	</script>
+
+	</div>
+</body>
+
+</html>
