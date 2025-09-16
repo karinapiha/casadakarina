@@ -733,7 +733,7 @@
     <section id="amenities">
       <style>
         .amenities-section {
-          max-width: 400px;
+          max-width: 100%;
           color: #333;
         }
 
@@ -835,10 +835,21 @@
           text-decoration: line-through;
           color: #999;
         }
+		  li.amenities-subtitle {
+    font-weight: 500;
+}
       </style>
       <div class="amenities-section">
         <h2>What this place offers</h2>
-        <ul class="amenities-list">
+       <div style="
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+">  <ul class="amenities-list">
           <li><i class="fas fa-utensils"></i> Kitchen</li>
           <li><i class="fas fa-wifi"></i> Wifi</li>
           <li><i class="fas fa-laptop"></i> Dedicated workspace</li>
@@ -854,7 +865,7 @@
           <li><i class="fas fa-snowflake"></i> Air conditioning</li>
           <li><i class="fas fa-umbrella-beach"></i> Patio or balcony</li>
 
-        </ul>
+        </ul></div>
 
         <button class="btn-contact amenities-modal-btn" onclick="openAmenitiesModal()">
           <i class="fas fa-list"></i> Show all 72 amenities
@@ -880,10 +891,10 @@
             <li><i class="fas fa-tshirt"></i> Washer</li>
             <li><i class="fas fa-tshirt"></i> Dryer</li>
             <li><i class="fas fa-toilet-paper"></i>Essentials<br/><span>Towels, bed sheets, soap, and toilet paper</span></li>
-            <li><i class="fas fa-hanger"></i> Hangers</li>
+            <li><i class="fa-solid fa-clothes-hanger"></i> Hangers</li>
             <li><i class="fas fa-bed"></i> Bed linens<br/><span> Egyptian cotton linens</span></li>
             <li><i class="fas fa-moon"></i> Room-darkening shades</li>
-            <li><i class="fas fa-iron"></i> Iron</li>
+            <li><i class="fa-solid fa-circle"></i> Iron</li>
             <li><i class="fas fa-tshirt"></i> Drying rack for clothing</li>
             <li><i class="fas fa-archive"></i> Clothing storage</li>
 			  <li class="amenities-subtitle">Entertainment</li>
@@ -915,17 +926,17 @@
             <li><i class="fas fa-utensils"></i> Dishes and silverware <span>Bowls, chopsticks, plates, cups, etc.</span> </li>
             <li><i class="fas fa-ice-cream"></i> Mini fridge</li>
             <li><i class="fas fa-snowflake"></i> Freezer</li>
-            <li><i class="fas fa-dishwasher"></i> Dishwasher</li>
+            <li><i class="fa-solid fa-circle"></i> Dishwasher</li>
             <li><i class="fas fa-fire"></i> Stove</li>
-            <li><i class="fas fa-oven"></i> Oven</li>
+            <li><i class="fa-solid fa-circle"></i> Oven</li>
             <li><i class="fas fa-mug-hot"></i> Hot water kettle</li>
             <li><i class="fas fa-coffee"></i> Coffee maker</li>
             <li><i class="fas fa-wine-glass-alt"></i> Wine glasses</li>
             <li><i class="fas fa-bread-slice"></i> Toaster</li>
-            <li><i class="fas fa-baking-sheet"></i> Baking sheet</li>
+            <li><i class="fa-solid fa-circle"></i> Baking sheet</li>
             <li><i class="fas fa-trash"></i> Trash compactor</li>
             <li><i class="fas fa-burn"></i> Barbecue utensils <span> Grill, charcoal, bamboo skewers/iron skewers, etc.</span></li>
-            <li><i class="fas fa-dining-table"></i> Dining table</li>
+            <li><i class="fa-solid fa-circle"></i> Dining table</li>
             <li><i class="fas fa-coffee"></i> Coffee</li>
 			  <li class="amenities-subtitle">  Location features </li>
             <li><i class="fas fa-door-closed"></i> Private entrance<span Separate street or building entrance></span></li>
@@ -934,9 +945,9 @@
             <li><i class="fas fa-umbrella-beach"></i> Patio or balcony</li>
             <li><i class="fas fa-tree"></i> Backyard<span>An open space on the property usually covered in grass</span></li>
             <li><i class="fas fa-couch"></i> Outdoor furniture</li>
-            <li><i class="fas fa-hammock"></i> Hammock</li>
-            <li><i class="fas fa-utensils-alt"></i> Outdoor dining area</li>
-            <li><i class="fas fa-bbq"></i> BBQ grill<span>Beach towels, umbrella, beach blanket, snorkeling gear</span> </li>
+            <li><i class="fa-solid fa-circle"></i> Hammock</li>
+            <li><i class="fa-solid fa-circle"></i> Outdoor dining area</li>
+            <li><i class="fa-solid fa-circle"></i> BBQ grill<span>Beach towels, umbrella, beach blanket, snorkeling gear</span> </li>
             <li><i class="fas fa-bicycle"></i> Bikes</li>
             <li><i class="fas fa-chair"></i> Sun loungers</li>
 		  <li class="amenities-subtitle">	  Parking and facilities</li>
