@@ -77,8 +77,11 @@
 			text-transform: uppercase;
 			letter-spacing: 0.1rem;
 			transition: background-color 0.3s ease;
-			display: inline-block;
+			display: inline-block;cursor:pointer;
 		}
+		ul.short-list li, ul#rules li, ul#safety li {
+    padding: 3px 0;
+}
 
 		body {
 			font-family: 'Josefin Sans', sans-serif;
@@ -1542,7 +1545,6 @@
 
 				<div class="info-section cancellation">
 					<h3> Cancellation policy</h3>
-					<p> Add your trip dates to get the cancellation details for this stay.</p>
 					<button class="ask-host-btn btn-contact">
 						<i class="fas fa-envelope"></i> Ask the host
 					</button>
@@ -1609,6 +1611,7 @@
 					transition: background 0.3s ease;
 					font-size: 0.75rem !important;
 					padding: 14px 13px;
+					cursor:pointer;
 				}
 
 				.toggle-btn:hover,
@@ -1653,9 +1656,7 @@
 				}
 			});
 		});
-		document.querySelector('.ask-host-btn').addEventListener('click', () => {
-			alert('Send a message to the host to ask about cancellation policy.');
-		});
+
 	</script>
 	<script>
 		// Botão Show more toggle (opcional JS simples)
