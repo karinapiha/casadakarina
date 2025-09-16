@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Casa da Karina</title>
+	<style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Nav */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a05d56;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.button {
+  background-color: #a05d56;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #7c3e3a;
+}
+
+.button.small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 15px 0 10px;
+  font-size: 1.4rem;
+  color: #a05d56;
+}
+
+.card p {
+  padding: 0 15px 20px;
+}
+
+/* About */
+.about {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: #f2e7de;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #7c3e3a;
+}
+
+/* Booking */
+.booking {
+  padding: 60px 30px;
+  text-align: center;
+  background: #fff;
+}
+
+.booking h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #a05d56;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #eee;
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="accommodation.html">Accommodation</a></li>
+				<li><a href="https://karinapiha.com" target="_blank">Art</a></li>
+				<li><a href="#">Yoga</a></li>
+				<li><a href="#booking">Book</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<img src="https://karinapiha.github.io/casadakarina/images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Casa da Karina" />
+		<div class="hero-text">
+			<h1>Casa da Karina</h1>
+			<p>A home of art, rest and soulful connection</p>
+			<a href="#explore" class="button">Explore</a>
+		</div>
+	</section>
+
+	<section class="highlights" id="explore">
+		<div class="card">
+			<img src="https://karinapiha.github.io/casadakarina/images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Accommodation" />
+			<h2>Accommodation</h2>
+			<p>Stay in a unique, historic home full of peace and character.</p>
+			<a href="accommodation.html" class="button small">See more</a>
+		</div>
+
+		<div class="card">
+			<img src="https://karinapiha.github.io/casadakarina/images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Art" />
+			<h2>Art</h2>
+			<p>Discover Karina's artistic world and creative projects.</p>
+			<a href="https://karinapiha.com" target="_blank" class="button small">Visit karinapiha.com</a>
+		</div>
+
+		<div class="card">
+			<img src="https://karinapiha.github.io/casadakarina/images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Yoga" />
+			<h2>Yoga & Healing</h2>
+			<p>Classes, sessions and inner work guided in sacred space.</p>
+			<a href="#" class="button small">Coming soon</a>
+		</div>
+	</section>
+
+	<section class="about">
+		<h2>More than just a house</h2>
+		<p>
+			Casa da Karina has welcomed artists, travelers and seekers over the years.
+			A space that breathes creativity, healing, and deep hospitality in the heart of New Zealand.
+		</p>
+	</section>
+
+	<section class="booking" id="booking">
+		<h2>Book Direct</h2>
+		<p>Contact Karina directly and avoid booking platform fees.</p>
+		<a href="https://wa.me/55SEUNUMERO" class="button">Message on WhatsApp</a>
+	</section>
+
+	<footer>
+		<p>&copy; 2025 Casa da Karina. All rights reserved.</p>
+		<p>
+			<a href="https://instagram.com/karinapiha" target="_blank">Instagram</a> |
+			<a href="mailto:contact@casadakarina.com">Email</a>
+		</p>
+	</footer>
+
+</body>
+
+</html>
