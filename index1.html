@@ -453,13 +453,20 @@ text-align: center;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    display: flex
+;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .card img {
@@ -475,7 +482,7 @@ text-align: center;
 }
 
 .card p {
-  padding: 0 15px 20px;
+  padding: 0 10px 10px;
 }
 
 /* About */
