@@ -11,34 +11,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     .benefits-list li {
-    margin: 5px 0;
-}
-    .icon-check {
-    color: #333;
-    font-size: 0.9em;
-    margin-right: 0.5em;
-    vertical-align: middle;
-}
-      .booking-benefits ul {
-       padding: 0 0 10px 0;
-        font-size:15px;
-}
-     @media (max-width: 1044px) {
-       .accommodation-info {
-    
-    padding: 11px 35px;
-    
-}
-     }
-     @media (max-width: 768px) {
- 
-    .accommodation-item {
-    
-    width:100% !important;
-    
-}
+      margin: 5px 0;
+    }
 
-     }
+    .icon-check {
+      color: #333;
+      font-size: 0.9em;
+      margin-right: 0.5em;
+      vertical-align: middle;
+    }
+
+    .booking-benefits ul {
+      padding: 0 0 10px 0;
+      font-size: 15px;
+    }
+
+    @media (max-width: 1044px) {
+      .accommodation-info {
+        padding: 11px 35px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .accommodation-item {
+        width: 100% !important;
+      }
+    }
+
     @media (max-width: 300px) {
       .card {
         width: 226px;
@@ -70,9 +69,11 @@
       font-weight: 300;
       margin-bottom: 20px;
     }
-li {
-    list-style: none;
-}
+
+    li {
+      list-style: none;
+    }
+
     a {
       text-decoration: none;
     }
@@ -459,13 +460,13 @@ li {
     }
 
     @media (max-width: 768px) {
-
       .accommodation-item img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-        margin-top:20px;
-}
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        margin-top: 20px;
+      }
+
       .info {
         flex: 1 1 100%;
         margin: 10px 0;
@@ -502,13 +503,9 @@ li {
         flex: 1 1 100%;
         margin: 10px 0;
       }
-      
     }
 
     @media (max-width: 480px) {
-     
-      
-
       .profile {
         padding: 10px;
       }
@@ -619,11 +616,11 @@ li {
     <input class=" menu-btn" type="checkbox" id="menu-btn">
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-    	<li><a href="index.html">Home</a></li>
-				<li><a href="./accommodation.html">Accommodation</a></li>
-				<li><a href="https://karinapiha.com" target="_blank">Art</a></li>
-				<li><a href="#">Yoga</a></li>
-				<li><a href="./contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="./accommodation.html">Accommodation</a></li>
+      <li><a href="https://karinapiha.com" target="_blank">Art</a></li>
+      <li><a href="#">Yoga</a></li>
+      <li><a href="./contact.html">Contact</a></li>
     </ul>
   </header>
   <div class="" style="height: 60px"></div>
@@ -631,15 +628,15 @@ li {
   <style>
     /* accommodation-container */
     .accommodation-container {
-     display: flex;
-    flex-wrap: wrap;
-   /* gap: 20px;*/
-    justify-content: center;
-    padding: 0px 0;
-    width: 100%;
-    align-content: center;
-    align-items: center;
-    flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      /* gap: 20px;*/
+      justify-content: center;
+      padding: 0px 0;
+      width: 100%;
+      align-content: center;
+      align-items: center;
+      flex-direction: row;
     }
 
     .accommodation-info p {
@@ -648,14 +645,13 @@ li {
 
     .accommodation-item {
       box-shadow: 0 0 10px rgb(141 141 141 / 56%);
-    display: flex;
-    justify-content: center;
-    /* gap: 20px; */
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    flex-wrap: nowrap;
-
+      display: flex;
+      justify-content: center;
+      /* gap: 20px; */
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: nowrap;
     }
 
     .accommodation-slider {
@@ -681,27 +677,40 @@ li {
       object-fit: cover;
       flex-shrink: 0;
     }
- .mobile-off {display:block}
-      .mobile-on {display:none}
-    @media screen and (max-width: 768px) {
 
+    .mobile-off {
+      display: block
+    }
+
+    .mobile-on {
+      display: none
+    }
+
+    @media screen and (max-width: 768px) {
       .accommodation-item {
-             box-shadow: none !important;
-    display: flex;
-    justify-content: center;
-    /* gap: 20px; */
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    flex-wrap: nowrap;
-    margin: 38px 0;
+        box-shadow: none !important;
+        display: flex;
+        justify-content: center;
+        /* gap: 20px; */
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        flex-wrap: nowrap;
+        margin: 38px 0;
       }
+
       .slider-container {
         height: 70vh;
         /* Reduza a altura em telas pequenas */
       }
-      .mobile-off {display:none}
-      .mobile-on {display:block}
+
+      .mobile-off {
+        display: none
+      }
+
+      .mobile-on {
+        display: block
+      }
     }
 
     button.next,
@@ -757,11 +766,11 @@ li {
     }
 
     span.rating-text-large {
-    color: #e4a853;
-    font-weight: bold;
-    display: block;
+      color: #e4a853;
+      font-weight: bold;
+      display: block;
       padding-bottom: 6px;
-}
+    }
 
     /* Responsividade para telas menores */
     @media screen and (max-width: 768px) {
@@ -772,7 +781,7 @@ li {
 
       .accommodation-slider,
       .accommodation-info {
-       width: 80%;
+        width: 80%;
         padding: 12px 0px;
       }
     }
@@ -792,41 +801,44 @@ li {
 
     /* Buttons in the info section */
     .buttons-container {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    align-content: center;
-    justify-content: center;
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      align-content: center;
+      justify-content: center;
     }
-.accommodation-item img{
+
+    .accommodation-item img {
       width: 50%;
-    height: 91vh;
-    object-fit: cover;
-}
+      height: 91vh;
+      object-fit: cover;
+    }
+
     i.fab.fa-whatsapp {
-    font-size: 14px;
-}
+      font-size: 14px;
+    }
+
     .buttons-container i {
-    margin-top: -3px;
-}
+      margin-top: -3px;
+    }
+
     .btn {
-        gap: 6px;
-    border: 1px solid #333;
-    display: flex;
-    padding: 15px 12px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-    letter-spacing: -1px;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s 
-ease;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+      gap: 6px;
+      border: 1px solid #333;
+      display: flex;
+      padding: 15px 12px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: -1px;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
 
     .btn.view-more {
@@ -857,88 +869,7 @@ ease;
       display: inline-block;
     }
   </style>
-  <!--
- <style>
-      .card-property {
-
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 250px;
-        border: 1px solid #333;
-}
-
-
-
-.card-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.card-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card-rating {
-    font-size: 18px;
-    color: #666;
-}
-
-.card-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.card-button:hover {
-    background-color: #3e8e41;
-}
-    .listing {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    }  
-</style>
-   <div class="listing"> 
-     <a href="./entire-place.html" class="card-property">
-    <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Home Casa da Karina" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Home Casa da Karina</h2>
-        <p class="card-rating">4.97/5 · 33 reviews</p>
-      
-    </div>
-</a>
-
-<a href="./private-sleepout.html" class="card-property">
-    <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Karina's House Private Sleepout" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Karina's House Private Sleepout</h2>
-        <p class="card-rating">4.91/5 · 80 reviews</p>
-      
-    </div>
-</a>
-    </div>
-  -->
+ 
   <div class="accommodation-container">
 
     <div class="accommodation-item">
@@ -953,12 +884,12 @@ ease;
         <p>8 Guests | 4 Bedrooms | 6 Beds | 1 Bath</p>
 
         <br>
-         <p>
+        <p>
           Built in 1932 as part of the historic Muritai Homestead, <strong>Casa da Karina</strong> is a charming and peaceful home — full of character and perfect for family or friends. Guests call it <em>"a true home away from home"</em> and <em>"a little piece of heaven."</em>
           <br><br>
           Want the best price? Book directly!
         </p>
-      <!--  <p>
+        <!--  <p>
           Built in 1932 as part of the historic Muritai Homestead, <strong>Casa da Karina</strong> is a charming and peaceful home — full of character and perfect for family or friends. Guests call it <em>"a true home away from home"</em> and <em>"a little piece of heaven."</em>
           <br><br>
           Located in the sought-after “green circle” of Havelock North, it’s just a short stroll to the village, boutique shops, cafés, and even the iconic Te Mata Peak. Wineries and beaches are also a short drive away.
@@ -970,38 +901,37 @@ ease;
 -->
         <div class="booking-benefits">
           <p><strong>Why book directly?</strong></p>
-         <ul class="benefits-list">
-  <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
-  <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
-  <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
-</ul>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
+          </ul>
         </div>
 
         <div class="buttons-container">
-      
-<a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight btn-contact">
-  <i class="fab fa-whatsapp"></i> Book Directly – Best Price
-</a>
 
-<a href="./entire-place.html" class="btn btn-contact">
- <i class="fas fa-home"></i> About This Stay
-</a>
+          <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight btn-contact">
+            <i class="fab fa-whatsapp"></i> Book Directly – Best Price
+          </a>
 
-<a href="https://www.airbnb.com/rooms/41800361?source_impression_id=p3_1757768708_P3yOzVK_U5yEg0VN" target="_blank" class="btn reserve-airbnb subtle btn-contact">
- or Reserve on Airbnb  <i class="fas fa-up-right-from-square"></i>
-</a>
- </div>
+          <a href="./entire-place.html" class="btn btn-contact">
+            <i class="fas fa-home"></i> About This Stay
+          </a>
+
+          <a href="https://www.airbnb.com/rooms/41800361?source_impression_id=p3_1757768708_P3yOzVK_U5yEg0VN" target="_blank" class="btn reserve-airbnb subtle btn-contact">
+            or Reserve on Airbnb <i class="fas fa-up-right-from-square"></i>
+          </a>
+        </div>
 
       </div>
 
-     
       <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Entire Place Photo" class="">
     </div>
 
- <br/> <br/>
-     <div class="accommodation-item">
-        <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-off" >
-     <div class="accommodation-info">
+    <br /> <br />
+ <div class="accommodation-item">
+      <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-off">
+      <div class="accommodation-info">
         <div class="rating-box">
           <span class="rating-text-large">★ 4.91 / 5</span>
           <span class="rating-note">Guest Favorite • Superhost on Airbnb</span>
@@ -1009,40 +939,135 @@ ease;
 
         <h3 class="section-subtitle">Private Sleepout • Havelock North, New Zealand</h3>
         <p class="section-title">Casa da Karina's Private Sleepout</p>
-        <p>1 king bed |  Private attached bathroom</p>
+        <p>1 king bed | Private attached bathroom</p>
 
         <br>
-         <p>
-       The <strong>Casa da Karina</strong> sleep out is located in the most noble area of Havelock North, the green belt, walking distance to the village, schools, shops and restaurants.
-You will have your own private room and bathroom away from the main house but inside our lovely garden.
+        <p>
+          The <strong>Casa da Karina</strong> sleep out is located in the most noble area of Havelock North, the green belt, walking distance to the village, schools, shops and restaurants.
+          You will have your own private room and bathroom away from the main house but inside our lovely garden.
           <br><br>
           Want the best price? Book directly!
         </p>
-    
+
         <div class="booking-benefits">
           <p><strong>Why book directly?</strong></p>
-         <ul class="benefits-list">
-  <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
-  <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
-  <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
-</ul>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
+          </ul>
         </div>
 
         <div class="buttons-container">
-    <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." 
-            class="btn reserve-direct highlight  btn-contact""> <i class="fab fa-whatsapp"></i> Book Directly – Best Price</a>
+          <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight  btn-contact"> <i class=" fab fa-whatsapp"></i> Book Directly – Best Price</a>
           <a href="./entire-place.html" class="btn btn-contact"><i class="fas fa-home"></i> About This Stay</a>
-          <a href="https://www.airbnb.com/rooms/41194993?source_impression_id=p3_1757796349_P3RZe1QqoPNuL6V8" target="_blank" class="btn reserve-airbnb subtle btn-contact"> or Reserve on Airbnb  <i class="fas fa-up-right-from-square"></i></a>
+          <a href="https://www.airbnb.com/rooms/41194993?source_impression_id=p3_1757796349_P3RZe1QqoPNuL6V8" target="_blank" class="btn reserve-airbnb subtle btn-contact"> or Reserve on Airbnb <i class="fas fa-up-right-from-square"></i></a>
         </div>
 
       </div>
-     
-       <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-on" >
+
+      <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-on">
     </div>
 
-    
+    <div class="accommodation-item">
+      <div class="accommodation-info">
+        <div class="rating-box">
+          <span class="rating-text-large">★ 4.97 / 5</span>
+          <span class="rating-note">Guest Favorite • Superhost on Airbnb</span>
+        </div>
+
+        <h3 class="section-subtitle">Entire Home • Havelock North, New Zealand</h3>
+        <p class="section-title">Casa da Karina</p>
+        <p>8 Guests | 4 Bedrooms | 6 Beds | 1 Bath</p>
+
+        <br>
+        <p>
+          Built in 1932 as part of the historic Muritai Homestead, <strong>Casa da Karina</strong> is a charming and peaceful home — full of character and perfect for family or friends. Guests call it <em>"a true home away from home"</em> and <em>"a little piece of heaven."</em>
+          <br><br>
+          Want the best price? Book directly!
+        </p>
+        <!--  <p>
+          Built in 1932 as part of the historic Muritai Homestead, <strong>Casa da Karina</strong> is a charming and peaceful home — full of character and perfect for family or friends. Guests call it <em>"a true home away from home"</em> and <em>"a little piece of heaven."</em>
+          <br><br>
+          Located in the sought-after “green circle” of Havelock North, it’s just a short stroll to the village, boutique shops, cafés, and even the iconic Te Mata Peak. Wineries and beaches are also a short drive away.
+          <br><br>
+          My dog Lola appears in the pictures but won’t be staying with you. Our lovely cat, however, lives here and may drop by to say hello.
+          <br><br>
+          Want the best price? Book directly and enjoy exclusive benefits!
+        </p>
+-->
+        <div class="booking-benefits">
+          <p><strong>Why book directly?</strong></p>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
+          </ul>
+        </div>
+
+        <div class="buttons-container">
+
+          <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight btn-contact">
+            <i class="fab fa-whatsapp"></i> Book Directly – Best Price
+          </a>
+
+          <a href="./entire-place.html" class="btn btn-contact">
+            <i class="fas fa-home"></i> About This Stay
+          </a>
+
+          <a href="https://www.airbnb.com/rooms/41800361?source_impression_id=p3_1757768708_P3yOzVK_U5yEg0VN" target="_blank" class="btn reserve-airbnb subtle btn-contact">
+            or Reserve on Airbnb <i class="fas fa-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Entire Place Photo" class="">
+    </div>
+
+    <br /> <br />
+ <div class="accommodation-item">
+      <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-off">
+      <div class="accommodation-info">
+        <div class="rating-box">
+          <span class="rating-text-large">★ 4.91 / 5</span>
+          <span class="rating-note">Guest Favorite • Superhost on Airbnb</span>
+        </div>
+
+        <h3 class="section-subtitle">Private Sleepout • Havelock North, New Zealand</h3>
+        <p class="section-title">Casa da Karina's Private Sleepout</p>
+        <p>1 king bed | Private attached bathroom</p>
+
+        <br>
+        <p>
+          The <strong>Casa da Karina</strong> sleep out is located in the most noble area of Havelock North, the green belt, walking distance to the village, schools, shops and restaurants.
+          You will have your own private room and bathroom away from the main house but inside our lovely garden.
+          <br><br>
+          Want the best price? Book directly!
+        </p>
+
+        <div class="booking-benefits">
+          <p><strong>Why book directly?</strong></p>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle icon-check"></i> No Airbnb service fees</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Priority early check-in / late check-out</li>
+            <li><i class="fas fa-check-circle icon-check"></i> Faster host communication</li>
+          </ul>
+        </div>
+
+        <div class="buttons-container">
+          <a href="https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability." class="btn reserve-direct highlight  btn-contact"> <i class=" fab fa-whatsapp"></i> Book Directly – Best Price</a>
+          <a href="./entire-place.html" class="btn btn-contact"><i class="fas fa-home"></i> About This Stay</a>
+          <a href="https://www.airbnb.com/rooms/41194993?source_impression_id=p3_1757796349_P3RZe1QqoPNuL6V8" target="_blank" class="btn reserve-airbnb subtle btn-contact"> or Reserve on Airbnb <i class="fas fa-up-right-from-square"></i></a>
+        </div>
+
+      </div>
+
+      <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Private Sleepout Photo" class="mobile-on">
+    </div>
+
   </div>
- <footer style="bottom:0;padding: 20px 0;height: 50px;display: flex;align-items: center;justify-content: center;">
+  <footer style="bottom:0;padding: 20px 0;height: 50px;display: flex;align-items: center;justify-content: center;">
     <p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
   </footer>
   <script>
