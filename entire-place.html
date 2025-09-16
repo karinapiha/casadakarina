@@ -472,9 +472,9 @@
 
 				.feature-icon {
 					font-size: 19px;
-    color: #333;
-    flex-shrink: 0;
-    margin-top: 0;
+					color: #333;
+					flex-shrink: 0;
+					margin-top: 0;
 				}
 
 				.feature-text h3 {
@@ -1294,15 +1294,12 @@
 				}
 
 				.show-more-btn {
-					
 					font-size: 1rem;
 					transition: background-color 0.3s ease;
 					cursor: pointer;
 				}
 
-				.show-more-btn:hover {
-				
-				}
+				.show-more-btn:hover {}
 
 				/* FontAwesome icon style fix */
 				.show-more-btn i {
@@ -1345,7 +1342,7 @@
 		<section id="host">
 			<style>
 				.host-section {
-					max-width: 600px;
+					max-width: 100%;
 					margin: 1rem auto;
 					color: #333;
 					padding: 1rem;
@@ -1361,18 +1358,25 @@
 					align-items: center;
 					gap: 1rem;
 					margin-bottom: 1rem;
+					margin-top: 1rem;
 				}
 
 				.host-photo {
 					width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
+					height: 80px;
+					border-radius: 50%;
+					object-fit: cover;
+					box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
 				}
 
 				.host-info {
-					flex: 1;
+					gap: 2px;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					align-content: center;
+					justify-content: center;
+					flex-wrap: nowrap;
 				}
 
 				.host-name {
@@ -1383,7 +1387,7 @@
 				.host-badge {
 					margin: 0 0 0.6rem 0;
 					color: #333;
-					font-weight: 600;
+					font-weight: 400;
 					font-size: 1rem;
 					display: flex;
 					align-items: center;
@@ -1391,7 +1395,7 @@
 				}
 
 				.host-badge i {
-					color:#D98E04 !important;
+					color: #333 !important;
 				}
 
 				.host-info p {
@@ -1424,21 +1428,19 @@
 				}
 
 				.message-host-btn {
-				margin-top: 1.5rem; */
-    /* background-color: #007BFF; */
-    /* border: none; */
-    /* color: white; */
-    /* padding: 0.6rem 1.2rem; */
-    font-size: 15px;
-    /* border-radius: 4px; */
-    cursor: pointer;
-    transition: background-color 0.3s 
-ease;
+					margin-top: 1.5rem;
+					*/
+					/* background-color: #007BFF; */
+					/* border: none; */
+					/* color: white; */
+					/* padding: 0.6rem 1.2rem; */
+					font-size: 15px;
+					/* border-radius: 4px; */
+					cursor: pointer;
+					transition: background-color 0.3s ease;
 				}
 
-				.message-host-btn:hover {
-				
-				}
+				.message-host-btn:hover {}
 
 				.payment-warning {
 					margin-top: 1rem;
@@ -1487,7 +1489,7 @@ ease;
 				</div>
 
 				<button class="btn-contact message-host-btn">Message host</button>
-<button class="btn-contact message-host-btn">Superhost Profile</button>
+				<button class="btn-contact message-host-btn">Superhost Profile</button>
 				<p class="payment-warning">
 					To help protect your payment, always use Airbnb to send money and communicate with hosts.
 				</p>
