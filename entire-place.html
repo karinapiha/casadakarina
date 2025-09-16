@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+
     html {
       scroll-padding-top: 80px;
     }
@@ -1243,7 +1244,7 @@
 
             </div>
 
-            <p>Such a lovely home! Couldn’t have asked for a more perfect place. It is in a great location right around the corner from the town centre. The house is roomy with lots of little spots to...</p>
+            <p class="truncate" data-max="100">Such a lovely home! Couldn’t have asked for a more perfect place. It is in a great location right around the corner from the town centre. The house is roomy with lots of little spots to...</p>
             <p><i class="fa-regular fa-user"></i> - <bold>Cody</bold> <br> <span>Auckland, New Zealand</span></p>
           </div>
           <!-- Review 2 -->
@@ -1252,7 +1253,7 @@
             <div class="stars" data-rating="5">
 
             </div>
-            <p>We were looking for a home with lots of space for a family and a dog and Karina’s house was the perfect spot as we were able to book the cabin room so that we could have space and quiet for a young baby. The space is large and flexible for a family and the garden is a beautiful place to relax. Karina was a great host: friendly and helpful when we needed anything and she even baked us a welcome cake :)</p>
+            <p class="truncate" data-max="100">We were looking for a home with lots of space for a family and a dog and Karina’s house was the perfect spot as we were able to book the cabin room so that we could have space and quiet for a young baby. The space is large and flexible for a family and the garden is a beautiful place to relax. Karina was a great host: friendly and helpful when we needed anything and she even baked us a welcome cake :)</p>
             <p><i class="fa-regular fa-user"></i> - <bold>Andrew</bold> <br>
               <span>11 years on Airbnb</span>
             </p>
@@ -1262,7 +1263,7 @@
             <div class="stars" data-rating="5">
 
             </div>
-            <p>We had a fabulous time, and Karina was a thoughtful host & pleasure to deal with. The home is absolutely lovely and was ideal for our family of two adults and three kids. Thank you Karina. </p>
+            <p class="truncate" data-max="100">We had a fabulous time, and Karina was a thoughtful host & pleasure to deal with. The home is absolutely lovely and was ideal for our family of two adults and three kids. Thank you Karina. </p>
             <p><i class="fa-regular fa-user"></i> - <bold>Sam</bold> <br>
               <span>4 years on Airbnb</span>
             </p>
@@ -1272,7 +1273,7 @@
             <div class="stars" data-rating="5">
 
             </div>
-            <p>Very lovely house for me and my family and relatives! Super relaxing, super accessible! Karina was a lovely host and she was very warming for us to visit her place
+            <p class="truncate" data-max="100">Very lovely house for me and my family and relatives! Super relaxing, super accessible! Karina was a lovely host and she was very warming for us to visit her place
 Thanks</p>
             <p><i class="fa-regular fa-user"></i> - <bold>Stephen</bold> <br> <span>4 years on Airbnb</span>
             </p>
@@ -1282,7 +1283,7 @@ Thanks</p>
             <div class="stars" data-rating="5">
 
             </div>
-            <p> This was a wonderful place to stay, beautiful house and beautiful garden! I felt at home and would have loved to stay for longer. The shops are nearby and it is a very safe neighbourhood. Very peaceful and relaxing area. Karina was a great host, and I am hoping to come again soon!</p>
+            <p class="truncate" data-max="100"> This was a wonderful place to stay, beautiful house and beautiful garden! I felt at home and would have loved to stay for longer. The shops are nearby and it is a very safe neighbourhood. Very peaceful and relaxing area. Karina was a great host, and I am hoping to come again soon!</p>
             <p><i class="fa-regular fa-user"></i> - <bold>Aishwariya</bold> <br>
               <span>6 years on Airbnb</span>
             </p>
@@ -1293,7 +1294,7 @@ Thanks</p>
             <div class="stars" data-rating="5">
 
             </div>
-            <p>A lovely house in a great location. Beautiful garden and a friendly cat.  A little warm when Hawkes Bay hit 30c, but the outside deck and chairs always stayed lovely and cool.</p>
+            <p class="truncate" data-max="100">A lovely house in a great location. Beautiful garden and a friendly cat.  A little warm when Hawkes Bay hit 30c, but the outside deck and chairs always stayed lovely and cool.</p>
             <p><i class="fa-regular fa-user"></i> - <bold>Stuart</bold> <br>
               <span>3 years on Airbnb</span>
             </p>
@@ -1794,6 +1795,16 @@ Thanks</p>
     // Insere o ano no elemento do footer
     document.getElementById("current-year").textContent = currentYear;
   </script>
+<script>
+  document.querySelectorAll('.truncate').forEach(el => {
+    const max = parseInt(el.dataset.max);
+    const fullText = el.textContent.trim();
+
+    if (fullText.length > max) {
+      el.textContent = fullText.slice(0, max).trim() + '...';
+    }
+  });
+</script>
 
 </body>
 
