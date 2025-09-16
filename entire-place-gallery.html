@@ -669,41 +669,111 @@
 
   <div class="profile">
 
-    <!--  -->
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <h1>Living room 1</h1>
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 22%;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  div.gallery-item {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  div.gallery-item {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+  <h1>Living room 1</h1>
     <span>2 sofa beds - Crib</span>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg?im_w=1200" alt="Living room 1 Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg?im_w=720" alt="Living room 1 Image" />
-        </div>
+<div class="gallery">
 
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg?im_w=720" alt="Living room 1 Image" />
-        </div>
+<div class="gallery-item">
+  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg">
+   <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg" alt="Living room 1 Image" />
+  </a>
 
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg?im_w=720" alt="Living room 1 Image" />
-        </div>
+</div>
 
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg?im_w=720" alt="Living room 1 Image" />
-        </div>
+<div class="gallery-item">
+  <a target="_blank" href="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg">
+    <img src="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg" alt="Forest" width="600" height="400">
+  </a>
+</div>
 
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg?im_w=720" alt="Living room 1 Image" />
-        </div>
+   <div class="gallery-item">
+  <a  href="  https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg ">
+    <img src="  https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg" alt="Mountains" width="600" height="400">
+  </a>
+</div>     
+     <div class="gallery-item">
+  <a  href="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg">
+    <img src="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg" alt="Mountains" width="600" height="400">
+  </a>
+</div>               
+  <div class="gallery-item">
+  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+</div>
+                  
+                    
+<div class="gallery-item">
+  <a href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg" alt="Northern Lights" width="600" height="400">
+  </a>
+</div>
 
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg?im_w=1200" alt="Living room 1 Image" />
-        </div>
+<div class="gallery-item">
+  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg" alt="Mountains" width="600" height="400">
+  </a>
+</div>
 
-      </div>
-    </div>
+</div>
+
+
+
+
+
+
+
+                    
 
     <h1>Living room 2</h1>
     <div id="card_slider">
