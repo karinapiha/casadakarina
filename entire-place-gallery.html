@@ -1,1107 +1,287 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Casa da Karina ★4.97 Superhost. Your home away from home in Havelock North, New Zealand. 4 beds, 1 bath. Book now!">
-  <title>Entire Place - Casa da Karina - NZ </title>
+  <title>Entire Place Gallery - Casa da Karina - NZ </title>
   <link rel="icon" type="image/png" href="./images/favicon.png">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<style>
-  i.fas.fa-check-circle.icon-check {
-    color: #333;
-    font-size: 21px;
-    background: #fff;
-    position: absolute;
-    bottom: 10px;
-    right: 11px;
-    top: 53px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 300px) {
-    .card {
-      width: 226px;
-      background: red;
+  <style>
+    html{
+      padding:0 30px;
     }
-
-    .right-section>div {
-      width: 70px;
-      margin: 0;
-    }
-  }
-
-  body {
+    body {
     font-family: "Josefin Sans", sans-serif;
-    margin: 0;
-    background: #fff;
-  }
-
-  a,
-  h1,
-  h2 {
-    color: #333;
-  }
-
-  h1,
-  h2 {
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .header {
-    background: #fff;
-    width: 100%;
-    z-index: 3;
-  }
-
-  .header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-  }
-
-  .header li a {
-    display: block;
-    padding: 20px 20px;
-    border-bottom: 2px solid #fff;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-
-  @media (min-width: 48em) {
-
-    .header li a,
-    footer p {
-      font-size: 0.9725rem;
-    }
-  }
-
-  .header .menu-btn:hover,
-  .header li a:hover {
-    border-bottom: 2px solid;
-  }
-
-  ul.menu {
-    background: #fff;
-  }
-
-  .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-  }
-
-  .header .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-  }
-
-  .header .menu-icon .navicon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 18px;
-  }
-
-  .header .menu-icon .navicon:after,
-  .header .menu-icon .navicon:before {
-    background: #333;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
-  }
-
-  .header .menu-icon .navicon:before {
-    top: 5px;
-  }
-
-  .header .menu-icon .navicon:after {
-    top: -5px;
-  }
-
-  .header .menu-btn {
-    display: none;
-  }
-
-  .header .menu-btn:checked~.menu {
-    max-height: 100vh;
-  }
-
-  .header .menu-btn:checked~.menu-icon .navicon {
-    background: 0 0;
-  }
-
-  .header .menu-btn:checked~.menu-icon .navicon:before {
-    transform: rotate(-45deg);
-  }
-
-  .header .menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
-  }
-
-  .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after,
-  .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before {
-    top: 0;
-  }
-
-  @media (min-width: 48em) {
-    .header li {
-      float: left;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .header li a {
-      padding: 20px 14px;
+    /* Scroll horizontal */
+    .image-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
     }
 
-    .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-      margin-right: 20px;
+    .image-scroll img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: transform 0.3s;
     }
 
-    .header .menu-icon {
+    .image-scroll img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
       display: none;
-    }
-  }
-
-  .welcome {
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    width: 100%;
-  }
-
-  .welcome h2 {
-    margin: 15px;
-    font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 0.2375rem;
-  }
-
-  .welcome p {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.2375rem;
-    margin: 0;
-  }
-
-  @media (max-width: 48em) {
-    .welcome h2 {
-      font-size: 3rem;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
-    .welcome p {
-      font-size: 1.8rem;
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
     }
 
-    ul.menu {
-      background: #fff;
-    }
-  }
-
-  .gallery {
-    display: flex;
-    width: 100%;
-    gap: 43px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .artwork {
-    text-align: center;
-    width: 360px;
-    height: 430px;
-  }
-
-  .artwork img {
-    width: 100%;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-
-  .artwork img:hover {
-    transform: scale(1.05);
-  }
-
-  .artwork h3,
-  .artwork p {
-    margin: 5px 0;
-  }
-
-  .artwork h3 {
-    text-transform: uppercase;
-    margin-top: 11px;
-    font-size: 15px;
-    color: #333;
-  }
-
-  .artwork p {
-    font-size: 18px;
-    color: #555;
-  }
-
-  footer {
-    background: #fff;
-    color: #333;
-    text-align: center;
-    font-size: 1rem;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  @media (min-width: 48em) {
-    footer {
-      font-size: 1.125rem;
-    }
-  }
-
-  .welcome a {
-    border: 1px solid #333;
-    padding: 19px 19px;
-  }
-
-  main#home {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
-  main#home .contact {
-    width: 55%;
-    text-align: center;
-    padding: 40px 20px;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 48em) {
-    main#home .contact {
-      width: 75%;
-    }
-  }
-
-  main#home .contact h2 {
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  main#home .contact p {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-    font-weight: 300;
-    line-height: 1.2;
-  }
-
-  main#home .contact .btn-contact {
-    font-size: 1rem;
-    color: #333;
-    background: #fff;
-    padding: 19px 20px;
-    border-radius: 4px;
-    border: 1px solid #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-  }
-
-  main#home .contact .btn-contact:hover {
-    border: 1px solid #000;
-    color: #000;
-  }
-
-  main#home .contact .more-info {
-    margin-top: 40px;
-  }
-
-  main#home .contact .more-info h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-
-  main#home .contact .more-info p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #333;
-  }
-
-  main#home .contact .more-info a {
-    color: #333;
-    text-decoration: underline;
-  }
-
-  main#home .contact .more-info a:hover {
-    color: #555;
-  }
-
-  .profile {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-  }
-
-  .info-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .info {
-    flex: 1 1 auto;
-    margin: 20px;
-  }
-
-  .s {
-    margin-bottom: 20px;
-  }
-
-  .info img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
-  }
-
-  .info h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .info p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .mobile-block {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    .info {
-      flex: 1 1 100%;
-      margin: 10px 0;
-    }
-  }
-
-  .info {
-    flex: 1 1 auto;
-    margin: 20px;
-  }
-
-  .s {
-    margin-bottom: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .info {
-      flex: 1 1 100%;
-      margin: 10px 0;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .mobile-none {
-      display: none;
+    .modal-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 8px;
     }
 
-    .profile {
+    .caption {
+      color: #fff;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .close, .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
       padding: 10px;
+      border-radius: 50%;
+      user-select: none;
     }
 
-    .card {
-      width: 100% !important;
+    .close {
+      top: 10px;
+      right: 20px;
+      transform: none;
+      font-size: 2rem;
     }
 
-    .right-section>div {
-      width: 70px !important;
-      margin: 0 !important;
+    .prev {
+      left: -50px;
     }
-  }
 
-  .info img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%;
-  }
-
-  .btn-contact {
-    font-size: 1rem;
-    color: #333;
-    background: #fff;
-    padding: 19px 20px;
-    border-radius: 4px;
-    border: 1px solid #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-  }
-
-  .btn-contact:hover {
-    border: 1px solid #000;
-    color: #000;
-  }
-
-  .s {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  . {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    width: 23.33%;
-    height: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  . p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-
-  . p:last-child {
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    . {
-      width: 27%;
+    .next {
+      right: -50px;
     }
-  }
 
-  @media (max-width: 480px) {
-    . {
-      width: 100%;
+    @media (max-width: 600px) {
+      .prev, .next {
+        left: 10px;
+        right: 10px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        font-size: 1.5rem;
+      }
+
+      .prev {
+        left: 20px;
+      }
+
+      .next {
+        right: 20px;
+      }
     }
-  }
-
-  i.fa-regular.fa-user {
-    line-height: 2;
-    border-radius: 50%;
-    font-size: 10px;
-  }
-
-  .reviews {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .review {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    width: 23.33%;
-    height: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-content: center;
-    flex-wrap: nowrap;
-  }
-
-  .review p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-weight: 300;
-    height: 152px;
-  }
-
-  .review p:last-child {
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
-    height: 52px;
-  }
-
-  .review p:last-child span {
-    color: #666;
-    font-weight: 400;
-  }
-
-  @media (max-width: 768px) {
-    .review {
-      width: 27%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .review {
-      width: 100%;
-    }
-  }
-
-  #card_slider {
-    clear: both;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    height: 170px;
-    margin-top: 20px;
-    position: relative;
-    padding-left: 5px;
-    padding-top: 0;
-  }
-
-  #card_slider::-webkit-scrollbar {
-    height: 5px;
-  }
-
-  #card_slider::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-  }
-
-  #card_slider::-webkit-scrollbar-thumb {
-    background-color: #5d646c;
-    border-radius: 0;
-  }
-
-  #card_track {
-    position: absolute;
-    width: 6000px;
-  }
-
-  .subject_card {
-    border-radius: 8px;
-    height: 142px;
-    width: 171px;
-    background-color: #fff;
-    color: #333;
-    float: left;
-    text-align: center;
-    margin-right: 20px;
-    display: flex;
-    border: 1px solid #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .subject_card span {
-    margin-top: -12px;
-    font-size: 13px;
-    color: #666;
-  }
-
-  i.fa-solid.fa-location-dot {
-    font-size: 25px;
-    padding: 8px 0;
-    color: #666;
-    margin-top: -31px;
-  }
-</style>
-
-<body>
-
-  <header class="header" style="
-    position: fixed;
-    padding: 7px 0;
-    ">
-    <a href="https://karinapiha.github.io/casadakarina/entire-place.html" class="btn-contact" 0=""><i class="fas fa-arrow-left"></i> Back</a>
-
-  </header>
-  <div class="" style="height: 60px"></div>
-
-  <div class="profile">
-
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-div.gallery {
+    
+    .menu {
+  background-color: #fff;
+  color: white;
+  padding: 15px 20px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-div.gallery-item {
-  margin: 5px;
-  border: 1px solid #ccc;
-  width: 22%;
+.back-button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display:flex;
+  gap:10px
 }
 
-div.gallery-item:hover {
-  border: 1px solid #777;
+.back-button:hover {
+  color: #666;
 }
 
-div.gallery-item img {
-  width: 100%;
-  height: auto;
-}
-
-div.gallery-item div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 700px) {
-  div.gallery-item {
-    width: 45%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  div.gallery-item {
-    width: 100%;
-  }
-}
-</style>
+  </style>
 </head>
 <body>
-
-
-  <h1>Living room 1</h1>
-    <span>2 sofa beds - Crib</span>
-<div class="gallery">
-
-<div class="gallery-item">
-  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg">
-   <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg" alt="Living room 1 Image" />
-  </a>
-
-</div>
-
-<div class="gallery-item">
-  <a target="_blank" href="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg">
-    <img src="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg" alt="Forest" width="600" height="400">
-  </a>
-</div>
-
-   <div class="gallery-item">
-  <a  href="  https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg ">
-    <img src="  https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg" alt="Mountains" width="600" height="400">
-  </a>
-</div>     
-     <div class="gallery-item">
-  <a  href="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg">
-    <img src="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg" alt="Mountains" width="600" height="400">
-  </a>
-</div>               
-  <div class="gallery-item">
-  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg" alt="Mountains" width="600" height="400">
-  </a>
-</div>
-                  
-                    
-<div class="gallery-item">
-  <a href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg" alt="Northern Lights" width="600" height="400">
-  </a>
-</div>
-
-<div class="gallery-item">
-  <a  href="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg">
-    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg" alt="Mountains" width="600" height="400">
-  </a>
-</div>
-
-</div>
-
-
-
-
-
-
-
-                    
-
-    <h1>Living room 2</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2ff7b6f2-45a4-4ee6-b3e0-a8edc93be315.jpeg?im_w=720" alt="Living room 2 Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/031491d7-f366-48d7-867c-ad2f6764f47a.jpeg?im_w=720" alt="Living room 2 Image" />
-        </div>
-
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/304040f7-9ece-4761-99f6-e3f9741d3351.jpeg?im_w=720" alt="Living room 2 Image" />
-        </div>
-
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2ff7b6f2-45a4-4ee6-b3e0-a8edc93be315.jpeg?im_w=720" alt="Living room 2 Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/598669d1-1884-4830-8ee9-613ca90dce08.jpg?im_w=720" alt="Living room 2 Image" />
-        </div>
-
-      </div>
-    </div>
-
-    <h1>Full kitchen</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/d01dafbe-08e8-44ea-a4a4-fb0dae400f23.jpeg?im_w=1200" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/8aa133f5-e0dd-4b74-bf09-1731b6adf7dc.jpg?im_w=720" alt="Full kitchen Image" />
-        </div>
-
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/6982dbd7-ef0c-4f2e-a837-49dd6805c19a.jpg?im_w=720" alt="Full kitchen Image" />
-        </div>
-
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/6372af20-8259-40b7-814a-29e992dbcfd1.jpg?im_w=720" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/d398c8f2-8bbe-4a98-80bc-f7faaf4e9174.jpg?im_w=720" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/a57d3785-4981-4f2b-b36f-07d2af203f49.jpeg?im_w=720" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/20c1e169-b27a-42ce-b0f0-055575ced8aa.jpeg" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/af7b92c4-68ed-4300-b96a-2c08311020ef.jpeg" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2e4a59a3-e44e-4b25-90ee-bbefec89e00a.jpeg?im_w=720" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/e12872c5-ec31-44d6-9c3e-492c821f0089.jpeg?im_w=720" alt="Full kitchen Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/a57d3785-4981-4f2b-b36f-07d2af203f49.jpeg?im_w=720" alt="Full kitchen Image" />
-        </div>
-
-      </div>
-    </div>
-
-    <h1>Dining area 1</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/80fcb0bc-c307-49ae-a0e7-1961adf2782f.jpeg?im_w=720" alt="Dining area 1 Image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/5b799c2e-3291-4a49-b3f6-07b56fff2360.jpg?im_w=720" alt="Dining area 1 Image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2d2a1e37-3be4-4096-9804-64aafde44e72.jpeg?im_w=720" alt="Dining area 1 Image 3" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2a10c2a3-e578-455b-8ec0-9fbd1fd26635.jpeg?im_w=720" alt="Dining area 1 Image 4" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/a8b40e07-b622-47e2-946e-08b7aa668ebd.jpeg?im_w=720" alt="Dining area 1 Image 5" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/d7fa7e06-e865-403f-8d65-efbcaa2b381c.jpeg?im_w=720" alt="Dining area 1 Image 6" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Dining area 2</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/bf96b739-7ee1-4ff4-b31c-51ec6f9fc833.jpeg?im_w=720" alt="Dining area 2 image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8848f192-5394-4981-a221-cf610c01455d.jpeg?im_w=720" alt="Dining area 2 image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/3ef18c05-b1ac-42c2-84d8-f252c41debbe.jpg?im_w=720" alt="Dining area 2 image 3" />
-        </div>
-        <!-- Mantido vazio o 4º card, pois não há uma 4ª imagem fornecida -->
-        <div class="subject_card">
-          <img src="" alt="Dining area 2 image 4" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Bedroom 1</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/e714e8b7-fa8a-4351-9443-e41eece5b635.jpg?im_w=720" alt="Bedroom 1 image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/563aeccb-a430-4fb6-b20e-65ddb870580c.jpeg?im_w=720" alt="Bedroom 1 image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/72bbe8b2-d821-455b-84f8-9d8380d7d0c0.jpeg?im_w=720" alt="Bedroom 1 image 3" />
-        </div>
-        <!-- Mantido vazio o 4º card, pois não há uma 4ª imagem fornecida -->
-        <div class="subject_card">
-          <img src="" alt="Bedroom 1 image 4" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Bedroom 2</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/d7778332-338c-4643-967f-58af188f5610.jpg?im_w=720" alt="Yellow suite" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/0f102d29-3329-496b-9104-74dec8e667ba.jpeg?im_w=720" alt="Bedroom 2 image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/ea29cb41-12b8-4b5d-ab4e-210e99254d21.jpeg?im_w=720" alt="Bedroom 2 image 3" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/54a1240e-9286-42b8-92c9-a7278acf4a5e.jpeg?im_w=720" alt="Bedroom 2 image 4" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Bedroom 3</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/d7778332-338c-4643-967f-58af188f5610.jpg?im_w=720" alt="Bedroom 3 image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/0f102d29-3329-496b-9104-74dec8e667ba.jpeg?im_w=720" alt="Bedroom 3 image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/ea29cb41-12b8-4b5d-ab4e-210e99254d21.jpeg?im_w=720" alt="Bedroom 3 image 3" />
-        </div>
-        <!-- Você também forneceu uma 4ª imagem, podemos adicionar se quiser -->
-      </div>
-    </div>
-
-    <h1>Bedroom 4</h1>
-
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-41800361/original/cbb2ab69-4b55-4a72-8e24-c959e20834ed.jpg?im_w=720" alt="Bedroom 4 image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/5f7d21cf-d36f-47fb-83d8-a69832bad05d.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/0c4b38df-a1b5-4d6b-9f3d-01543a48831e.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-41800361/original/cbb2ab69-4b55-4a72-8e24-c959e20834ed.jpg?im_w=720" alt="Bedroom 4 image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/5f7d21cf-d36f-47fb-83d8-a69832bad05d.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/0c4b38df-a1b5-4d6b-9f3d-01543a48831e.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/7a7ae6ea-c305-4b11-b596-2544ff5d62a3.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/bb1a7526-3809-40ac-bd30-ab02ab04e4b6.jpg?im_w=720" alt="Garden then" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/91669fc1-e0c3-46f0-ab84-02b5b7d36888.jpg?im_w=720" alt="View from sleepout" />
-        </div>
-        <!-- Se tiver mais imagens, pode continuar aqui -->
-      </div>
-    </div>
-
-    <h1>Full bathroom</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/01954fb7-be9e-43ec-b07b-355e6db83749.jpg?im_w=720" alt="Full bathroom image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/3343bb63-e70e-427b-9284-afbca0e88980.jpeg?im_w=720" alt="Full bathroom image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/your-third-image-url.jpg" alt="Full bathroom image 3" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Patio</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/5f7d21cf-d36f-47fb-83d8-a69832bad05d.jpg?im_w=720" alt="Patio Garden View 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/0c4b38df-a1b5-4d6b-9f3d-01543a48831e.jpg?im_w=720" alt="Patio Garden View 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/7a7ae6ea-c305-4b11-b596-2544ff5d62a3.jpg?im_w=720" alt="Patio Garden View 3" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Patio</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/56ff6190-a338-41c5-a18b-b62759dc05a6.jpg?im_w=720" alt="Patio image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/fa08d568-b97a-4743-bc1e-572949fd9358.jpg?im_w=720" alt="Porch" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/32e0283c-6af7-43cc-9d01-d2060f274747.jpg?im_w=720" alt="Veranda (living room outside)" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/047c84f1-e7ea-4b5a-b774-cd4e6c26836f.jpg?im_w=720" alt="Hammocks" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/d19fd05c-c0f4-4fcc-81cd-9c4a69e953e3.jpeg?im_w=720" alt="Patio image 5" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8cf3fdcf-814f-40d4-bc45-e6591828c94f.jpeg?im_w=720" alt="Patio image 6" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/296d2e16-5932-48f4-a2e4-f9b14ad543a0.jpeg?im_w=720" alt="Patio image 7" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Exterior</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/99df8599-a6a0-45ef-bbb7-0beeabb7c8f2.jpg?im_w=720" alt="“Casa da Karina” from above" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/303d947a-880c-48e2-aef5-9efebd275cca.jpg?im_w=720" alt="View from the road" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/51746f15-d928-421c-9510-ced8003df9bd.jpg?im_w=720" alt="Looking into “Casa da Karina “ from the garden." />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/aa51b9e7-83ad-4a97-88ca-3b26b1ec5eee.jpg?im_w=720" alt="Exterior image 4" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/f475277b-7fb2-4f68-bc41-5467ea2bb058.jpg?im_w=720" alt="Exterior image 5" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Hot tub</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8d8b8654-b4ed-4d0f-a6da-4ebe096b68f2.jpeg?im_w=720" alt="Hot tub image 1" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/80383952-15ce-4afc-bd3a-16e13808f94e.jpeg?im_w=720" alt="Hot tub image 2" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/80383952-15ce-4afc-bd3a-16e13808f94e.jpeg?im_w=720" alt="Hot tub image 3 (repeated)" />
-        </div>
-      </div>
-    </div>
-
-    <h1>Additional photos</h1>
-    <div id="card_slider">
-      <div id="card_track">
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/c5b796df-413d-4840-986b-64fb13ad2a9a.jpg?im_w=720" alt="Additional photos Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/016e76b8-d83b-4364-abbf-e0289b7bb495.jpg?im_w=720" alt="Additional photos Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/17b47f7f-9f90-402c-b3be-803a5a94bf8c.jpg?im_w=720" alt="Additional photos Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/5c34efaa-66a8-4446-acf7-c107922d6902.jpg?im_w=720" alt="Additional photos Image" />
-        </div>
-        <div class="subject_card">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/c09c8809-4c5e-47e3-b51d-aef27d46c416.jpeg?im_w=720" alt="Additional photos Image" />
-        </div>
-      </div>
-    </div>
-
+<header class="menu">
+  <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i>  Back</button>
+</header>
+ <h1>Living room 1</h1>
+      <span>2 sofa beds - Crib</span>
+  
+  <div class="image-scroll">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg" alt="Living room 1" data-caption="Living room 1">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg" alt="Living room 1" data-caption="Living room 1">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg" alt="Living room 1" data-caption="Living room 1">
   </div>
 
   
-  <br><br><br><br>
-  <footer style="bottom:0; padding: 0px 0;">
+ <h1>Living room 2</h1>
+      <span>-</span>
+  
+  <div class="image-scroll">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2ff7b6f2-45a4-4ee6-b3e0-a8edc93be315.jpeg" alt="Living room 2" data-caption="Living room 2">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/031491d7-f366-48d7-867c-ad2f6764f47a.jpeg" alt="Living room 2" data-caption="Living room 2">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/304040f7-9ece-4761-99f6-e3f9741d3351.jpeg" alt="Living room 2" data-caption="Living room 2">
+    <img src="https://a0.muscache.com/im/pictures/598669d1-1884-4830-8ee9-613ca90dce08.jpg" alt="Living room 2" data-caption="Living room 2">
+   
+  </div>
+
+  
+  
+  
+  
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <span class="prev" id="prevBtn">&#10094;</span>
+      <img id="modalImage" src="" alt="">
+      <span class="next" id="nextBtn">&#10095;</span>
+        <div id="modalCounter" style="color:white; margin-top: 10px; font-weight: bold;"></div>
+  
+      <div class="caption" id="modalCaption"></div>
+    </div>
+  </div>
+ <footer style="bottom:0; padding: 0px 0; text-align:center">
     <p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
   </footer>
-
-  <script>
+   <script>
     // Obtém o ano atual com base no horário do navegador
     const currentYear = new Date().getFullYear();
     // Insere o ano no elemento do footer
     document.getElementById("current-year").textContent = currentYear;
   </script>
+  <script>
 
-  </div>
+    
+    const images = document.querySelectorAll('.image-scroll img');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const closeModal = document.getElementById('closeModal');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      const img = images[index];
+      modalImage.src = img.src;
+      modalCaption.textContent = img.dataset.caption;
+          document.getElementById('modalCounter').textContent = `${index + 1} / ${images.length}`;
+
+      modal.style.display = 'flex';
+    }
+
+    function closeModalFunc() {
+      modal.style.display = 'none';
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      openModal(currentIndex);
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      openModal(currentIndex);
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => openModal(index));
+    });
+
+    closeModal.addEventListener('click', closeModalFunc);
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+
+    // Fechar ao clicar fora da imagem
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Teclado (opcional)
+    window.addEventListener('keydown', (e) => {
+      if (modal.style.display === 'flex') {
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'Escape') closeModalFunc();
+      }
+    });
+  </script>
+  <script>
+  function safeBack() {
+    if (window.history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = '/';
+    }
+  }
+</script>
+
 </body>
-
 </html>
+
+
+
