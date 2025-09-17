@@ -11,16 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    html{
-      padding:0 30px;
+    html {
+      padding: 0 30px;
     }
+
     @media (min-width: 1200px) {
-  html {
-    padding: 0 100px;
-  }
-}
+      html {
+        padding: 0 100px;
+      }
+
+      .image-scroll img {
+        width: 25% !important;
+      }
+    }
+
     body {
-    font-family: "Josefin Sans", sans-serif;
+      font-family: "Josefin Sans", sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -58,7 +64,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.8);
+      background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
       padding: 20px;
@@ -83,14 +89,16 @@
       font-size: 1rem;
     }
 
-    .close, .prev, .next {
+    .close,
+    .prev,
+    .next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       color: white;
       font-size: 2rem;
       cursor: pointer;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       padding: 10px;
       border-radius: 50%;
       user-select: none;
@@ -112,7 +120,9 @@
     }
 
     @media (max-width: 600px) {
-      .prev, .next {
+
+      .prev,
+      .next {
         left: 10px;
         right: 10px;
         top: auto;
@@ -129,94 +139,87 @@
         right: 20px;
       }
     }
-    
+
     .menu {
-  background-color: #fff;
-  color: white;
-  padding: 15px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+      background-color: #fff;
+      color: white;
+      padding: 15px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.back-button {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-  display:flex;
-  gap:10px
-}
+    .back-button {
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #333;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      gap: 10px
+    }
 
-.back-button:hover {
-  color: #666;
-}
-
+    .back-button:hover {
+      color: #666;
+    }
   </style>
 </head>
+
 <body>
-<header class="menu">
-  <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i>  Back</button>
-</header>
- <h1>Living room 1</h1>
-      <span>2 sofa beds - Crib</span>
-  
+  <header class="menu">
+    <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+  </header>
+  <h1>Living room 1</h1>
+  <span>2 sofa beds - Crib</span>
+
   <div class="image-scroll">
     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/1e005d65-e691-4911-8412-5b5a20462b84.jpeg" alt="Living room 1" data-caption="Living room 1">
     <img src="https://a0.muscache.com/im/pictures/1ecd6a82-60fb-44d2-80ac-42ccb4a83b19.jpg" alt="Living room 1" data-caption="Living room 1">
     <img src="https://a0.muscache.com/im/pictures/3759c794-91e1-41c1-a648-3ba853baf376.jpg" alt="Living room 1" data-caption="Living room 1">
     <img src="https://a0.muscache.com/im/pictures/bb0a587f-805c-4802-a88b-4afa472c6fbe.jpg" alt="Living room 1" data-caption="Living room 1">
     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/8ac4dce4-9923-41ab-9d2f-259dea9ebb3b.jpeg" alt="Living room 1" data-caption="Living room 1">
-        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg" alt="Living room 1" data-caption="Living room 1">
-      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/4f8fe80d-7614-4ec4-8f0e-03d7031ff734.jpeg" alt="Living room 1" data-caption="Living room 1">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/386ddca0-ae31-4dcc-973b-1624de46c5fc.jpeg" alt="Living room 1" data-caption="Living room 1">
   </div>
 
-  
- <h1>Living room 2</h1>
-      <span>-</span>
-  
+  <h1>Living room 2</h1>
+  <span>-</span>
+
   <div class="image-scroll">
     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/2ff7b6f2-45a4-4ee6-b3e0-a8edc93be315.jpeg" alt="Living room 2" data-caption="Living room 2">
     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/031491d7-f366-48d7-867c-ad2f6764f47a.jpeg" alt="Living room 2" data-caption="Living room 2">
     <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-41800361/original/304040f7-9ece-4761-99f6-e3f9741d3351.jpeg" alt="Living room 2" data-caption="Living room 2">
     <img src="https://a0.muscache.com/im/pictures/598669d1-1884-4830-8ee9-613ca90dce08.jpg" alt="Living room 2" data-caption="Living room 2">
-   
+
   </div>
 
-  
-  
-  
-  
   <div class="modal" id="imageModal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
       <span class="prev" id="prevBtn">&#10094;</span>
       <img id="modalImage" src="" alt="">
       <span class="next" id="nextBtn">&#10095;</span>
-        <div id="modalCounter" style="color:white; margin-top: 10px; font-weight: bold;"></div>
-  
+      <div id="modalCounter" style="color:white; margin-top: 10px; font-weight: bold;"></div>
+
       <div class="caption" id="modalCaption"></div>
     </div>
   </div>
- <footer style="bottom:0; padding: 0px 0; text-align:center">
+  <footer style="bottom:0; padding: 0px 0; text-align:center">
     <p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
   </footer>
-   <script>
+  <script>
     // Obtém o ano atual com base no horário do navegador
     const currentYear = new Date().getFullYear();
     // Insere o ano no elemento do footer
     document.getElementById("current-year").textContent = currentYear;
   </script>
   <script>
-
-    
     const images = document.querySelectorAll('.image-scroll img');
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -224,7 +227,6 @@
     const closeModal = document.getElementById('closeModal');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-
     let currentIndex = 0;
 
     function openModal(index) {
@@ -232,8 +234,7 @@
       const img = images[index];
       modalImage.src = img.src;
       modalCaption.textContent = img.dataset.caption;
-          document.getElementById('modalCounter').textContent = `${index + 1} / ${images.length}`;
-
+      document.getElementById('modalCounter').textContent = `${index + 1} / ${images.length}`;
       modal.style.display = 'flex';
     }
 
@@ -250,22 +251,18 @@
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       openModal(currentIndex);
     }
-
     images.forEach((img, index) => {
       img.addEventListener('click', () => openModal(index));
     });
-
     closeModal.addEventListener('click', closeModalFunc);
     nextBtn.addEventListener('click', showNext);
     prevBtn.addEventListener('click', showPrev);
-
     // Fechar ao clicar fora da imagem
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeModalFunc();
       }
     });
-
     // Teclado (opcional)
     window.addEventListener('keydown', (e) => {
       if (modal.style.display === 'flex') {
@@ -276,17 +273,15 @@
     });
   </script>
   <script>
-  function safeBack() {
-    if (window.history.length > 1) {
-      history.back();
-    } else {
-      window.location.href = '/';
+    function safeBack() {
+      if (window.history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = '/';
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
+
 </html>
-
-
-
