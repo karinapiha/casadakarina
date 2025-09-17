@@ -120,25 +120,25 @@
     }
 
     @media (max-width: 600px) {
+  .prev,
+  .next {
+    left: 10px;
+    right: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    font-size: 1.5rem;
+  }
 
-      .prev,
-      .next {
-        left: 10px;
-        right: 10px;
-        top: auto;
-        bottom: 20px;
-        transform: none;
-        font-size: 1.5rem;
-      }
+  .prev {
+    left: 20px;
+  }
 
-      .prev {
-        left: 20px;
-      }
+  .next {
+    right: 20px;
+  }
+}
 
-      .next {
-        right: 20px;
-      }
-    }
 
     .menu {
       background-color: #fff;
@@ -210,7 +210,7 @@
       <div class="caption" id="modalCaption"></div>
     </div>
   </div>
-  <footer style="bottom:0; padding: 0px 0; text-align:center">
+ <footer style="bottom:0;padding: 20px 0;text-align:center">
     <p style="bottom:0;margin:0">© <span id="current-year">2025</span> Casa da Karina. All rights reserved.</p>
   </footer>
   <script>
