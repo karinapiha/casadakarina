@@ -113,11 +113,11 @@
     }
 
     .close {
-    top: 10px;
-    right: 20px;
-    transform: none;
-    font-size: 1.5rem;
-    line-height: 2.4 !important;
+      top: 10px;
+      right: 20px;
+      transform: none;
+      font-size: 1.5rem;
+      line-height: 2.4 !important;
     }
 
     .prev {
@@ -134,7 +134,7 @@
       .next {
         /*     left: 10px;
     right: 10px; */
-               top: auto;
+        top: auto;
         bottom: 70px;
         transform: none;
         font-size: 1.5rem;
@@ -169,28 +169,36 @@
       z-index: 1000;
     }
 
-    .back-button {
-      background-color: #fff;
-      color: #333;
+    header a.btn-contact {
+      font-size: 0.8rem !important;
       border: 1px solid #333;
-      padding: 10px 15px;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-      display: flex;
-      gap: 10px;
     }
 
-    .back-button:hover {
-      color: #666;
+    header>a {
+      font-size: 0.8rem !important;
+      margin: 0px 10px;
+    }
+
+    .btn-contact {
+      font-size: 1rem;
+      color: #333;
+      background: #fff;
+      padding: 19px 20px;
+      border-radius: 4px;
+      border: 1px solid #333;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
   <header class="menu">
-    <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+    <a href="./entire-place.html" class="btn-contact" 0=""><i class="fas fa-arrow-left"></i> Back</a>
   </header>
   <br><br><br><br>
   <h1>Living room 1</h1>
@@ -427,7 +435,7 @@
   </script>
   <script>
     function safeBack() {
-       window.location.href = './entire-place.html';   
+      window.location.href = './entire-place.html';
     }
   </script>
 
