@@ -10,37 +10,50 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-  i.fas.fa-check-circle.icon-check {
-    color: #333;
-    font-size: 21px;
-    background: #fff;
-    position: absolute;
-    bottom: 10px;
-    right: 11px;
-    top: 53px;
-    /* color: white; */
-    border-radius: 50%;
-    /* width: 20px; */
-    /* height: 20px; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 300px) {
- .card {
-            width: 226px;
-            background: red;
-          }
+  <style>
+    .back-button {
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #333;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      gap: 10px;
+    }
 
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
-}
-  
-</style>
+    i.fas.fa-check-circle.icon-check {
+      color: #333;
+      font-size: 21px;
+      background: #fff;
+      position: absolute;
+      bottom: 10px;
+      right: 11px;
+      top: 53px;
+      /* color: white; */
+      border-radius: 50%;
+      /* width: 20px; */
+      /* height: 20px; */
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 300px) {
+      .card {
+        width: 226px;
+        background: red;
+      }
+
+      .right-section>div {
+        width: 70px;
+        margin: 0;
+      }
+    }
+  </style>
   <style>
     body {
       font-family: 'Josefin Sans', sans-serif;
@@ -494,14 +507,15 @@
       .profile {
         padding: 10px;
       }
-      .card { width: 100% !important;
+
+      .card {
+        width: 100% !important;
       }
+
       .right-section>div {
-   
-    width: 70px !important;
+        width: 70px !important;
         margin: 0 !important;
-    
-}
+      }
     }
 
     .info img {
@@ -580,13 +594,12 @@
     }
 
     i.fa-regular.fa-user {
-    /* border: 1px solid #333; */
-    line-height: 2;
-    border-radius: 50%;
-    font-size: 10px;
-}
+      /* border: 1px solid #333; */
+      line-height: 2;
+      border-radius: 50%;
+      font-size: 10px;
+    }
 
-    
     .reviews {
       display: flex;
       flex-wrap: wrap;
@@ -594,45 +607,45 @@
     }
 
     .review {
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* width: calc(33.33% - 40px); */
-    width: 23.33%;
-    height: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-content: center;
-    flex-wrap: nowrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+      /* width: calc(33.33% - 40px); */
+      width: 23.33%;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      align-content: center;
+      flex-wrap: nowrap;
     }
 
     .review p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      text-align: center;
+      font-weight: 300;
       height: 152px;
     }
 
     .review p:last-child {
-     font-weight: 400;
-    color: #333;
-    margin-bottom: 0;
-    font-size: 12px;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 0;
+      font-size: 12px;
       height: 52px;
     }
 
     .review p:last-child span {
-    color: #666;
-    font-weight: 400;
-}
+      color: #666;
+      font-weight: 400;
+    }
 
     @media (max-width: 768px) {
       .review {
@@ -647,29 +660,25 @@
         margin
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <header class="header" style="position: fixed; margin-top: 0px; padding-top: 5px">
-    <img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
-           width: 54px;
-    margin-top: 0px;
-    margin-left: 9px;" />
+  <header class="header" style="
+    position: fixed;
+    padding: 7px 0;
+    ">
 
-    <input class=" menu-btn" type="checkbox" id="menu-btn" />
+    <input class=" menu-btn" type="checkbox" id="menu-btn">
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
     <ul class="menu">
-      <li><a href="./index.html">Home</a></li>
       <li><a href="./entire-place.html">Entire Place</a></li>
       <li><a href="./private-sleepout.html">Private Sleepout</a></li>
-      <li><a href="./superhost.html">SuperHost</a></li>
-      <li><a href="./contact.html">Contact</a></li>
+
     </ul>
   </header>
-
   <div class="" style="height: 60px"></div>
 
   <div class="profile">
@@ -746,33 +755,32 @@
         }
 
         .button {}
-         .card {
-            width: 226px;
-            
-          }
 
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
+        .card {
+          width: 226px;
+        }
+
+        .right-section>div {
+          width: 70px;
+          margin: 0;
+        }
       }
     </style>
 
     <section class="container">
       <div class="left-column">
         <style>
-@media (max-width: 440px) {
-  .card {
-            width: 226px;
-            
+          @media (max-width: 440px) {
+            .card {
+              width: 226px;
+            }
+
+            .right-section>div {
+              width: 70px;
+              margin: 0;
+            }
           }
 
-  .right-section>div {
-    width: 70px;
-    margin:0;
-}
-}
-          
           .card {
             width: 365px;
             background-color: #fff;
@@ -800,7 +808,7 @@
             height: 70px;
             border-radius: 50%;
             margin-bottom: 10px;
-                object-fit: cover;
+            object-fit: cover;
           }
 
           .left-section .verified-icon {
@@ -893,8 +901,8 @@ border-right: 1px solid #ddd;*/
             <div class="left-section">
               <div class="photo-container">
                 <img src="https://a0.muscache.com/im/pictures/user/cb3c094c-d288-405e-a9b4-f387aae5d716.jpg?im_w=240" />
-                <i class="fas fa-check-circle icon-check"></i> 
-<!--                 <div class="verified-icon"><i class="fas fa-check-circle icon-check"></i> 
+                <i class="fas fa-check-circle icon-check"></i>
+                <!--                 <div class="verified-icon"><i class="fas fa-check-circle icon-check"></i> 
                 </div> -->
               </div>
               <div class="name">Karina Piha</div>
@@ -907,7 +915,9 @@ border-right: 1px solid #ddd;*/
                 <div class="label">Airbnb Reviews</div>
               </div>
               <div>
-                <div class="value"> <div class="value"><span class="rating-text-large">★ 4.91 / 5</span></div></div>
+                <div class="value">
+                  <div class="value"><span class="rating-text-large">★ 4.91 / 5</span></div>
+                </div>
                 <div class="label">Airbnb Rating</div>
               </div>
               <div>
@@ -925,8 +935,7 @@ border-right: 1px solid #ddd;*/
               Lives: <span style="color: #666; font-weight: 400;"> Havelock North, New Zealand</span>
             </p>
             <br /><br />
-            <button class="button btn-contact" style="width:100%" 
-   onclick="window.open('https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability.', '_blank');">Message Host <i class="fas fa-paper-plane"></i></button>
+            <button class="button btn-contact" style="width:100%" onclick="window.open('https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability.', '_blank');">Message Host <i class="fas fa-paper-plane"></i></button>
           </div>
         </div>
 
@@ -937,9 +946,7 @@ border-right: 1px solid #ddd;*/
           The place is decorated as part of our house, designed for the people we love the most.<br /><br />
           We have 5 kids (3 live at home), a lovely dog, and a very friendly cat.</p>
         <br />
-        <button
-          class="button btn-contact"  
-          onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See More <i class="fas fa-external-link-alt"></i></button>
+        <button class="button btn-contact" onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See More <i class="fas fa-external-link-alt"></i></button>
       </div>
     </section>
   </div>
@@ -951,18 +958,18 @@ border-right: 1px solid #ddd;*/
       <div class="review">
         <style>
           .stars {
-          color: #ccc;
-    font-size: 13px;
-    height: 20px;
-    padding-top: 10px;
+            color: #ccc;
+            font-size: 13px;
+            height: 20px;
+            padding-top: 10px;
           }
 
-   .stars .filled {
-/*     color: #f90;
+          .stars .filled {
+            /*     color: #f90;
     color: #D9A404;
     color: #D9B607; */
-    color: #D98E04;
-}
+            color: #D98E04;
+          }
         </style>
 
         <div class="stars">
@@ -974,7 +981,7 @@ border-right: 1px solid #ddd;*/
         </div>
 
         <p>Regarding the host, Karina is the best. She was inviting and so helpful with any request. We cannot thank her enough.</p>
-       <p><i class="fa-regular fa-user"></i> - <bold>Cody</bold> <br/> <span>Auckland, New Zealand</span></p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Cody</bold> <br /> <span>Auckland, New Zealand</span></p>
       </div>
       <!-- Review 2 -->
       <div class="review">
@@ -987,8 +994,9 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
         <p>Karina was an amazing host – very friendly and accommodating. Her instructions were clear and helpful.</p>
-      <p><i class="fa-regular fa-user"></i> - <bold>Sarah</bold> <br/> 
-<span>Auckland, New Zealandy</span></p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Sarah</bold> <br />
+          <span>Auckland, New Zealandy</span>
+        </p>
       </div>
       <!-- Review 3 -->
       <div class="review">
@@ -1001,8 +1009,9 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
         <p>Karina is a friendly, warm person & very welcoming. </p>
-       <p><i class="fa-regular fa-user"></i> - <bold>Margie</bold> <br/> 
-<span>Auckland, New Zealand</span></p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Margie</bold> <br />
+          <span>Auckland, New Zealand</span>
+        </p>
       </div>
       <!-- Review 4 -->
       <div class="review">
@@ -1015,8 +1024,8 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
         <p>Karina is such a warm and welcoming host—highly recommend staying here.</p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Ayshen</bold> <br/> <span>Huntleys Point, Australia</span>
-</p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Ayshen</bold> <br /> <span>Huntleys Point, Australia</span>
+        </p>
       </div>
       <!-- Review 5 -->
       <div class="review">
@@ -1029,8 +1038,9 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
         <p> Karina and her family were welcoming and friendly, l would definitely recommend this place.</p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Leanne</bold> <br/>
-<span>Waikato, New Zealand</span></p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Leanne</bold> <br />
+          <span>Waikato, New Zealand</span>
+        </p>
       </div>
       <!-- Review 6 -->
       <div class="review">
@@ -1043,17 +1053,16 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
         <p>Karina was a very friendly host who organized some treats, much appreciated. </p>
-        <p><i class="fa-regular fa-user"></i> - <bold>Michelle</bold> <br/> 
-<span>Cambridge, New Zealand</span> </p>
+        <p><i class="fa-regular fa-user"></i> - <bold>Michelle</bold> <br />
+          <span>Cambridge, New Zealand</span>
+        </p>
       </div>
 
     </div>
     <br /><br />
     <div style="width:100%; text-align:center;">
-        <button
-          class="button btn-contact"  
-          onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See all reviews on Airbnb <i class="fas fa-external-link-alt"></i></button>
-      
+      <button class="button btn-contact" onclick="window.open('https://www.airbnb.com/users/show/15533268?enable_auto_translate=true&_set_bev_on_new_domain=1757644748_EANGUwMjJlNTRhY2&locale=en', '_blank');">See all reviews on Airbnb <i class="fas fa-external-link-alt"></i></button>
+
     </div>
     <br /><br /><br /><br />
     <!--  -->
@@ -1089,39 +1098,38 @@ border-right: 1px solid #ddd;*/
       }
 
       .subject_card {
-
-    border-radius: 8px;
-    height: 142px;
-    width: 171px;
-    background-color: #fff;
-    color: #333;
-    float: left;
-    text-align: center;
-    margin-right: 20px;
-    display: flex;
-    border: 1px solid #333;
-    /* box-shadow: 0px 2px 4px 0px rgb(82, 82, 88); */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        border-radius: 8px;
+        height: 142px;
+        width: 171px;
+        background-color: #fff;
+        color: #333;
+        float: left;
+        text-align: center;
+        margin-right: 20px;
+        display: flex;
+        border: 1px solid #333;
+        /* box-shadow: 0px 2px 4px 0px rgb(82, 82, 88); */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .subject_card span {
-    margin-top: -12px;
-    font-size: 13px;
-    color: #666;
-}
+        margin-top: -12px;
+        font-size: 13px;
+        color: #666;
+      }
 
-i.fa-solid.fa-location-dot {
-     font-size: 25px;
-    padding: 8px 0px;
-    color: #666;
-    margin-top: -31px;
-}
-}
+      i.fa-solid.fa-location-dot {
+        font-size: 25px;
+        padding: 8px 0px;
+        color: #666;
+        margin-top: -31px;
+      }
+      }
 
-i.fa-solid.fa-location-dot {}
+      i.fa-solid.fa-location-dot {}
 
       .subject_card>img {
         border-top-left-radius: 8px;
@@ -1137,215 +1145,200 @@ i.fa-solid.fa-location-dot {}
         margin-top: 5px;
         overflow: hidden;
         max-height: 60px;
-        font-size:13px;
+        font-size: 13px;
       }
     </style>
     <h1>Where Karina Has Been</h1>
 
     <div id="card_slider">
       <div id="card_track">
-        
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Aracati, Brazil</p>
-            <span>July 2025</span>
-          </div>
-        
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paraty, Brazil</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Aracati, Brazil</p>
-            <span>July 2025</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Nelson, New Zealand</p>
-            <span>January 2025</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Napier City, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Waimārama, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-    
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Taupō, New Zealand</p>
-            <span>2 trips</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Zagarolo, Italy</p>
-            <span>September 2023</span>
-          </div>
-        
 
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Sitges, Spain</p>
-            <span>September 2023</span>
-          </div>
-       
-         
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Barcelona, Spain</p>
-            <span>September 2023</span>
-          </div>
-        
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Auckland, New Zealand</p>
-            <span>9 trips</span>
-          </div>
-         
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Whangarei Heads, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-         
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Far North District, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-      
-          
-          <div class="subject_card">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Kahuranaki, New Zealand</p>
-            <span>December 2022</span>
-          </div>
-       
-       
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Glenduan, New Zealand</p>
-    <span>July 2022</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Aracati, Brazil</p>
+          <span>July 2025</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Tasman District, New Zealand</p>
-    <span>July 2022</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Paraty, Brazil</p>
+          <span>2 trips</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Elsthorpe, New Zealand</p>
-    <span>March 2022</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Aracati, Brazil</p>
+          <span>July 2025</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Eskdale, New Zealand</p>
-    <span>January 2021</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Nelson, New Zealand</p>
+          <span>January 2025</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Kuratau, New Zealand</p>
-    <span>January 2021</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Napier City, New Zealand</p>
+          <span>2 trips</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Clarence, New Zealand</p>
-    <span>September 2020</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Waimārama, New Zealand</p>
+          <span>2 trips</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Colchagua, Chile</p>
-    <span>April 2018</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Taupō, New Zealand</p>
+          <span>2 trips</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Thames Coromandel District, New Zealand</p>
-    <span>January 2018</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Zagarolo, Italy</p>
+          <span>September 2023</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>London, United Kingdom</p>
-    <span>2 trips</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Sitges, Spain</p>
+          <span>September 2023</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Hurunui District, New Zealand</p>
-    <span>September 2020</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Barcelona, Spain</p>
+          <span>September 2023</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Marlborough, New Zealand</p>
-    <span>2 trips</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Auckland, New Zealand</p>
+          <span>9 trips</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Central Hawke's Bay District, New Zealand</p>
-    <span>2 trips</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Whangarei Heads, New Zealand</p>
+          <span>December 2022</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Aramoana, New Zealand</p>
-    <span>October 2019</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Far North District, New Zealand</p>
+          <span>December 2022</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Amsterdam, Netherlands</p>
-    <span>June 2019</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Kahuranaki, New Zealand</p>
+          <span>December 2022</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Pataua, New Zealand</p>
-    <span>January 2019</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Glenduan, New Zealand</p>
+          <span>July 2022</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Ōhope, New Zealand</p>
-    <span>December 2018</span>
-  </div>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Tasman District, New Zealand</p>
+          <span>July 2022</span>
+        </div>
 
-  <div class="subject_card">
-    <i class="fa-solid fa-location-dot"></i>
-    <p>Providencia, Chile</p>
-    <span>April 2018</span>
-  </div>
-</a>
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Elsthorpe, New Zealand</p>
+          <span>March 2022</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Eskdale, New Zealand</p>
+          <span>January 2021</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Kuratau, New Zealand</p>
+          <span>January 2021</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Clarence, New Zealand</p>
+          <span>September 2020</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Colchagua, Chile</p>
+          <span>April 2018</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Thames Coromandel District, New Zealand</p>
+          <span>January 2018</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>London, United Kingdom</p>
+          <span>2 trips</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Hurunui District, New Zealand</p>
+          <span>September 2020</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Marlborough, New Zealand</p>
+          <span>2 trips</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Central Hawke's Bay District, New Zealand</p>
+          <span>2 trips</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Aramoana, New Zealand</p>
+          <span>October 2019</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Amsterdam, Netherlands</p>
+          <span>June 2019</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Pataua, New Zealand</p>
+          <span>January 2019</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Ōhope, New Zealand</p>
+          <span>December 2018</span>
+        </div>
+
+        <div class="subject_card">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Providencia, Chile</p>
+          <span>April 2018</span>
+        </div>
+        </a>
 
       </div>
     </div>
@@ -1353,154 +1346,155 @@ i.fa-solid.fa-location-dot {}
     <h1>Ask Karina About</h1>
     <style>
       .ask-list {
-            display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
       }
+
       .ask-list p {
-    padding: 10px;
-    border: 1px solid #333;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 20px;
-    /* border: 1px solid #ddd; */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #666;
-}
+        padding: 10px;
+        border: 1px solid #333;
+        margin: 5px;
+        border-radius: 10px;
+        padding: 20px;
+        /* border: 1px solid #ddd; */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: #666;
+      }
+
       .ask-list p i {
-   margin-right: 4px;
-    color: #333;
-}
+        margin-right: 4px;
+        color: #333;
+      }
     </style>
     <div class="ask-list">
-    <p><i class="fas fa-utensils"></i> Cooking </p>
-    <p><i class="fas fa-hamburger"></i> Food Scenes </p>
-    <p><i class="fas fa-tree"></i> Outdoors </p>
-    <p><i class="fas fa-book"></i> Reading </p>
-</div>
+      <p><i class="fas fa-utensils"></i> Cooking </p>
+      <p><i class="fas fa-hamburger"></i> Food Scenes </p>
+      <p><i class="fas fa-tree"></i> Outdoors </p>
+      <p><i class="fas fa-book"></i> Reading </p>
+    </div>
 
     <br /><br /><br /><br />
-    
+
     <h1>Karina’s listings</h1>
     <style>
       .card-property {
-
-    display: flex
-;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        width: 250px;
         border: 1px solid #333;
-}
+      }
 
+      .card-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
 
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
 
-.card-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
+      .card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 
-.card-content {
-    padding: 20px;
-    text-align: center;
-}
+      .card-rating {
+        font-size: 18px;
+        color: #666;
+      }
 
-.card-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+      .card-button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-.card-rating {
-    font-size: 18px;
-    color: #666;
-}
+      .card-button:hover {
+        background-color: #3e8e41;
+      }
 
-.card-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+      .listing {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      }
+    </style>
+    <div class="listing">
+      <a href="./entire-place.html" class="card-property">
+        <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Home Casa da Karina" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">Home Casa da Karina</h2>
+          <p class="card-rating">4.97/5 · 33 reviews</p>
 
-.card-button:hover {
-    background-color: #3e8e41;
-}
-    .listing {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    }  
-</style>
-   <div class="listing"> 
-     <a href="./entire-place.html" class="card-property">
-    <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="Home Casa da Karina" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Home Casa da Karina</h2>
-        <p class="card-rating">4.97/5 · 33 reviews</p>
-      
-    </div>
-</a>
+        </div>
+      </a>
 
-<a href="./private-sleepout.html" class="card-property">
-    <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Karina's House Private Sleepout" class="card-image">
-    <div class="card-content">
-        <h2 class="card-title">Karina's House Private Sleepout</h2>
-        <p class="card-rating">4.91/5 · 80 reviews</p>
-      
-    </div>
-</a>
+      <a href="./private-sleepout.html" class="card-property">
+        <img src="./images/%20entire-place/021bd7f1-93a1-4778-834a-d8ede6a25bd9.jpeg" alt="Karina's House Private Sleepout" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">Karina's House Private Sleepout</h2>
+          <p class="card-rating">4.91/5 · 80 reviews</p>
+
+        </div>
+      </a>
     </div>
     <br /><br /><br /><br />
     <h1>Karina's Guidebook</h1>
     <style>
       .guide {
         width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
       }
+
       .guide a {
-     margin: 20px;
-    padding-top: 36px;
-    width: 147px;
-    text-align: center;
+        margin: 20px;
+        padding-top: 36px;
+        width: 147px;
+        text-align: center;
       }
+
       .guide-a-1 {
-            width: 100%;
-    margin: 9px 0 30px 0px;
-    font-size: 37px;
-    color: #333;
-}
+        width: 100%;
+        margin: 9px 0 30px 0px;
+        font-size: 37px;
+        color: #333;
+      }
       }
     </style>
     <div class="guide">
       <a href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/4407280" target="_blank" class="btn-contact">
         <i class="fa-solid fa-signs-post guide-a-1"></i>
-Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
-         <a href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/2083505" target="_blank" class="btn-contact">
-           <i class="fa-solid fa-map-location-dot guide-a-1"></i>
-Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
+        Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
+      <a href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/2083505" target="_blank" class="btn-contact">
+        <i class="fa-solid fa-map-location-dot guide-a-1"></i>
+        Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
     </div>
     <br /><br /><br /><br />
     <footer style="bottom:0; padding: 0px 0;">
@@ -1513,59 +1507,14 @@ Karina's Guidebook <i class="fas fa-external-link-alt"></i></a>
   // Insere o ano no elemento do footer
   document.getElementById("current-year").textContent = currentYear;
 </script>
+<script>
+  function safeBack() {
+    if (window.history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = '/';
+    }
+  }
+</script>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
