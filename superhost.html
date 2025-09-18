@@ -631,7 +631,7 @@
       margin-bottom: 5px;
       text-align: center;
       font-weight: 300;
-      height: 152px;
+      height: auto;
     }
 
     .review p:last-child {
@@ -984,7 +984,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
         </div>
 
-        <p class="truncate" data-max="120">Regarding the host, Karina is the best. She was inviting and so helpful with any request. We cannot thank her enough.</p>
+        <p class="truncate" data-max="80">Regarding the host, Karina is the best. She was inviting and so helpful with any request. We cannot thank her enough.</p>
         <p><i class="fa-regular fa-user"></i> - <bold>Cody</bold> <br /> <span>Auckland, New Zealand</span></p>
       </div>
       <!-- Review 2 -->
@@ -997,7 +997,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <p class="truncate" data-max="120">Karina was an amazing host – very friendly and accommodating. Her instructions were clear and helpful.</p>
+        <p class="truncate" data-max="80">Karina was an amazing host – very friendly and accommodating. Her instructions were clear and helpful.</p>
         <p><i class="fa-regular fa-user"></i> - <bold>Sarah</bold> <br />
           <span>Auckland, New Zealandy</span>
         </p>
@@ -1012,7 +1012,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <p class="truncate" data-max="120">Karina is a friendly, warm person & very welcoming. </p>
+        <p class="truncate" data-max="80">Karina is a friendly, warm person & very welcoming. </p>
         <p><i class="fa-regular fa-user"></i> - <bold>Margie</bold> <br />
           <span>Auckland, New Zealand</span>
         </p>
@@ -1027,7 +1027,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <p class="truncate" data-max="120">Karina is such a warm and welcoming host—highly recommend staying here.</p>
+        <p class="truncate" data-max="80">Karina is such a warm and welcoming host—highly recommend staying here.</p>
         <p><i class="fa-regular fa-user"></i> - <bold>Ayshen</bold> <br /> <span>Huntleys Point, Australia</span>
         </p>
       </div>
@@ -1041,7 +1041,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <p class="truncate" data-max="120"> Karina and her family were welcoming and friendly, l would definitely recommend this place.</p>
+        <p class="truncate" data-max="80"> Karina and her family were welcoming and friendly, l would definitely recommend this place.</p>
         <p><i class="fa-regular fa-user"></i> - <bold>Leanne</bold> <br />
           <span>Waikato, New Zealand</span>
         </p>
@@ -1056,7 +1056,7 @@ border-right: 1px solid #ddd;*/
           <i class="fas fa-star filled"></i>
           <i class="fas fa-star filled"></i>
         </div>
-        <p class="truncate" data-max="120">Karina was a very friendly host who organized some treats, much appreciated. </p>
+        <p class="truncate" data-max="80">Karina was a very friendly host who organized some treats, much appreciated. </p>
         <p><i class="fa-regular fa-user"></i> - <bold>Michelle</bold> <br />
           <span>Cambridge, New Zealand</span>
         </p>
@@ -1511,6 +1511,15 @@ border-right: 1px solid #ddd;*/
   // Insere o ano no elemento do footer
   document.getElementById("current-year").textContent = currentYear;
 </script>
+ <script>
+    document.querySelectorAll('.truncate').forEach(el => {
+      const max = parseInt(el.dataset.max);
+      const fullText = el.textContent.trim();
+      if (fullText.length > max) {
+        el.textContent = fullText.slice(0, max).trim() + '...';
+      }
+    });
+  </script>
 </html>
 
 
