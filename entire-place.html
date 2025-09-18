@@ -1195,13 +1195,76 @@
 
         <div class="summary-section">
 <!--           <h3>7 of 7 items showing</h3> -->
-          <ul class="summary-list">
-            <li><strong>Overall rating</strong> <span>5 stars, 97% of reviews</span></li>
-            <li><strong>5</strong> 4 stars, 3% of reviews</li>
-            <li><strong>4</strong> 3 stars, 0% of reviews</li>
-            <li><strong>3</strong> 2 stars, 0% of reviews</li>
-            <li><strong>2</strong> 1 star, 0% of reviews</li>
-          </ul>
+        <style>
+  .rating-summary-1 {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+  }
+
+  .rating-summary-1 li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+  }
+
+  .rating-bar-1 {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    flex-grow: 1;
+    margin: 0 10px;
+    max-width: 200px;
+  }
+
+  .rating-bar-fill-1 {
+    background-color: #333;
+    height: 100%;
+  }
+
+  .rating-label-1 {
+    white-space: nowrap;
+    min-width: 50px;
+  }
+</style>
+
+<ul class="rating-summary-1">
+  <li><strong>Overall rating</strong> <span>5 stars, 97% of reviews</span></li>
+
+  <li>
+    <span class="rating-label-1">5 stars</span>
+    <div class="rating-bar-1"><div class="rating-bar-fill-1" style="width: 97%;"></div></div>
+    <span>97%</span>
+  </li>
+
+  <li>
+    <span class="rating-label-1">4 stars</span>
+    <div class="rating-bar-1"><div class="rating-bar-fill-1" style="width: 3%;"></div></div>
+    <span>3%</span>
+  </li>
+
+  <li>
+    <span class="rating-label-1">3 stars</span>
+    <div class="rating-bar-1"><div class="rating-bar-fill-1" style="width: 0%;"></div></div>
+    <span>0%</span>
+  </li>
+
+  <li>
+    <span class="rating-label-1">2 stars</span>
+    <div class="rating-bar-1"><div class="rating-bar-fill-1" style="width: 0%;"></div></div>
+    <span>0%</span>
+  </li>
+
+  <li>
+    <span class="rating-label-1">1 star</span>
+    <div class="rating-bar-1"><div class="rating-bar-fill-1" style="width: 0%;"></div></div>
+    <span>0%</span>
+  </li>
+</ul>
+
         </div>
 
         <div class="details-ratings">
