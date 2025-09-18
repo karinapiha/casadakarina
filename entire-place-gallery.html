@@ -101,7 +101,7 @@
       top: 50%;
       transform: translateY(-50%);
       color: white;
-      font-size: 2rem;
+      font-size: 1.5rem;
       cursor: pointer;
       background: rgba(0, 0, 0, 0.5);
       /*       padding: 10px; */
@@ -113,11 +113,11 @@
     }
 
     .close {
-      top: 10px;
-      right: 20px;
-      transform: none;
-      font-size: 2rem;
-      line-height: 1.4 !important;
+    top: 10px;
+    right: 20px;
+    transform: none;
+    font-size: 1.5rem;
+    line-height: 2.4 !important;
     }
 
     .prev {
@@ -134,10 +134,13 @@
       .next {
         /*     left: 10px;
     right: 10px; */
-        top: auto;
+               top: auto;
         bottom: 70px;
         transform: none;
         font-size: 1.5rem;
+        width: 50px;
+        height: 50px;
+        line-height: 2.4 !important;
       }
 
       .prev {
@@ -350,10 +353,10 @@
 
   <div class="modal" id="imageModal">
     <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <span class="prev" id="prevBtn">&#10094;</span>
+      <span class="close" id="closeModal"><i class="fa-solid fa-xmark"></i></span>
+      <span class="prev" id="prevBtn"><i class="fa-solid fa-arrow-left"></i></span>
       <img id="modalImage" src="" alt="">
-      <span class="next" id="nextBtn">&#10095;</span>
+      <span class="next" id="nextBtn"><i class="fa-solid fa-arrow-right"></i></span>
       <div id="modalCounter" style="color:white; margin-top: 10px; font-weight: bold;"></div>
 
       <div class="caption" id="modalCaption"></div>
