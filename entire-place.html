@@ -10,6 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    a img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
     html {
       scroll-padding-top: 80px;
     }
@@ -295,20 +301,30 @@
     <section id="overview-photos">
       <h2>Casa da Karina</h2>
       <div class="grid">
-        <div class="item" data-active="true" style="view-transition-name: item-0;">
-          <img src="./images/%20entire-place/9158dfb3-4d6d-48c6-95dd-288ce2c3d6e0.jpeg" alt="">
+        <div class="item" data-active="true">
+          <a href="./entire-place-gallery.html">
+            <img src="https://via.placeholder.com/600x400" alt="Imagem 1">
+          </a>
         </div>
-        <div class="item" style="view-transition-name: item-1;">
-          <img src="./images/%20entire-place/1dec1547-3168-47b4-99cf-c39921cca984.jpeg" alt="">
+        <div class="item">
+          <a href="./entire-place-gallery.html">
+            <img src="https://via.placeholder.com/300x300" alt="Imagem 2">
+          </a>
         </div>
-        <div class="item" style="view-transition-name: item-2;">
-          <img src="./images/%20entire-place/2a10c2a3-e578-455b-8ec0-9fbd1fd26635.jpeg" alt="">
+        <div class="item">
+          <a href="./entire-place-gallery.html">
+            <img src="https://via.placeholder.com/300x300" alt="Imagem 3">
+          </a>
         </div>
-        <div class="item" style="view-transition-name: item-3;">
-          <img src="./images/%20entire-place/56ff6190-a338-41c5-a18b-b62759dc05a6.jpg" alt="">
+        <div class="item">
+          <a href="./entire-place-gallery.html">
+            <img src="https://via.placeholder.com/300x300" alt="Imagem 4">
+          </a>
         </div>
-        <div class="item" style="view-transition-name: item-4;">
-          <img src="./images/%20entire-place/7926679f-8835-4cc8-a5f0-b38c38d3d556.jpeg" alt="">
+        <div class="item">
+          <a href="./entire-place-gallery.html">
+            <img src="https://via.placeholder.com/300x300" alt="Imagem 5">
+          </a>
         </div>
       </div>
 
@@ -322,40 +338,33 @@
             gap: 0.5rem;
             grid-template-columns: 2fr 1fr 1fr;
             grid-template-rows: repeat(2, 1fr);
-            max-width: 100%;
             height: 300px;
           }
 
-          .grid img:hover {
-            opacity: 0.9;
-            cursor: pointer;
+          .item[data-active="true"] {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
           }
 
           .item {
             overflow: hidden;
+            height: 100%;
           }
 
-          .item>img {
+          .item>a {
+            display: block;
+            height: 100%;
+          }
+
+          .item>a>img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
             border-radius: 5px;
           }
-
-          .item[data-active="true"] {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-            z-index: 2;
-          }
-
-          /* Automatic placement of other items */
-          .item:not([data-active="true"]) {
-            /* they will fill remaining cells automatically */
-          }
-        }
       </style>
-      <a href="https://karinapiha.github.io/casadakarina/entire-place-gallery.html" class="btn-contact show-all-btn" style="">
+      <a href="./entire-place-gallery.html" class="btn-contact show-all-btn" style="">
         <i class="fas fa-images"></i> Show all photos
       </a>
       <h3 class="section-subtitle">Entire Home • Havelock North, New Zealand</h3>
@@ -1517,205 +1526,205 @@
           </div>
           <div class="host-info">
             <h3 class="host-name">Karina Piha</h3>
-            
+
             <ul class="host-stats">
               <li><strong>127</strong> reviews</li>
               <li><strong>4.91</strong> average rating</li>
-              
+
             </ul>
           </div>
         </div>
-        </div>
-        <style>
-          .host-card {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            padding: 1rem;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: #fafafa;
-            max-width: 420px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-          }
+      </div>
+      <style>
+        .host-card {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          padding: 1rem;
+          border: 1px solid #eee;
+          border-radius: 8px;
+          background-color: #fafafa;
+          max-width: 420px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
 
-          .host-avatar {
-            position: relative;
-            width: 64px;
-            height: 64px;
-            flex-shrink: 0;
-          }
+        .host-avatar {
+          position: relative;
+          width: 64px;
+          height: 64px;
+          flex-shrink: 0;
+        }
 
-          .host-avatar img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ccc;
-          }
+        .host-avatar img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid #ccc;
+        }
 
-          .host-icon {
-            position: absolute;
-            bottom: -4px;
-            right: -4px;
-            background: #fff;
-            border-radius: 50%;
-            padding: 2px;
-            font-size: 0.75rem;
-            color: #333;
-            /* AirBnb red */
-            border: 1px solid #ccc;
-          }
+        .host-icon {
+          position: absolute;
+          bottom: -4px;
+          right: -4px;
+          background: #fff;
+          border-radius: 50%;
+          padding: 2px;
+          font-size: 0.75rem;
+          color: #333;
+          /* AirBnb red */
+          border: 1px solid #ccc;
+        }
 
-          .host-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-          }
+        .host-info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
 
-          .host-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 0;
-          }
+        .host-name {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin: 0;
+        }
 
-          .host-badge {
-            font-size: 0.85rem;
-            color: #333;
-            font-weight: 500;
-            margin: 0;
-          }
+        .host-badge {
+          font-size: 0.85rem;
+          color: #333;
+          font-weight: 500;
+          margin: 0;
+        }
 
-          .host-stats {
-            list-style: none;
-            padding: 0;
-            margin: 4px 0 0;
-            font-size: 0.85rem;
-            color: #555;
-          }
+        .host-stats {
+          list-style: none;
+          padding: 0;
+          margin: 4px 0 0;
+          font-size: 0.85rem;
+          color: #555;
+        }
 
-          .host-stats li {
-            margin-bottom: 2px;
-          }
-        </style>
-        <div class="host-details-text">
-          <p><strong>My work:</strong> Artist & Yoga Teacher</p>
-          <p>I am born and raised in Brazil, lived 16 years in Germany and now in NZ since 2016. Initially we set the lodge to welcome our visiting family and friends from abroad. The place is decorated as part of our house, designed for the people we love the most. We have 5 kids (3 live at home), a lovely dog and a very friendly cat.</p>
-          <p><strong>Karina is a Superhost</strong></p>
-          <p>A <strong>Superhost</strong> on Airbnb is a top-rated host known for outstanding hospitality. With excellent reviews, quick communication, and reliable service, they offer a stay you can trust — the kind that turns a trip into a great memory.</p>
-          <!-- 					<div class="host-extra-info">
+        .host-stats li {
+          margin-bottom: 2px;
+        }
+      </style>
+      <div class="host-details-text">
+        <p><strong>My work:</strong> Artist & Yoga Teacher</p>
+        <p>I am born and raised in Brazil, lived 16 years in Germany and now in NZ since 2016. Initially we set the lodge to welcome our visiting family and friends from abroad. The place is decorated as part of our house, designed for the people we love the most. We have 5 kids (3 live at home), a lovely dog and a very friendly cat.</p>
+        <p><strong>Karina is a Superhost</strong></p>
+        <p>A <strong>Superhost</strong> on Airbnb is a top-rated host known for outstanding hospitality. With excellent reviews, quick communication, and reliable service, they offer a stay you can trust — the kind that turns a trip into a great memory.</p>
+        <!-- 					<div class="host-extra-info">
 						<p><i class="fas fa-check-circle"></i> : <strong>100%</strong></p>
 						<p><i class="fas fa-clock"></i> </p>
 					</div> -->
-        </div>
-
-        <button class="btn-contact message-host-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability.', '_blank')">Message host</button>
-        <button class="btn-contact message-host-btn" onclick="window.location.href='/superhost'">Superhost Profile</button>
-        <p class="payment-warning">
-
-        </p>
       </div>
 
-    </section>
-    <section>
-      <h2><i class="fas fa-info-circle"></i> Things to know</h2>
-      <div class="things-to-know">
+      <button class="btn-contact message-host-btn" onclick="window.open('https://api.whatsapp.com/send?phone=+64278755175&text=Hi%21+I+came+from+the+Casa+da+Karina+website.+I%E2%80%99d+like+to+ask+a+few+questions+and%2For+check+availability.', '_blank')">Message host</button>
+      <button class="btn-contact message-host-btn" onclick="window.location.href='/superhost'">Superhost Profile</button>
+      <p class="payment-warning">
 
-        <div class="info-section">
-          <h3> House rules</h3>
-          <ul class="short-list">
-            <li> Check-in after 3:00 PM</li>
-            <li> Checkout before 11:00 AM</li>
-            <li> 8 guests maximum</li>
-          </ul>
-          <button class="toggle-btn btn-contact" data-target="rules">
-            <i class="fas fa-plus"></i> Show more
-          </button>
-          <ul class="full-list hidden" id="rules">
-            <li> You'll be staying in someone's home, so please treat it with care and respect.</li>
-            <li> Self check-in with smart lock</li>
-            <li> Pets allowed</li>
-            <li> Quiet hours 11:00 PM - 7:00 AM</li>
-            <li> Commercial photography allowed</li>
-            <li>No smoking</li>
-            <li> Please care for the cat</li>
-          </ul>
-        </div>
+      </p>
+  </div>
 
-        <div class="info-section">
-          <h3> Safety & property</h3>
-          <ul class="short-list">
-            <li> Carbon monoxide alarm</li>
-            <li> Smoke alarm</li>
-            <li> Pet(s) live on property</li>
-          </ul>
-          <button class="toggle-btn btn-contact" data-target="safety">
-            <i class="fas fa-plus"></i> Show more
-          </button>
-          <ul class="full-list hidden" id="safety">
-            <li> Avoid surprises by looking over these important details about your Host's property.</li>
-            <li> Carbon monoxide alarm installed</li>
-            <li> Smoke alarm installed</li>
-            <li> No parking on property</li>
-          </ul>
-        </div>
+  </section>
+  <section>
+    <h2><i class="fas fa-info-circle"></i> Things to know</h2>
+    <div class="things-to-know">
 
-        <div class="info-section cancellation">
-          <h3> Cancellation policy</h3>
-          <button class="ask-host-btn btn-contact">
-            <i class="fas fa-envelope"></i> Ask the host
-          </button>
-        </div>
+      <div class="info-section">
+        <h3> House rules</h3>
+        <ul class="short-list">
+          <li> Check-in after 3:00 PM</li>
+          <li> Checkout before 11:00 AM</li>
+          <li> 8 guests maximum</li>
+        </ul>
+        <button class="toggle-btn btn-contact" data-target="rules">
+          <i class="fas fa-plus"></i> Show more
+        </button>
+        <ul class="full-list hidden" id="rules">
+          <li> You'll be staying in someone's home, so please treat it with care and respect.</li>
+          <li> Self check-in with smart lock</li>
+          <li> Pets allowed</li>
+          <li> Quiet hours 11:00 PM - 7:00 AM</li>
+          <li> Commercial photography allowed</li>
+          <li>No smoking</li>
+          <li> Please care for the cat</li>
+        </ul>
       </div>
-      <style>
-        .things-to-know {
-          max-width: 900px;
-          margin: 1.5rem auto;
-        }
 
-        h2 {
-          margin-bottom: 1rem;
-          font-size: 1.8rem;
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          color: #222;
-        }
+      <div class="info-section">
+        <h3> Safety & property</h3>
+        <ul class="short-list">
+          <li> Carbon monoxide alarm</li>
+          <li> Smoke alarm</li>
+          <li> Pet(s) live on property</li>
+        </ul>
+        <button class="toggle-btn btn-contact" data-target="safety">
+          <i class="fas fa-plus"></i> Show more
+        </button>
+        <ul class="full-list hidden" id="safety">
+          <li> Avoid surprises by looking over these important details about your Host's property.</li>
+          <li> Carbon monoxide alarm installed</li>
+          <li> Smoke alarm installed</li>
+          <li> No parking on property</li>
+        </ul>
+      </div>
 
-        h3 {
-          /* 			margin-top: 0; */
-          margin-bottom: 0.7rem;
-          font-weight: 600;
-          font-size: 1.3rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          color: #333;
-        }
+      <div class="info-section cancellation">
+        <h3> Cancellation policy</h3>
+        <button class="ask-host-btn btn-contact">
+          <i class="fas fa-envelope"></i> Ask the host
+        </button>
+      </div>
+    </div>
+    <style>
+      .things-to-know {
+        max-width: 900px;
+        margin: 1.5rem auto;
+      }
 
-        ul {
-          list-style: none;
-          /* removendo bullets padrão */
-          margin: 0 0 0.7rem 0;
-          padding-left: 0;
-        }
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: #222;
+      }
 
-        ul li {
-          margin-bottom: 0.6rem;
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          color: #666;
-        }
+      h3 {
+        /* 			margin-top: 0; */
+        margin-bottom: 0.7rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #333;
+      }
 
-        .info-section {
-          color: #666 !important;
-        }
+      ul {
+        list-style: none;
+        /* removendo bullets padrão */
+        margin: 0 0 0.7rem 0;
+        padding-left: 0;
+      }
 
-        .toggle-btn,
-        .ask-host-btn {
-          /* 					background: #007BFF;
+      ul li {
+        margin-bottom: 0.6rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+      }
+
+      .info-section {
+        color: #666 !important;
+      }
+
+      .toggle-btn,
+      .ask-host-btn {
+        /* 					background: #007BFF;
 					color: white;
 					border: none;
 					padding: 0.4rem 0.9rem;
@@ -1725,35 +1734,35 @@
 					display: inline-flex;
 					align-items: center;
 					gap: 0.5rem; */
-          transition: background 0.3s ease;
-          font-size: 0.75rem !important;
-          padding: 14px 13px;
-          cursor: pointer;
+        transition: background 0.3s ease;
+        font-size: 0.75rem !important;
+        padding: 14px 13px;
+        cursor: pointer;
+      }
+
+      .toggle-btn:hover,
+      .ask-host-btn:hover {
+        /* 					background: #0056b3; */
+      }
+
+      .full-list.hidden {
+        display: none;
+      }
+
+      /* Responsivo */
+      @media (min-width: 768px) {
+        .things-to-know {
+          display: flex;
+          gap: 1rem;
         }
 
-        .toggle-btn:hover,
-        .ask-host-btn:hover {
-          /* 					background: #0056b3; */
+        .info-section {
+          flex: 1;
+          margin-bottom: 0;
         }
-
-        .full-list.hidden {
-          display: none;
-        }
-
-        /* Responsivo */
-        @media (min-width: 768px) {
-          .things-to-know {
-            display: flex;
-            gap: 1rem;
-          }
-
-          .info-section {
-            flex: 1;
-            margin-bottom: 0;
-          }
-        }
-      </style>
-    </section>
+      }
+    </style>
+  </section>
 
   </div>
   <footer>
