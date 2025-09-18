@@ -669,13 +669,17 @@
     position: fixed;
     padding: 7px 0;
     ">
-
+<img class="display" id="menu-logo" src="./images/pineapple-transparent.png" style="
+           width: 54px;
+    margin-top: 0px;
+    margin-left: 9px;">
     <input class=" menu-btn" type="checkbox" id="menu-btn">
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <button onclick="safeBack()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
     <ul class="menu">
+            <li><a href="./">Home</a></li>
       <li><a href="./entire-place.html">Entire Place</a></li>
       <li><a href="./private-sleepout.html">Private Sleepout</a></li>
+         <li><a href="./contact.html">Contact</a></li>
 
     </ul>
   </header>
@@ -1507,14 +1511,5 @@ border-right: 1px solid #ddd;*/
   // Insere o ano no elemento do footer
   document.getElementById("current-year").textContent = currentYear;
 </script>
-<script>
-  function safeBack() {
-    if (window.history.length > 1) {
-      history.back();
-    } else {
-      window.location.href = '/';
-    }
-  }
-</script>
-
 </html>
+
